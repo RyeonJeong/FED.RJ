@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+html,body{
+    margin: 0;
+    padding: 0;
+
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul{
+    float: left;
+}
+body{
+    background-color: #fff;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+body *{
+    outline: 2px dotted red;
+}
+
+/* 공통 */
+.pbx{
+    float: left;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.wrap{
+    width: 1000px;
+    height: 650px;
+}
+.lbx{
+    width: 200px;
+}
+.rbx{
+    width: 800px;
+}

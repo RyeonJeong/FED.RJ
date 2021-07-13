@@ -1,0 +1,39 @@
+/6// 웹디 기능사 JS 개인연습 - main.js
+
+// 슬라이드 구현하기
+setInterval(function(){
+    console.log("슬라이드");
+    var tg = document.querySelector(".slide");
+    tg.style.top = "-100%",
+    tg.style.transition = ".6s";
+
+    setTimeout(function(){
+        console.log("타임아웃");
+        var first = tg.querySelectorAll("li")[0];
+        tg.appendChild(first);
+        tg.style.top = "0";
+        tg.style.transition = "none";
+    },600); // 타임아웃 함수
+},3000); // 슬라이드 함수
+
+// 탭창
+// 함수명 : tap
+function tap(a1,a2){
+    console.log("탭창 확인:"+a1,a2);
+    tc = document.querySelectorAll(".tc>li");
+    tm = document.querySelectorAll(".tm>li");
+
+    tc[a1].classList.add("on");
+    tm[a1].classList.add("on");
+    tc[a2].classList.remove("on");
+    tm[a2].classList.remove("on");
+}; // 탭창 함수
+
+// 팝업
+// 함수명 : pop
+
+function pop(sts){
+    console.log("팝업확인!"+sts);
+    var pop = document.querySelector(".pop");
+    pop.style.display = sts;
+}; // 팝업함수

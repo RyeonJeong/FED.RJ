@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+/* 공통 css */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+body * {
+    /* outline: 2px dotted red; */
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    float: left;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.ibx {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.pbx {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.prt {
+    position: relative;
+}
+
+/* a */
+#top{
+    background-color: rgb(240, 240, 240);
+}
+.top {
+    height: 100px;
+}
+
+.top1 {
+    width: 200px;
+}
+
+.logo {
+    margin-top: 16px;
+    margin-left: -11px;
+}
+
+.top2 {
+    width: 1000px;
+    z-index: 1;
+}
+
+.gnb {
+    width: 600px;
+    height: 40px;
+    top: 30px;
+    right: 20px;
+    position: absolute;
+    background-color: #ccc;
+
+}
+
+.gnb li {
+    width: 150px;
+}
+
+.gnb li a {
+    line-height: 40px;
+    display: block;
+    text-align: center;
+}
+.gnb ol{
+    background-color: #ccc;
+    height: 0;
+    overflow: hidden;
+
+    transition: .6s;
+}
+.gnb li:hover>a{
+    background-color: black;
+    color: white;
+}
+.gnb li:hover ol{
+    height: 160px;
+}
+
+
+/* b */
+.ban {
+    height: 300px;
+    overflow: hidden;
+}
+.slide{
+    left: 0;
+    width: 300%; /* 상하->좌우 */
+    position: relative;
+}
+
+/* c */
+.cont {
+    height: 200px;
+}
+
+.cont>.pbx {
+    width: 400px;
+    background-color: rgb(240, 240, 240);
+}
+.im{
+    width: 100%;
+    height: 100%;
+}
+.tm{
+    width: 200px;
+    height: 40px;
+    background-color:#bbb;
+}
+.tm li{
+    width: 100px;
+}
+.tm li.on{
+    background-color: white;
+}
+.tm a{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+.tc{
+    height: 140px;
+    background-color: white;
+}
+.tc>li{
+    display: none;
+}
+.tc>li.on{
+    display: block;
+
+}
+.gong{
+    padding-top: 10px;
+    padding-left: 5px;
+    
+}
+.gong li{
+    float: none;
+    line-height: 26px;
+}
+.gong li a{
+    width: 285px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+span{
+    float: right;
+}
+.gal img{
+    width: 100px;
+}
+.gal li{
+    margin: 20px 12px;
+    border: 1px solid #333;
+}
+
+
+/* d */
+#info{
+    background-color: rgb(240, 240, 240);
+}
+.info {
+    height: 100px;
+}
+
+.info1 {
+    width: 200px;
+}
+
+.info2 {
+    width: 800px;
+}
+.cp{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.info3 {
+    width: 200px;
+}
+.sns{
+    width: 100%;
+}
+.sns li{
+    margin-top: 10px;
+}
+.sns img{
+    width: 50px;
+    margin-left: 10px;
+}
+
+.pop{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 400px;
+    display: none;
+}
+p{
+    padding: 5px;
+}
+.bbx{
+    text-align: right;
+    padding: 5px;
+}
+h2{
+    text-align: center;
+}

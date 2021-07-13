@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* 폰트CDN */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+/* font-family: 'Jua', sans-serif; 폰트이름 */
+body {
+    position: relative;
+    background: url(images/wbg.jpg) no-repeat fixed top/100% 100%;
+    /* overflow: auto; */
+    width: 1500px;
+    height: 1000px;
+}
+
+.ibx {
+    position: absolute;
+    top: 200px;
+    left: 15%;
+    width: 80%;
+    /* outline: 4px dotted red; */
+}
+
+.pbx {
+    position: relative;
+    width: 22%;
+    /* float: left; */
+    box-sizing: border-box;
+    padding: 5px;
+
+
+}
+
+.pbx img {
+    width: 100%;
+}
+
+
+.ibx::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 각 인물 설명박스 */
+.sbox {
+    position: absolute;
+    left: 120%;
+    top: -35px;
+    width: 915px;
+    color: white;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    margin-top: 50px;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: 2px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.534);
+
+    opacity: 0;
+    transition: .4s ease-in;
+
+}
+
+.pbx:hover .sbox {
+    display: inline-block;
+    width: 1100px;
+    opacity: 1;
+
+}
+
+@media only screen and (max-width: 1200px) {
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+    .ibx {
+        top: 23%;
+        left: 10%;
+    }
+    .sbox{
+        top: -37px;
+        width: 400px;
+
+    }
+    .pbx:hover .sbox {
+        display: inline-block;
+        width: 500px;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:800px) {
+
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    body {
+        background: url(images/wbg.jpg) top/167%;
+    }
+
+    .ibx {
+        position: absolute;
+        /* float: left; */
+        top: 15%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .pbx {
+        position: relative;
+        width: 24%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 10px;
+        float: left;
+    }
+
+    .pbx img {
+        width: 100%;
+    }
+
+    /* 인물박스 공통 */
+    .cat2,
+    .cat3,
+    .cat4 {
+        opacity: 1;
+        transition: 1s ease-in-out;
+    }
+
+    .cat1 .pbx:first-child {
+        position: absolute;
+        width: 208%;
+        transform: translate(55%);
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .cat1 .pbx:first-child~.pbx {
+        display: none;
+    }
+
+    .pbx {
+        /* display: none; */
+    }
+
+    .case1 .cat1 {
+        display: block;
+    }
+
+    .case2 .cat2 {
+        display: block;
+    }
+
+    .case3 .cat3 {
+        display: block;
+    }
+
+    .case4 .cat4 {
+        display: block;
+    }
+
+    .sbox {
+        opacity: 0;
+        transition: 1s ease-in-out;
+    }
+
+    /* 정혁 마우스 오버시 설명박스 */
+
+    .cat1:hover .sbox1 {
+        font-size: 4vw;
+        line-height: 4vw;
+        transform: translate(-30%, 100%);
+        width: 300px;
+        opacity: 1;
+    }
+    .cat1:hover .jh{
+        position: absolute;
+        width: 250%;
+        top: 300%;
+        left: 75%;
+
+        z-index: 1;
+    }
+
+    /* 세리 마우스 오버시 설명박스 */
+    .cat2:hover .sbox2 {
+        font-size: 4vw;
+        line-height: 4vw;
+        transform: translate(-52%, 146%);
+        width: 300px;
+        opacity: 1;
+    }
+    .cat2:hover .sri{
+        position: absolute;
+        width: 230%;
+        top: 300%;
+        left: -7%;
+
+        z-index: 1;
+    }
+
+    /* 서단 마우스 오버시 설명박스 */
+    .cat3:hover .sbox3 {
+        font-size: 4vw;
+        line-height: 4vw;
+        transform: translate(-74%, 179%);
+        width: 300px;
+        opacity: 1;
+    }
+    .cat3:hover .sdn{
+        position: absolute;
+        width: 230%;
+        top: 300%;
+        left: -117%;
+
+        z-index: 1;
+    }
+
+    /* 승준 마우스 오버시 설명박스 */
+    .cat4:hover .sbox4 {
+        font-size: 4vw;
+        line-height: 4vw;
+        transform: translate(-98%, 150%);
+        width: 300px;
+        opacity: 1;
+    }
+    .cat4:hover .sjun{
+        position: absolute;
+        width: 230%;
+        top: 300%;
+        left: -208%;
+
+        z-index: 1;
+    }
+
+
+
+}
+

@@ -1,0 +1,24 @@
+// 제이쿼리버전
+
+// 수직방향이동유형
+
+setInterval(function(){
+
+console.log("인터발!");
+
+$(".slide").animate({top:"-100%"},600,
+function(){ // 콜백함수(애니후 실행코드)
+// 1. 첫번째 li를 선택
+var first = $(this).find("li").first();
+
+// 2. 첫번째 li를 맨뒤로 이동 + top값 0으로 초기화
+$(this).append(first).css({top:"0"});
+
+}); // animate //
+
+},3000); // 인터발함수 //
+
+
+
+
+

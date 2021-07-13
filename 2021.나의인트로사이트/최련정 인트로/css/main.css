@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* 인트로 페이지 - main.css */
+
+@import url(./common.css);
+
+/* 웹폰트 CDN */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Roboto+Mono:wght@300&display=swap');
+/* 
+ /* 웹폰트설정(main) 
+ font-family: 'Encode Sans SC', sans-serif;
+ font-family: 'Roboto Mono', monospace;
+ */
+
+
+
+/* SEC 1. */
+
+#pg1>h1 {
+  position: absolute;
+  font-size: 3.8vw;
+  left: 15%;
+  top: 28%;
+
+  font-family: 'Encode Sans SC', sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+#pg1>p {
+  position: absolute;
+  font-size: 1.4vw;
+  left: 20%;
+  top: 38%;
+
+  font-family: 'Roboto Mono', monospace;
+  color: #797979;
+}
+
+
+
+
+/* SEC 2. */
+
+/* 오른쪽 설명글 */
+#pg2>h1 {
+  position: absolute;
+  top: 22%;
+  right: 15%;
+  font-family: 'Encode Sans SC', sans-serif;
+  font-size: 2.8vw;
+}
+
+#pg2 .rbx {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  width: 30vw;
+
+  /* outline: 2px solid red; */
+}
+
+#pg2 li {
+  float: none;
+  /* text-indent: 15px; */
+  list-style-image: url(../images/square2.gif);
+  text-align: justify;
+}
+
+.rbx a {
+  color: #333;
+  font-size: 1vw;
+  line-height: 4vh;
+}
+
+.rbx span {
+  display: block;
+  margin-left: 14%;
+}
+
+/* 왼쪽사진 */
+.lbx img {
+  position: absolute;
+  top: 33%;
+  left: 22%;
+  width: 250px;
+  border: 10px double gray;
+}
+
+/* background-color: wheat; */

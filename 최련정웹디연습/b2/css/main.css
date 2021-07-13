@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+/* 공통 css */
+html,body{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: #fff;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+body *{
+    outline: 2px dotted red;
+}
+ol,ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    float: left;
+}
+.ibx{
+    width: 1200px;
+    margin: 0 auto;
+}
+.pbx{
+    height: 100%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.prt{
+    position: relative;
+}
+/* a */
+#top{
+    background-color: #ccc;
+}
+.top{
+    position: relative;
+    height: 100px;
+    z-index: 1;
+}
+.top1{
+    width: 200px;
+}
+.logo{
+    margin-top: 20px;
+    margin-left: -10px;
+}
+.top2{
+    width: 1000px;
+}
+/* gnb */
+.gnb{
+    position: absolute;
+    width: 800px;
+    height: 40px;
+    right: 10px;
+    bottom: 0;
+    background-color: rgb(86, 255, 199);
+}
+.tit{
+    font-size: 20px;
+    font-weight: bold;
+}
+.gnb::before{
+    content: '';
+    display: block;
+    width: 1200px;
+    top: 41px;
+    left: -390px;
+    height: 0; /* 160px; */
+    position: absolute;
+    background-color: rgb(86, 255, 199);
+    opacity: .8;
+    
+}
+.gnb li{
+    width: 200px;
+    line-height: 40px;
+    position: relative;
+}
+.gnb ol {
+    height: 0; /* 160px */
+    overflow: hidden;
+}
+.gnb ol li:hover a{
+    background-color: rgb(0, 236, 158);
+}
+.gnb:hover ol,
+.gnb:hover::before{
+    height: 160px;
+}
+.gnb li:hover>a{
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+}
+
+
+.gnb ol li{
+    background-color: rgba(86, 255, 199, 0.137);
+}
+.gnb li a{
+    display: block;
+    text-align: center;
+    
+}
+/* b */
+.ban{
+    height: 300px;
+    overflow: hidden;
+}
+.slide{
+    position: relative;
+    top: 0;
+}
+/* c */
+.cont{
+    height: 200px;
+    background-color: #ccc;
+}
+.im{
+    width: 100%;
+    height: 100%;
+}
+/* 탭메뉴 */
+.tm{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(2, 255, 171);
+}
+.tm li{
+    width: 100px;
+}
+.tm li.on{
+    background-color: white;
+}
+.tm li a{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+.tc{
+    height: 140px;
+    background-color: white;
+}
+.tc>li{
+    display: none;
+}
+.tc>li.on{
+    display: block;
+}
+/* 공지사항 */
+.gong{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.gong li{
+    float: none;
+    line-height: 26px;
+}
+.gong li a{
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 278px;
+}
+span{
+    float: right;
+}
+.gal li{
+    margin: 20px 12px;
+}
+.gal img{
+    width: 100px;
+    border: 1px solid #333;
+}
+
+
+.cont .pbx{
+    width: 400px;
+}
+.pop{
+    position: absolute;
+    background-color: white;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    display: none;
+}
+.bbx{
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+p{
+    padding: 10px;
+}
+h2{
+    text-align: center;
+}
+/* d */
+#info{
+    background-color: #ccc;
+}
+.info{
+    height: 100px;
+}
+.info1{
+    width: 1000px;
+}
+.cp{
+    margin-top: 30px;
+    text-align: center;
+}
+.info2{
+    width: 200px;
+}
+.sns img{
+    width: 30px;
+}
+.sns li{
+    padding-left: 5px;
+    margin-right: 10px;
+}
+
+.pbxIn{
+    height: 50%;
+}

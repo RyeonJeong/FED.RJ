@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+    <title>세계의 미술작품</title>
+</head>
+
+<body>
+    <!-- a -->
+    <div id="top">
+        <div class="ibx top">
+            <div class="pbx top1">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/logo.png" alt="로고">
+                    </a>
+                </div>
+            </div>
+            <div class="pbx top2 prt">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">소장처별</a>
+                        <ol>
+                            <li><a href="#">한국</a></li>
+                            <li><a href="#">프랑스</a></li>
+                            <li><a href="#">이탈리아</a></li>
+                            <li><a href="#">독일</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">장르별</a>
+                        <ol>
+                            <li><a href="#">회화</a></li>
+                            <li><a href="#">판화</a></li>
+                            <li><a href="#">공예/고대유물</a></li>
+                            <li><a href="#">그 외</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">테마별</a>
+                        <ol>
+                            <li><a href="#">초상화/인물</a></li>
+                            <li><a href="#">종교</a></li>
+                            <li><a href="#">신화/문학</a></li>
+                            <li><a href="#">일상/스포츠</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#">시대별</a>
+                        <ol>
+                            <li><a href="#">1990년 이전</a></li>
+                            <li><a href="#">1900년대</a></li>
+                            <li><a href="#">현대</a></li>
+                            <li><a href="#">그 외</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- b -->
+    <div class="ibx ban">
+        <ul class="slide">
+            <li>
+                <a href="#"><img src="./images/slide_01.png" alt="슬라이드"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/slide_02.png" alt="슬리이드"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/slide_03.png" alt="슬라이드"></a>
+            </li>
+        </ul>
+    </div>
+    <!-- c -->
+    <div class="ibx cont">
+        <div class="pbx cont1">
+            <ul class="tm">
+                <li class="on" onclick="tab(0,1)">
+                    <a href="#">공지사항</a>
+                </li>
+                <li onclick="tab(1,0)">
+                    <a href="#">갤러리</a>
+                </li>
+            </ul>
+            <ul class="tc">
+                <li class="on">
+                    <ul class="gong">
+                        <li>
+                            <a href="#" onclick="pop('block')">
+                                [발표]『장사의 신동 X 설화수』 이벤트 당첨자
+                            </a>
+                            <span>2021. 06. 07</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『장사의 신동 X 설화수』 이벤트 당첨자
+                            </a>
+                            <span>2021. 06. 07</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『장사의 신동 X 설화수』 이벤트 당첨자
+                            </a>
+                            <span>2021. 06. 07</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『장사의 신동 X 설화수』 이벤트 당첨자
+                            </a>
+                            <span>2021. 06. 07</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ol class="gal">
+                        <li onmouseout='mos2(this)' onmouseover='mos1(this)'>
+                            <a href="#">
+                                <img src="./images/gal1.png" alt="이미지">
+                            </a>
+                        </li>
+                        <li onmouseout='mos2(this)' onmouseover='mos1(this)'>
+                            
+                            <a href="#">
+                                <img src="./images/gal2.png" alt="이미지">
+                            </a>
+                        </li>
+                        <li onmouseout='mos2(this)' onmouseover='mos1(this)'>
+                            
+                            <a href="#">
+                                <img src="./images/gal3.png" alt="이미지">
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="pbx cont2">
+            <a href="#">
+                <img class="im" src="./images/contents_01.png" alt="갤러리">
+            </a>
+        </div>
+        <div class="pbx cont3">
+            <a href="#">
+                <img class="im" src="./images/contents_02.png" alt="갤러리">
+            </a>
+        </div>
+    </div>
+    <!-- d -->
+    <div id="info">
+        <div class="ibx info">
+            <div class="pbx info1">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/logoB.png" alt="로고">
+                    </a>
+                </div>
+            </div>
+            <div class="pbx info2">
+                <div class="cp">
+                    <a href="#">Copyright JUST Shopping Mall All rights reserved.</a>
+                </div>
+            </div>
+            <div class="pbx info3">
+                <ul class="sns">
+                    <li>
+                        <a href="#">
+                            <img src="./images/sns1.png" alt="sns">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/sns2.png" alt="sns">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/sns3.png" alt="sns">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 팝업 -->
+    <div class="pop">
+        <h2>
+            『장사의 신동 X 설화수』 <br> 이벤트 당첨자 <br>
+        </h2>
+        <p>
+            안녕하세요. JUST 쇼핑몰입니다. <br><br>
+
+            5월 17일 진행된 '장사의 신동 설화수편' 구매이벤트에 참여해주신 여러분의 관심과 성원에 감사드리며, 당첨자를 아래와 같이 안내드립니다 <br>
+            각 상품 별 당첨자에게는 별도 안내를 통해 경품이 지급될 예정입니다. <br>
+
+            ■ 당첨 경품 : 윤조에센스 90ml(5명) , 자음생 앰플 20g(2명) , 자음생 에센스 30ml(3명) <br>
+            ■ 당첨 대상 : 장사의 신동 설화수 라이브방송 구매 고객 대상 추첨 <br>
+            ■ 지급 방식 : 6/7~6/11 이전 별도 개별 안내 후 지급 <br>
+        </p>
+        <div class="bbx">
+            <button onclick="pop('none')">
+                닫기
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

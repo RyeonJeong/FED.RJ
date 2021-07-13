@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+            meta요소 : 문서요약 정보
+            - charset 속성 : 페이지 인코딩형식 지정
+            - "UTF-8" 2byte 문자까지 처리해주는 형식
+            -> 한글이 깨지지 않게 반드시 써야함!
+         -->
+    <title>네이버 요약뉴스 -정치뉴스</title>
+    <!-- 
+             title 요소 : 브라우저 탭메뉴 제목출력
+          -->
+    <style>
+        /* 영역박스 디자인 */
+        body>div {
+            width: 727px;
+            margin: 0 auto;
+            /* 마진 위 아래 0, 
+                  양쪽 자동(중앙위치) */
+        }
+    </style>
+    <!-- 
+              style 요소: 스타일 시트를 인터널 방식으로 삽입하는 코딩구역
+              - 장점: 한번에 스타일을 컨트롤 할 수 있다!
+              - 코딩형식:
+                    선택요소{
+                        속성명: 값;
+                    }
+           -->
+</head>
+
+<body>
+    <!-- 1. 상단부분 -->
+    <div>
+        <!-- 1-1. 타이틀 -->
+        <h1>네이버 요약 뉴스 - 정치뉴스</h1>
+        <!-- 
+                h1~h6 요소: 제목영역
+                큰 제목은 h1 부터 점점 작아짐
+                (heading)
+             -->
+        <!-- 1-2. 로고 및 링크메뉴 -->
+        <h2>
+            <a href="index.html">
+                <img src="images/naver.png" alt="네이버로고" style="width:35px;vertical-align: middle;">
+            </a>
+            <a href="sub01.html">정치</a> |
+            <a href="sub02.html">경제</a> |
+            <a href="sub03.html">사회</a> |
+            <a href="sub04.html">IT/과학</a> |
+            <a href="sub05.html">TV/연예</a>
+            <!-- 
+                    a 요소: 페이지이동
+                    - href 속성: 이동페이지 정보
+                    - target 속성: 창옵션(_blank 새창)
+
+                    img 요소: 이미지 표시 
+                    - src 속성: 이미지 경로 
+                    (source)
+                    - alt 속성: 이미지 설명(웹접근성!)
+                    (alternative text: 대체텍스트)
+
+                    style 공통속성(어느요소나 사용가능)
+                    - 스타일시트 설정을 인라인으로 셋팅함
+                    - 요소별 개별사용 가능
+                    - 값 형식
+                        속성명: 값;
+                 -->
+        </h2>
+        <!-- 1-3. 구분선 -->
+        <hr>
+    </div>
+
+    <!-- 
+            div 요소: 내용을 구분해주는 영역박스
+            (divide / division)
+         -->
+
+    <!-- 2. 내용부분 -->
+    <div>
+        <h2>'역대 최고치' 사전투표율에 여야 아전인수 해석</h2>
+
+        <!-- 
+            <b> - 굵은 텍스트
+            <strong> -중요한 텍스트
+            -> b 요소와 strong 요소의 차이는?
+                -> 의미에 차이가 있다!
+                -> strong은 중요한 데이터의 뜻
+                -> 이렇게 유의미한 태그요소를 시멘틱 요소(Sementic element)라고 한다!
+
+            <i> -기울임 꼴 텍스트(italic)
+            <em> -강조된 텍스트(emphasize)
+                -> i 와 em 요소는 이탤릭 디자인으로 같지만 의미가 다르다
+                -> em 에만 "강조"의 의미가 있다!
+
+            <mark> -표시된 텍스트(눈에 띄게!)
+            <small> -더 작은 텍스트
+                (14px - 기본글자크기는 16px)
+            <del> -삭제 된 텍스트(지운표시)
+                -delete
+            <ins> -삽입 된 텍스트(밑줄표시)
+                -insert
+            <sub> -아래 첨자 텍스트
+            <sup> -위첨자 텍스트 
+
+             [인용구에 사용하는 태그]
+               <q> - 쌍따옴표로 표시되는 인용구
+                  - 왜쓰냐? 인용구를 별도로 구별해야할때 사용!
+             <abbr> - 줄임말의 원래 뜻을 title 속성으로 표시해줌
+                  - title은 abbr요소의 필수 속성임!
+                  - 점선 밑줄이 기본 디자인
+                 - title 속성은 어느요소나 사용가능함 (툴팁설명보이기)
+              <cite> - 시, 문학, 작품 등의 제목, 작품명을 인용
+                  - 이탤릭체가 기본 디자인
+               <bdo> - 문자출력 순서를 반대로 바꾸는 요소
+                    - dir 속성 : 값을 "rtl" 로 해야 오른쪽부터 출력됨!
+                    - 기본값은 "ltr" (쓸필요없음!)
+                    - 언제씀? 아랍어와 같이 반대로 출력이 필요한 경우
+                <blockquote> - 인용구를 블록으로 싸주는 요소
+                    - 주의사항 : p 태그 안에 넣지마라! 블록이니까!
+             -->
+
+        <!-- 
+    p요소 : 문단을 나타내는 영역
+    - 주의사항 : div같은 블록요소를 쓸 수 없다!
+ -->
+        <p><i>4.7 재·보궐선거 사전투표일이 역대 최고치를 기록한 가운데</i> 여야가 각각 승리를 자신하는 해석을 내놓았다.</p>
+
+        <h3>다음은 wwf 웹 사이트의 인용문입니다.</h3>
+
+        <blockquote>50 년 동안 WWF는 자연의 미래를 보호 해 왔습니다. 세계 최고의 보존 조직인 WWF는 100 개국에서 활동하고 있으며 미국 내 120 만 회원, 전 세계적으로 500 만에
+            가까운 회원이 지원합니다.</blockquote>
+
+        <p>
+            신영대 더불어민주당 대변인은 지난 3일 논평을 내고 "역대 재보선 최고치를 기록한 사전투표율은 거짓말과 의혹으로 얼룩진 국민의 힘 후보를 심판하고 <b>박영선, 김영춘</b> 후보를 지키기 위한
+            투표열기"라고
+            말했다.
+        </p>
+
+        <p>
+            같은 날 박기녕 국민의 힘 중앙선대위 부대변인은 <strong>"높은 사전투표율은 이번 선거가 문재인 정권의 오만과 무능, 박원순·오거돈 전 시장의 성비위와 이를 옹호하는 민주당 인사들을
+                심판하는 선거임을 <ins>명백히</ins> 증명해주는 듯 하다"</strong>"고 말했다.
+        </p>
+
+        <p>
+            중앙선거관리위원회에 따르면 지난 2일과 3일 이틀간에 걸쳐 진행된 4·7 재·보궐선거 사전투표에서 전국 1216만명의 유권자 중 <em>20.54%</em>인 249만명이 사전투표에 참여했다.
+            서울시장
+            선거에서는 전체
+            유권자의 <em>21.95%</em>에 해당하는 184만명의 유권자가 투표권을 행사했다. 부산시장 선거에는 54만7499명이 투표해 <em>18.65%</em>의 투표율을 기록했다.
+        </p>
+
+        <p>
+            두 후보 모두 평소에 뭉크의 <cite>절규</cite>라는 작품을 좋아한다고 한다.<br>
+            이 글자 읽어보세요!<br>
+            <bdo dir="rtl">우리나라대한민국</bdo>
+        </p>
+
+        <p>
+            이번 재·보궐선거<sub>補闕選擧</sub>의 사전투표율은 사전투표가 도입된 2012년 이후 실시된 재보선 중 <mark>역대 최고치</mark>다. 이전 기록은 경북 청송과 예천 두 곳의
+            기초의원을 뽑았던 2014년 10·29
+            재·보궐선거(19.41%)였다.
+        </p>
+
+        <p>신 대변인은 "박영선 후보의 서울시 대전환과 김영춘 후보의 가덕신공항 추진으로 시민들의 기대에 부흥하겠다"며 "본투표일에도 소중한 한 표를 부탁드린다"고 덧붙였다.</p>
+
+        <p><small>전범진 기자 forward@hankyung.com</small></p>
+
+        <!-- 이미지박스 -->
+
+        <figure>
+            <img src="images/정치뉴스1.jpg" alt="기사사진">
+            <!-- 이미지설명 -->
+            <figcaption>
+                <small>문재인 대통령과 부인 김정숙 여사가 2일 오전 서울 종로구 삼청동 주민센터를 찾아 2021재·보궐선거 사전투표를 하고 있다. 연합뉴스</small>
+            </figcaption>
+        </figure>
+        <!-- 
+            figure요소 : div의 형제요소, 이미지박스
+            - 의미적으로 표나 그림, 이미지를 담는다
+            - 하위요소 : figcaption요소 - 그림설명
+         -->
+
+        <a href="https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=100&oid=015&aid=0004524283"
+            target="_blank">원본뉴스</a>
+
+        <hr>
+        <h3>정치뉴스</h3>
+        <ol>
+            <li>
+                <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=100&amp;oid=008&amp;aid=0004569699"
+                    class="nclicks(rig.secteco)" target="_blank" title="대립하던 김종인·안철수, '오세훈 시장' 탄생에 웃으며 손 잡았다">대립하던 김종인·안철수, '오세훈 시장' 탄생에 웃으며 손 잡았다
+                </a>
+            </li>
+
+            <li>
+                <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=102&amp;oid=009&amp;aid=0004776302"
+                    class="nclicks(rig.secteco)" target="_blank" title="김어준 "뉴스공장 폐지 오세훈 덕에 어렵다"">김어준 "뉴스공장 폐지 오세훈 덕에 어렵다" </a>
+
+            </li>
+
+            <li>
+                <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=101&amp;oid=018&amp;aid=0004895486"
+                    class="nclicks(rig.secteco)" target="_blank" title="글로벌 최저 법인세율 논의 '급물살'…美제안에 유럽·IMF 지지 표명">글로벌 최저 법인세율 논의 '급물살'…美제안에 유럽·IMF 지지 표명
+
+                </a>
+            </li>
+        </ol>
+
+        <h3>주요뉴스</h3>
+        <ul>
+            <li>
+                <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=101&amp;oid=030&amp;aid=0002937965"
+                    class="nclicks(rig.secteco)" target="_balnk" title="롯데케미칼, 이산화탄소 포집·활용(CCU) '기술자립' 이끈다">롯데케미칼, 이산화탄소 포집·활용(CCU) '기술자립' 이끈다
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=101&amp;oid=001&amp;aid=0012313588"
+                    class="nclicks(rig.secteco)" target="_blank" title="시동 걸린 공공 주도 서울 도심 개발…관건은 주민 동의">시동 걸린 공공 주도 서울 도심 개발…관건은 주민 동의
+
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=101&amp;oid=029&amp;aid=0002665714"
+                    class="nclicks(rig.secteco)" target="_blank" title="[1보]LG전자, 1분기 영업익 1.5조…분기 사상 최대">[1보]LG전자, 1분기 영업익 1.5조…분기 사상 최대
+
+                </a>
+            </li>
+        </ul>
+        <!-- 
+            ol 요소 : 순서있는 리스트(ordered list)
+            - li 요소 : 필수 하위요소
+            - 중요사항 : ol 아래는 li만 올 수 있다.
+                        ol 아래는 반드시 1개이상의 li가 있어야함
+            
+            ul 요소 : 순서없는 리스트(unordered list)
+            - li 요소 : 필수 하위요소
+
+            ol, ul, li는 모두 블록요소임!
+         -->
+         <h3>분야별뉴스</h3>
+         <dl>
+             <dt>정치</dt>
+             <dd>
+                 <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=100&amp;oid=032&amp;aid=0003068129" target="_blank" title="선거 잘해놓고… 개표상황실서 '폭력 사태' 발생한 국민의힘">선거 잘해놓고… 개표상황실서 '폭력 사태' 발생...</a>
+             </dd>
+             <dd>
+                 <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=100&amp;oid=008&amp;aid=0004569164" target="_balnk" title="4·7선거 결과와 맞물린 개각...마지막 총리는 '통합형'">4·7선거 결과와 맞물린 개각...마지막 총리는 '통합형'</a>
+             </dd>
+
+             <dt>경제</dt>
+             <dd>
+                 <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=100&amp;oid=011&amp;aid=0003894242" target="_blank" title="허경영, 7번 출마해 3등···‘정치 염증’ 투영됐나">허경영, 7번 출마해 3등···‘정치 염증’ ...</a>
+             </dd>
+             <dd>
+                 <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=100&amp;oid=214&amp;aid=0001111106" target="_blank" title="퇴임하는 김종인 자연인으로 돌아간다…국민의힘 더 변화해야">퇴임하는 김종인 "자연인으로 돌아간다…국민의힘 더 변화해야"</a>
+             </dd>
+
+             <dt>사회</dt>
+             <dd>
+                 <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=102&amp;oid=056&amp;aid=0011021432" target="_blank" title="‘정인이 사건’ 등 아동학대 처벌 강화 촉구">‘정인이 사건’ 등 아동학대 처벌 강화 촉구</a>
+             </dd>
+             <dd>
+                 <a href="http://news.naver.com/main/read.nhn?mode=LSD&amp;mid=shm&amp;sid1=101&amp;oid=018&amp;aid=0004896339" target="_blank" title="HMM, 상반기 대졸 신입자원 공채…25일까지 접수">HMM, 상반기 대졸 신입자원 공채…25일까지 접수</a>
+             </dd>
+         </dl>
+         <!-- 
+             dl 요소: 용어설명 리스트
+                        (description list)
+                - dt 요소: 용어 
+                        (defines term)
+                - dd 요소: 용어설명 
+                        (defines description)
+                - 유의사항: dt, dd는 반드시 1번이상 사용해야함!
+          -->
+
+    </div>
+
+
+    <!-- 3. 하단부분 -->
+    <div>
+        <hr>
+        <address>
+            서울시 강동구 천호동 1010-88 동원B
+            <br>
+            대표: 최만만 <br>
+            전화번호: 02-333-7777
+        </address>
+        <!-- 
+                address 요소: 주소영역
+                br 요소: 줄바꿈(개행)
+                (break)
+             -->
+    </div>
+</body>
+
+</html>

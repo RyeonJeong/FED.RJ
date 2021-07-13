@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>자바스크립트 기본</title>
+        <!-- 자바스크립트 코딩구역 - 인터널방식 -->
+        <script>
+
+            //함수/////////////////
+            function gogo(){
+                // 1. 함수호출확인
+                // alert("나불렀수?");
+
+                // 2. 변경대상 선정
+                
+                // html 변경하기
+                // 2-1. #name 요소 내부에 이미지태그 넣기
+                document
+                // 전체 html문서 객체를 로딩함
+                // DOM(Document Object Model)을 통하여 각 요소에 접근
+                .getElementById("name")
+                // JS에서 점(.)은 하위객체나 요소로 접근함을 말한다!    
+                // getElementById(아이디명)
+                // get 가져와라
+                // Element 요소를
+                // By ~의하여
+                // Id 아이디요소를
+                .innerHTML = '<img src="images/kim.png" alt="김비서가 왜그럴까?">';
+                // innerHTML 선택요소 내부에 HTML태그넣는 속성
+                // 이퀄(=)의 의미는 오른쪽 값을 왼쪽에 할당(넣는다!)
+
+
+                
+                // CSS 변경하기
+                // 대상선정 : .pbox
+                // 변수에 선택요소를 넣고 재사용하자!
+                var tg = document.getElementsByClassName("pbox").item(0)
+                
+                // 선택요소가 tg라는 변수에 들어가 있으므로 변수명으로 호출하면 된다
+                // 2-2. 글자색 변경하기
+                tg.style.color="lime";
+
+                // 2-3. 글자크기 변경하기(font -size:50px)
+                tg.style.fontSize="50px";
+
+                // 2-4. 트랜지션주기(2초)
+                tg.style.transition= "all 2s";
+
+                // 2-5. 배경이미지 넣기
+                tg.style.background = "url(images/kimbs.jpg) no-repeat top/cover";
+
+                // 2-6. 원모양 만들기
+                tg.style.borderRadius = "50%";
+
+                // 2-7. 글자중앙정령
+                tg.style.textAlign = "center";
+
+                // 2-8. 줄간격 변경
+                tg.style.lineHeight = "300px";
+
+                // 2-9. 왼쪽마진 변경
+                tg.style.marginTop = "500px";
+
+                // 2-10. 회전,축소
+                tg.style.transform = "rotate(720deg) scale(.6)";
+
+                 //2-11. 배경색 변경하기
+                // body 특별히 취급하여 document바로 아래 사용한다!
+                // document.body
+                document.body.style.backgroundColor = "gold";
+                document.body.style.transition = "all 5s";
+            }
+            
+
+        </script>
+        <style>
+            .pbox{
+                font-size: 24px;
+                width: 700px;
+                height: 600px;
+                border: 4px solid purple;
+                color: yellow;
+                text-shadow: 1px 1px 1px #000;
+                margin: 0 auto;
+                /* background: url(images/kimbs.jpg) no-repeat top/cover; */
+            }
+        </style>
+
+    </head>
+    <body>
+        <p class="pbox" onclick="gogo()" title="이 박스를 클릭하세요!">
+            나는 요즘 매일 생각한다! <br>
+            도대체 <span id="name"></span>
+        </p>
+        <!-- 
+            onclick=""
+            이벤트 속성의 값 내부는 JS코딩 구역이다!
+            - JS문법을 사용해야 한다
+            - 함수 호출시에는 함수명 뒤에 반드시 ()가 있어야 한다!
+         -->
+    </body>
+</html>

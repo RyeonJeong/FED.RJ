@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    float: left;
+}
+body{
+    background-color: #fff;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+body *{
+    outline: 2px dotted red;
+}
+.prt{
+    position: relative;
+}
+
+/* 공통박스 */
+.ibx{
+    width: 1200px;
+    margin: 0 auto;
+}
+.pbx{
+    float: left;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* a */
+.top{
+    height: 100px;
+}
+.top1{
+    width: 200px;
+}
+.logo img{
+    margin-top: 15px;
+    margin-left: -7px;
+}
+.top2{
+    width: 1000px;
+}
+.gnb{
+    position: absolute;
+    width: 600px;
+    height: 40px;
+    top: 30px;
+    right: 20px;
+    background-color: rgb(226, 225, 225);
+}
+.gnb li{
+    width: 150px;
+}
+.tit{
+    font-size: 18px;
+    font-weight: bold;
+}
+.gnb li a{
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(226, 225, 225);
+}
+
+/* b */
+.ban{
+    height: 300px;
+}
+/* c */
+.cont{
+    height: 200px;
+}
+.cont1{
+    width: 500px;
+}
+.cont2{
+    width: 350px;
+}
+.cont3{
+    width: 350px;
+}
+/* d */
+.info{
+    height: 100px;
+}
+.info1{
+    width: 200px;
+}
+.info2{
+    width: 1000px;
+}
+.pbxIn{
+    height: 50%;
+}

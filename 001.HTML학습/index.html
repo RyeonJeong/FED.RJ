@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹퍼블리셔과정 - 최련정</title>
+    <style>
+        /* 웹폰트 CDN */
+        @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Serif+KR:wght@600;900&display=swap');
+
+        /* 
+    웹폰트 설정
+    font-family: 'Jua', sans-serif;
+    font-family: 'Noto Serif KR', serif;
+     */
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(intro_img/daffodils-6292667_1920.jpg) no-repeat fixed center/cover;
+        }
+
+        body {
+        background-attachment: fixed;
+        background-size: cover;
+        margin-top: 100px;
+        }
+
+        /* 전체부모박스 */
+        .wrap {
+            width: 1200px;
+            border: 2px solid #ccc;
+            /* 블록박스 가로중앙정렬 - 마영오씨! */
+            margin: 0 auto;
+            /* 마진: 위아래0 양쪽auto */
+            padding: 20px;
+            /* float으로 인한 높이값 상실처리 */
+            overflow: hidden;
+            box-sizing: border-box;
+            /* 크기유지박스 */
+            background-color: rgba(195, 226, 240, 0.329);
+            min-height: 700px;
+            /* 최소높이값(많아지면 늘어남!) */
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        /* 타이틀 */
+        #tit {
+            text-align: center;
+            font-family: 'Noto Serif KR', serif;
+            font-size: 46px;
+            color: white;
+            text-shadow: 2px 2px grey;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        /* 프로젝트 박스 공통 */
+        .pjbx {
+            width: 45%;
+            float: left;
+            margin-left: 49px;
+            padding: 20px;
+            /* 
+                50%로 옆으로 흐르면 2개의 블록박스가 나란히 오는데 이때 패딩을 주면 박스가 커지므로 하나가 아래로 내려간다(50%넘으므르!)
+                이때 해결책!!!
+                보더나 패딩이 지정한 사이즈 내부로 포함되게 하는 속성이 있다
+                box-sizing:border-box
+             */
+            box-sizing: border-box;
+            /* 기본값은 content-box(커지는박스) */
+        }
+
+        /* 프로젝트 영역 타이틀 */
+        .pjbx h2 {
+            font-family: 'Jua', sans-serif;
+            font-size: 43px;
+            color: #443c3cfa;
+            text-align: center;
+            /* border: 2px double #e8e7ed; */
+            border-radius: 20px;
+            line-height: 30px;
+        }
+        
+
+        /* 각 박스의 ol리스트 */
+        .pjbx>ol {
+            font-size: 24px;
+            line-height: 40px;
+
+            /* 기본 ol셋팅 초기화 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            /* 맨앞 표시자 없앰 */
+        }
+
+        /* 각 박스의 a링크 */
+        .pjbx a {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 27px;
+            line-height: 53px;
+            color: whitesmoke;
+            text-shadow: 2px 2px gray;
+            text-decoration: none;
+        }
+
+        /* 오버시 */
+        .pjbx a:hover {
+            color: orange;
+            text-shadow: 1px 1px gray;
+
+            transition: .2s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 id="tit">
+            웹퍼블리셔_최련정
+        </h1>
+
+
+
+        <!-- 1. 공통 프로젝트 박스 -->
+        <div class="pjbx cpj">
+            <h2>공통 프로젝트</h2>
+            <ol>
+                <li>
+                    <!-- 1. 상대경로(2가지) -->
+                    <a href="001.Info_PJ/" target="_blank">01. 네이버 요약 뉴스</a>
+                    <!-- <a href="./001.Info_PJ/"
+                        target="_blank"> 네이버 요약 뉴스</a> -->
+                    <!-- 2. 절대경로 -->
+                    <!-- <a href="http://fuswjd55.dothome.co.kr/001.Info_PJ/"
+                        target="_blank"> 네이버 요약 뉴스</a> -->
+                    <!-- 3.절대상대경로 -->
+                    <!-- <a href="/001.Info_PJ/" target="_blank"> 네이버 요약 뉴스</a> -->
+
+                </li>
+
+                <li>
+                    <a href="./002.drama_pj/Dokkaebi.html" target="_blank">02. 도깨비 캐릭터 소개 사이트</a>
+                </li>
+
+                <li>
+                    <a href="./003.Robot_PJ/robot.html" target="_blank">03. 로봇PJ</a>
+                </li>
+                <li>
+                    <a href="./004.CGV_PJ/003.site/intro.html" target="_blank">04. CGV 영화소개</a>
+                </li>
+                <li>
+                    <a href="./005.Transform_PJ/index.html" target="_blank">05. 구르미그린달빛</a>
+                </li>
+                <li>
+                    <a href="./005.Transform_PJ/sbuck.html" target="_blank">06. Starbucks</a>
+                </li>
+                <li>
+                    <a href="./003.Robot_PJ/avengers.html" target="_blank">07. Avengers</a>
+                </li>
+                <li>
+                    <a href="./003.Robot_PJ/fixedBG.html" target="_blank">08. Fixed BG</a>
+                </li>
+                <li>
+                    <a href="./007.WebDiary_PJ/index.html" target="_blank">09. Web Diary</a>
+                </li>
+                <li>
+                    <a href="./020.Simpson/Simpson.html" target="_blank">10. 심슨네가족</a>
+                </li>
+                <li>
+                    <a href="./020.Simpson/OpenDoor.html" target="_blank">11. 엘사창문</a>
+                </li>
+                <li>
+                    <a href="./009.Unpretty_PJ/index.html" target="_blank">12. Unpretty</a>
+                </li>
+                <li>
+                    <a href="./008.SeoulLand_PJ/asset/index.html" target="_blank">13. SeoulLand</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">14. SolarSystem</a>
+                </li>
+                <li>
+                    <a href="./022.CubeTrip/index.html" target="_blank">15. 세계도시</a>
+                </li>
+            </ol>
+        </div>
+
+
+        <!-- 2. 개인 프로젝트 박스 -->
+        <div class="pjbx mpj">
+            <h2>개인 프로젝트</h2>
+            <ol>
+                <li>
+                    <a href="999.mission/001.도깨비응용_최련정/lovefire.html" target="_blank">01. 도깨비응용_사랑의불시착</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">02. cgv응용예시_M-net</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+
+</html>
