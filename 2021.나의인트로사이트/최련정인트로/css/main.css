@@ -12,8 +12,7 @@
  */
 
 
-
-/* SEC 1. */
+/* SEC 1.///////////////////////////////////////////////// */
 
 #pg1>h1 {
   position: absolute;
@@ -36,10 +35,8 @@
   color: #797979;
 }
 
+/* SEC 2. ///////////////////////////////////////////////////*/
 
-
-
-/* SEC 2. */
 
 /* 오른쪽 설명글 */
 #pg2>h1 {
@@ -87,3 +84,43 @@
 }
 
 /* background-color: wheat; */
+
+
+/* SEC 3.////////////////////////////////////////////// */
+
+/* 왼쪽 스킬박스 */
+.sklbx{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.sklbx li{
+  line-height: 8.5vh;
+  float: none;
+}
+.sklbx a{
+  font-family: 'Encode Sans SC', sans-serif;
+  font-size: 2vw;
+  color: #473e3e;
+}
+
+/* 오른쪽 그래프박스 */
+.gpbox{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  outline: 2px solid red;
+  width: 1000px;
+}
+/* 그래프 공통 */
+.gpbox .pbox{
+  height: 100px;
+}
+
+
+
+
+
+/* SEC 4.////////////////////////////////////////////// */
+/* SEC 5.////////////////////////////////////////////// */
+/* SEC 6.////////////////////////////////////////////// */
