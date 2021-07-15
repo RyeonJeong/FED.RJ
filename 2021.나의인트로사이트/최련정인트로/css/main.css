@@ -4,11 +4,18 @@
 @import url(./common.css);
 
 /* 웹폰트 CDN */
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Nanum+Gothic+Coding&family=Roboto+Mono:wght@300&family=Sunflower:wght@500&display=swap');
 /* 
  /* 웹폰트설정(main) 
- font-family: 'Encode Sans SC', sans-serif;
- font-family: 'Roboto Mono', monospace;
+ font-family: 'Encode Sans SC', sans-serif; (타이틀 영문)
+ font-family: 'Roboto Mono', monospace; (내용 영문)
+
+ */
+ /*  웹폰트설정
+ font-family: 'Encode Sans SC', sans-serif; (타이틀 영문)
+ font-family: 'Roboto Mono', monospace;(내용 영문)
+ font-family: 'Sunflower', sans-serif;(타이틀 한글)
+ font-family: 'Nanum Gothic Coding', monospace;(내용 한글)
  */
 
 
@@ -64,8 +71,10 @@
 }
 
 .rbx a {
-  color: #333;
-  font-size: 1vw;
+  font-family: 'Nanum Gothic Coding', monospace;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3vw;
   line-height: 4vh;
 }
 
@@ -77,6 +86,7 @@
 /* 왼쪽사진 */
 .lbx img {
   position: absolute;
+  border-radius: 20%;
   top: 33%;
   left: 22%;
   width: 250px;
@@ -92,7 +102,7 @@
 .sklbx{
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 15%;
 }
 .sklbx li{
   line-height: 8.5vh;
@@ -101,21 +111,75 @@
 .sklbx a{
   font-family: 'Encode Sans SC', sans-serif;
   font-size: 2vw;
-  color: #473e3e;
+  font-weight: bold;
+  color: #fff;
+}
+.sklbx li:nth-child(1) a{
+  text-shadow: 2px 2px  rgb(207, 109, 207);
+}
+.sklbx li:nth-child(2) a{
+  text-shadow: 2px 2px  rgb(255, 182, 72);
+}
+.sklbx li:nth-child(3) a{
+  text-shadow: 2px 2px  rgb(101, 101, 255);
+}
+.sklbx li:nth-child(4) a{
+  text-shadow: 2px 2px  rgb(255, 255, 144);
+}
+.sklbx li:nth-child(5) a{
+  text-shadow: 2px 2px  rgb(255, 71, 71);
+}
+.sklbx li:nth-child(6) a{
+  text-shadow: 2px 2px  rgb(190, 255, 93);
 }
 
 /* 오른쪽 그래프박스 */
 .gpbox{
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 28%;
+  left: 28%;
   outline: 2px solid red;
-  width: 1000px;
+  width: 60%;
 }
 /* 그래프 공통 */
 .gpbox .pbox{
-  height: 100px;
+  height: 6.2vh;
+  margin: 3vh;
 }
+/* 그래프 막대 숫자공통 */
+.pbox a{
+  font-size: 4vh;
+  line-height: 6.2vh;
+  margin-left: 20%;
+  font-family: 'Sunflower', sans-serif;
+  text-shadow: 1px 2px #333;
+}
+/* 그래프 막대개별 */
+.pbx1{
+  width: 90%;
+  background-color: rgb(207, 109, 207);
+}
+.pbx2{
+  width: 80%;
+  background-color: rgb(255, 182, 72);
+}
+.pbx3{
+  width: 85%;
+  background-color: rgb(101, 101, 255);
+}
+.pbx4{
+  width: 90%;
+  background-color: rgb(255, 255, 144);
+}
+.pbx5{
+  width: 65%;
+  background-color: rgb(255, 71, 71);
+}
+.pbx6{
+  width: 75%;
+  background-color: rgb(190, 255, 93);
+}
+
 
 
 
