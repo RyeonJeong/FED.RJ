@@ -106,7 +106,7 @@
 }
 .sklbx li{
   line-height: 8.5vh;
-  float: none;
+  float: left;
 }
 .sklbx a{
   font-family: 'Encode Sans SC', sans-serif;
