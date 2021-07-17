@@ -45,11 +45,11 @@
 /* SEC 2. ///////////////////////////////////////////////////*/
 
 
-/* 오른쪽 설명글 */
+/* 왼쪽 설명글 */
 #pg2>h1 {
   position: absolute;
   top: 22%;
-  right: 15%;
+  right: 26%;
   font-family: 'Encode Sans SC', sans-serif;
   font-size: 2.8vw;
 }
@@ -83,14 +83,13 @@
   margin-left: 14%;
 }
 
-/* 왼쪽사진 */
+/* 오른쪽사진 */
 .lbx img {
   position: absolute;
   border-radius: 20%;
-  top: 33%;
-  left: 22%;
+  top: 16%;
+  right: 7%;
   width: 250px;
-  border: 10px double gray;
 }
 
 /* background-color: wheat; */
@@ -98,88 +97,156 @@
 
 /* SEC 3.////////////////////////////////////////////// */
 
-/* 왼쪽 스킬박스 */
+
+/* 스킬박스 배경 */
 .sklbx{
-  position: absolute;
-  top: 30%;
-  left: 15%;
-}
-.sklbx li{
-  line-height: 8.5vh;
-  float: left;
-}
-.sklbx a{
-  font-family: 'Encode Sans SC', sans-serif;
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fff;
-}
-.sklbx li:nth-child(1) a{
-  text-shadow: 2px 2px  rgb(207, 109, 207);
-}
-.sklbx li:nth-child(2) a{
-  text-shadow: 2px 2px  rgb(255, 182, 72);
-}
-.sklbx li:nth-child(3) a{
-  text-shadow: 2px 2px  rgb(101, 101, 255);
-}
-.sklbx li:nth-child(4) a{
-  text-shadow: 2px 2px  rgb(255, 255, 144);
-}
-.sklbx li:nth-child(5) a{
-  text-shadow: 2px 2px  rgb(255, 71, 71);
-}
-.sklbx li:nth-child(6) a{
-  text-shadow: 2px 2px  rgb(190, 255, 93);
+  height: 100%;
 }
 
-/* 오른쪽 그래프박스 */
-.gpbox{
+.sklbx>ul{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* 파티션 li공통 */
+.sklbx>ul>li{
+  position: relative;
+      /* 부모자격 */
+  flex: 1;
+  text-align: center;
+
+  transition: all .4s ease-in-out;
+  
+}
+
+/* li에 마우스 오버시 커짐 */
+.sklbx>ul>li:hover {
+  flex: 1.4;
+}
+
+/* li에 마우스 오버시 로고이미지 위치 아래로 */
+.sklbx>ul>li:hover img{
+  top: 88%;
+  width: 30%;
+}
+/* li에 마우스 오버시 pbox의 a 값 보이기 */
+.sklbx>ul>li:hover .pbox a{
+  display: block;
+}
+
+
+
+/* 파티션 li에 반투명 검은색 커버 만들기 */
+.sklbx>ul>li::before {
+  content: '';
   position: absolute;
-  top: 28%;
-  left: 28%;
-  outline: 2px solid red;
-  width: 60%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: .5;
+  transition: opacity .6s;
 }
-/* 그래프 공통 */
-.gpbox .pbox{
-  height: 6.2vh;
-  margin: 3vh;
+
+/* li에 마우스 오버시 반투명 커버 투명도 0 */
+.sklbx>ul>li:hover::before {
+  opacity: 0;
 }
+
+/* 각파티션 박스 배경 */
+.sklbx>ul>li:nth-child(1) {
+  background-color: rgb(207, 109, 207);
+}
+.sklbx>ul>li:nth-child(2) {
+  background-color: rgb(255, 182, 72);
+}
+.sklbx>ul>li:nth-child(3) {
+  background-color: rgb(255, 255, 144);
+}
+.sklbx>ul>li:nth-child(4) {
+  background-color: rgb(101, 101, 255);
+}
+.sklbx>ul>li:nth-child(5) {
+  background-color: rgb(255, 196, 157);
+}
+.sklbx>ul>li:nth-child(6) {
+  background-color: rgb(190, 255, 93);
+}
+/* 파티션 박스 안 이미지 위치크기조정 */
+.sklbx>ul>li>img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 부모는? 싸고있는 li */
+  transform: translate(-50%, -50%);
+  /* 정중앙이동 */
+  width: 50%;
+  max-width: 250px;
+  /* 최대크기지정 */
+
+  /* 트랜지션 */
+  /* transition: .4s; */
+
+}
+
 /* 그래프 막대 숫자공통 */
 .pbox a{
   font-size: 4vh;
-  line-height: 6.2vh;
-  margin-left: 20%;
+  margin-left: 8%;
   font-family: 'Sunflower', sans-serif;
   text-shadow: 1px 2px #333;
-}
-/* 그래프 막대개별 */
-.pbx1{
-  width: 90%;
-  background-color: rgb(207, 109, 207);
-}
-.pbx2{
-  width: 80%;
-  background-color: rgb(255, 182, 72);
-}
-.pbx3{
-  width: 85%;
-  background-color: rgb(101, 101, 255);
-}
-.pbx4{
-  width: 90%;
-  background-color: rgb(255, 255, 144);
-}
-.pbx5{
-  width: 65%;
-  background-color: rgb(255, 71, 71);
-}
-.pbx6{
-  width: 75%;
-  background-color: rgb(190, 255, 93);
+  display: none;
 }
 
+/* 각 %값 그래프막대공통 */
+.skill .pbox{
+  position: absolute;
+  bottom: 20%;
+  left: 37%;
+  width: 25%;
+  height: 0;
+  background-color: #ff4655;
+  
+
+  
+}
+.sklbx>ul>li:hover .skill>.pbox{
+  display: block;
+}
+
+.sklbx>ul>li:hover .pbx1{ /* 높이값-30%(바닥에서 올린값) */
+  height: 60%;
+  transition: 1.5s;
+  border: 2px solid darkred;
+}
+.sklbx>ul>li:hover .pbx2{
+  height: 50%;
+  transition: 1.5s;
+  border: 2px solid darkred;
+}
+.sklbx>ul>li:hover .pbx3{
+  height: 55%;
+  transition: 1.5s;
+  border: 2px solid darkred;
+}
+.sklbx>ul>li:hover .pbx4{
+  height: 60%;
+  transition: 1.5s;
+  border: 2px solid darkred;
+}
+.sklbx>ul>li:hover .pbx5{
+  height: 35%;
+  transition: 1.5s;
+  border: 2px solid darkred;
+}
+.sklbx>ul>li:hover .pbx6{
+  height: 45%;
+  transition: 1.5s;
+  border: 2px solid darkred;
+}
 
 
 
