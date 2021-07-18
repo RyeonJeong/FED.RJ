@@ -143,15 +143,12 @@
 
  /* 2. 페이지영역 */
  /* 개별 페이지 셋팅 */
- #pg1 {
-     background: url(../images/sec1.png) no-repeat center/cover;
- }
- #pg2 #myvid1{
-     top: 0;
-     left: 0;
+ #pg1 #myvid {
      width: 100%;
      height: 100%;
-     background-color: #1c191b;
+     object-fit: cover;
+ }
+ #pg2 {
  }
 
  #pg3 {
@@ -160,7 +157,9 @@
      /* background-color: 위에 투명화면 덮기; */
  }
  #pg4 {
-     background: url(../images/mainbg.jpg) no-repeat;
+     background-color: whitesmoke;
+     width: 100%;
+     height: 100%;
  }
  #pg5 {
      background: url(../images/mainbg.jpg) no-repeat;

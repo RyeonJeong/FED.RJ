@@ -11,7 +11,7 @@
  font-family: 'Roboto Mono', monospace; (내용 영문)
 
  */
- /*  웹폰트설정
+/*  웹폰트설정
  font-family: 'Encode Sans SC', sans-serif; (타이틀 영문)
  font-family: 'Roboto Mono', monospace;(내용 영문)
  font-family: 'Sunflower', sans-serif;(타이틀 한글)
@@ -39,71 +39,168 @@
   top: 38%;
 
   font-family: 'Roboto Mono', monospace;
-  color: #797979;
+  color: #fff;
 }
 
 /* SEC 2. ///////////////////////////////////////////////////*/
 
-
-/* 왼쪽 설명글 */
-#pg2>h1 {
+.probox {
   position: absolute;
-  top: 22%;
-  right: 26%;
+  top: 52%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 82vw;
+  height: 75vh;
+  /* outline: 2px dotted red; */
+}
+
+/* 왼쪽박스 */
+.prolbx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* outline: 2px dotted red; */
+}
+
+/* mbti 박스 */
+.mbti {
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  outline: 3px dotted blue;
+}
+
+.mbti>h1 {
+  font-size: 40px;
+  font-family: Sunflower, sans-serif;
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
+.mbti>h2 {
+  font-size: 30px;
+  padding-left: 25px;
+  padding-top: 15px;
   font-family: 'Encode Sans SC', sans-serif;
-  font-size: 2.8vw;
 }
 
-#pg2 .rbx {
+/* 사진박스 */
+.photo {
+  width: 100%;
+  height: 40%;
+  top: 20%;
+  left: 0;
+  outline: 3px dotted blue;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 200px;
+  padding: 12px;
+  padding-left: 69px;
+}
+
+.phosbx {
   position: absolute;
-  top: 30%;
-  right: 15%;
-  width: 30vw;
-
-  /* outline: 2px solid red; */
+  height: auto;
+  width: 40%;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);;
 }
 
-#pg2 li {
-  float: none;
-  /* text-indent: 15px; */
-  list-style-image: url(../images/square2.gif);
-  text-align: justify;
+.phosbx h3 {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.rbx a {
-  font-family: 'Nanum Gothic Coding', monospace;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.3vw;
-  line-height: 4vh;
+.phosbx li {
+  list-style-type: circle;
+  font-size: 18px;
+  line-height: 2.5;
 }
 
-.rbx span {
+
+/* 스킬박스 */
+.pg2ski {
+  width: 100%;
+  height: 40%;
+  top: 60%;
+  left: 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  outline: 3px dotted blue;
+}
+
+/* 그래프박스 */
+.gp {
+  width: 100%;
+  height: 20%;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+
+  outline: 2px solid red;
+}
+
+.gpin {
+  position: relative;
+  width: 75%;
+  height: 8px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+}
+.gp span{
   display: block;
-  margin-left: 14%;
+  left: 50%;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;;
 }
 
-/* 오른쪽사진 */
-.lbx img {
+.gpin1 {
+  
+}
+.gpin2 {
+
+}
+.gpin3 {
+
+}
+.gpin4 {
+
+}
+.gpin5 {
+
+}
+
+
+/* 오른쪽박스 */
+.prorbx {
   position: absolute;
-  border-radius: 20%;
-  top: 16%;
-  right: 7%;
-  width: 250px;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  outline: 2px dotted green;
 }
 
-/* background-color: wheat; */
 
 
 /* SEC 3.////////////////////////////////////////////// */
 
 
 /* 스킬박스 배경 */
-.sklbx{
+.sklbx {
   height: 100%;
 }
 
-.sklbx>ul{
+.sklbx>ul {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -111,14 +208,14 @@
 }
 
 /* 파티션 li공통 */
-.sklbx>ul>li{
+.sklbx>ul>li {
   position: relative;
-      /* 부모자격 */
+  /* 부모자격 */
   flex: 1;
   text-align: center;
 
   transition: all .4s ease-in-out;
-  
+
 }
 
 /* li에 마우스 오버시 커짐 */
@@ -127,12 +224,13 @@
 }
 
 /* li에 마우스 오버시 로고이미지 위치 아래로 */
-.sklbx>ul>li:hover img{
+.sklbx>ul>li:hover img {
   top: 88%;
   width: 30%;
 }
+
 /* li에 마우스 오버시 pbox의 a 값 보이기 */
-.sklbx>ul>li:hover .pbox a{
+.sklbx>ul>li:hover .pbox a {
   display: block;
 }
 
@@ -160,21 +258,27 @@
 .sklbx>ul>li:nth-child(1) {
   background-color: rgb(207, 109, 207);
 }
+
 .sklbx>ul>li:nth-child(2) {
   background-color: rgb(255, 182, 72);
 }
+
 .sklbx>ul>li:nth-child(3) {
   background-color: rgb(255, 255, 144);
 }
+
 .sklbx>ul>li:nth-child(4) {
   background-color: rgb(101, 101, 255);
 }
+
 .sklbx>ul>li:nth-child(5) {
   background-color: rgb(255, 196, 157);
 }
+
 .sklbx>ul>li:nth-child(6) {
   background-color: rgb(190, 255, 93);
 }
+
 /* 파티션 박스 안 이미지 위치크기조정 */
 .sklbx>ul>li>img {
   position: absolute;
@@ -193,7 +297,7 @@
 }
 
 /* 그래프 막대 숫자공통 */
-.pbox a{
+.pbox a {
   font-size: 4vh;
   margin-left: 8%;
   font-family: 'Sunflower', sans-serif;
@@ -202,47 +306,54 @@
 }
 
 /* 각 %값 그래프막대공통 */
-.skill .pbox{
+.skill .pbox {
   position: absolute;
   bottom: 20%;
   left: 37%;
   width: 25%;
   height: 0;
   background-color: #ff4655;
-  
 
-  
+
+
 }
-.sklbx>ul>li:hover .skill>.pbox{
+
+.sklbx>ul>li:hover .skill>.pbox {
   display: block;
 }
 
-.sklbx>ul>li:hover .pbx1{ /* 높이값-30%(바닥에서 올린값) */
+.sklbx>ul>li:hover .pbx1 {
+  /* 높이값-30%(바닥에서 올린값) */
   height: 60%;
   transition: 1.5s;
   border: 2px solid darkred;
 }
-.sklbx>ul>li:hover .pbx2{
+
+.sklbx>ul>li:hover .pbx2 {
   height: 50%;
   transition: 1.5s;
   border: 2px solid darkred;
 }
-.sklbx>ul>li:hover .pbx3{
+
+.sklbx>ul>li:hover .pbx3 {
   height: 55%;
   transition: 1.5s;
   border: 2px solid darkred;
 }
-.sklbx>ul>li:hover .pbx4{
+
+.sklbx>ul>li:hover .pbx4 {
   height: 60%;
   transition: 1.5s;
   border: 2px solid darkred;
 }
-.sklbx>ul>li:hover .pbx5{
+
+.sklbx>ul>li:hover .pbx5 {
   height: 35%;
   transition: 1.5s;
   border: 2px solid darkred;
 }
-.sklbx>ul>li:hover .pbx6{
+
+.sklbx>ul>li:hover .pbx6 {
   height: 45%;
   transition: 1.5s;
   border: 2px solid darkred;
@@ -250,8 +361,110 @@
 
 
 
-
-
 /* SEC 4.////////////////////////////////////////////// */
+/* 응용 프로젝트 */
+.mbox {
+  position: relative;
+  top: 15%;
+  left: 11%;
+  width: 40%;
+  height: 80%;
+  /* outline: 2px solid red; */
+
+  z-index: 1;
+}
+
+.mpbx {
+  position: absolute;
+  width: 40%;
+  height: 45%;
+  border: 1px solid #f1f1f1;
+  background-color: #fff;
+  box-shadow: 12px 12px 18px rgb(0 0 0 / 10%);
+
+}
+
+/* 포트폴리오 이미지 크기지정 */
+.mpbx img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.mbox .bx1 {
+  top: 5%;
+  left: 5%;
+}
+
+.mbox .bx2 {
+  top: 0%;
+  left: 55%;
+}
+
+.mbox .bx3 {
+  top: 55%;
+  left: 5%;
+}
+
+.mbox .bx4 {
+  top: 50%;
+  left: 55%;
+}
+
+/* 응용 프로젝트 설명 */
+.sbox {
+  position: absolute;
+  width: 36%;
+  height: 30%;
+  top: 17%;
+  right: 6%;
+  /* outline: 2px dotted green; */
+}
+
+.sbox1 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+
+  /* outline: 1px dotted red; */
+}
+
+.sbox1 h2 {
+  font-family: 'Sunflower', sans-serif;
+  font-size: 2.5vw;
+  letter-spacing: 1vw;
+  text-align: center;
+  line-height: 2;
+}
+
+.sbox1 span {
+  font-family: 'Nanum Gothic Coding', monospace;
+  color: #797979;
+  line-height: 2;
+  text-align: center;
+}
+
+/* 오른쪽 아래 동영상 */
+.video {
+  position: absolute;
+  top: 51%;
+  right: 6%;
+  width: 50%;
+  height: 46%;
+  background-color: #ccc;
+}
+
+#myvid2 {
+  position: absolute;
+  width: 59%;
+  top: 24%;
+  left: 37%;
+
+}
+
+
+
+
 /* SEC 5.////////////////////////////////////////////// */
 /* SEC 6.////////////////////////////////////////////// */
