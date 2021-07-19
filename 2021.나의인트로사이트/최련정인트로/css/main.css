@@ -154,15 +154,28 @@
   background-color: rgb(231, 231, 231);
   border-radius: 10px;
 }
-.gp span{
+.gp>span{
   display: block;
   left: 50%;
   padding-top: 5px;
   text-align: center;
-  font-weight: bold;;
+  font-weight: bold;
+}
+.gpin .pregp{
+  position: absolute;
+  color: #777;
+  left: -13%;
+}
+.gpin .afgp{
+  position: absolute;
+  color: #777;
+  right: -13%;
 }
 
-.gpin1 {
+.gpin1::before {
+  content: '';
+
+  /* background: rgb(66, 140, 149); */
   
 }
 .gpin2 {
