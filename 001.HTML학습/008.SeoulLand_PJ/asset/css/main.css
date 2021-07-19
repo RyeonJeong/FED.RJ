@@ -360,6 +360,9 @@ body {
 .links{
     margin-top: 11px;
 }
+.links img{
+    width: 110px;
+}
 
 /* 4.SNS 박스 */
 .sns{
