@@ -107,7 +107,8 @@
   width: 40%;
   top: 40%;
   left: 75%;
-  transform: translate(-50%, -50%);;
+  transform: translate(-50%, -50%);
+  ;
 }
 
 .phosbx h3 {
@@ -146,49 +147,156 @@
 
 .gpin {
   position: relative;
-  width: 75%;
+  width: 60%;
   height: 8px;
-  top: 20%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: rgb(231, 231, 231);
   border-radius: 10px;
 }
-.gp>span{
+
+.gp>span {
   display: block;
   left: 50%;
   padding-top: 5px;
   text-align: center;
   font-weight: bold;
 }
-.gpin .pregp{
+
+.gpin .pregp {
   position: absolute;
-  color: #777;
-  left: -13%;
+  color: #a5a5a5;
+  left: -28%;
+  top: -24px;
+  text-align-last: left;
 }
-.gpin .afgp{
+
+.gpin .afgp {
   position: absolute;
-  color: #777;
-  right: -13%;
+  color: #a5a5a5;
+  right: -28%;
+  top: -24px;
+  text-align: right;
 }
 
 .gpin1::before {
   content: '';
-
-  /* background: rgb(66, 140, 149); */
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 8PX;
+  right: 0;
+  border-radius: 10px;
+  background-color: rgb(66, 140, 149);
   
+  animation: maani 2s linear 1s forwards;
 }
-.gpin2 {
 
+@keyframes maani {
+  to{
+    width: 51%;
+  }
 }
-.gpin3 {
 
+.gpin .aftx1{
+  color:rgb(66, 140, 149);
+  font-weight: bold;
 }
-.gpin4 {
 
+.gpin2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 8PX;
+  left: 0;
+  border-radius: 10px;
+  background-color: rgb(226, 188, 81);
+
+  animation: eaani 2s linear 1s forwards;
 }
-.gpin5 {
 
+@keyframes eaani {
+  to{
+    width: 66%;
+  }
+}
+
+.gpin .pretx2{
+  color: rgb(226, 188, 81);
+  font-weight: bold;
+}
+
+.gpin3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 8PX;
+  left: 0;
+  border-radius: 10px;
+  background-color: rgb(88, 189, 130);
+
+  animation: bonani 2s linear 1s forwards;
+}
+
+@keyframes bonani {
+  to{
+    width: 65%;
+  }
+}
+.gpin .pretx3{
+  color: rgb(88, 189, 130);
+  font-weight: bold;
+}
+
+.gpin4::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 8PX;
+  right: 0;
+  border-radius: 10px;
+  background-color: rgb(219, 141, 215);
+
+  animation: junani 2s linear 1s forwards;
+}
+
+@keyframes junani {
+  to{
+    width: 82%;
+  }
+}
+
+.gpin .aftx4{
+  color: rgb(219, 141, 215);
+  font-weight: bold;
+}
+
+.gpin5::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 8PX;
+  right: 0;
+  border-radius: 10px;
+  background-color: rgb(133, 106, 150);
+
+  animation: jaani 2s linear 1s forwards;
+}
+
+@keyframes jaani {
+  to{
+    width: 75%;
+  }
+}
+
+.gpin .aftx5{
+  color: rgb(133, 106, 150);
+  font-weight: bold;
 }
 
 
