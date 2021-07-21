@@ -189,8 +189,10 @@
   right: 0;
   border-radius: 10px;
   background-color: rgb(66, 140, 149);
-  
-  animation: maani 2s linear 1s forwards;
+}
+
+.pg2ski.on .gpin1::before {
+  animation: maani 2s linear forwards;
 }
 
 @keyframes maani {
@@ -214,7 +216,10 @@
   border-radius: 10px;
   background-color: rgb(226, 188, 81);
 
-  animation: eaani 2s linear 1s forwards;
+}
+
+.pg2ski.on .gpin2::before {
+  animation: eaani 2s linear forwards;
 }
 
 @keyframes eaani {
@@ -238,8 +243,11 @@
   border-radius: 10px;
   background-color: rgb(88, 189, 130);
 
-  animation: bonani 2s linear 1s forwards;
 }
+
+.pg2ski.on .gpin3::before {
+  animation: bonani 2s linear forwards;
+  }
 
 @keyframes bonani {
   to{
@@ -261,7 +269,10 @@
   border-radius: 10px;
   background-color: rgb(219, 141, 215);
 
-  animation: junani 2s linear 1s forwards;
+}
+
+.pg2ski.on .gpin4::before {
+animation: junani 2s linear forwards;
 }
 
 @keyframes junani {
@@ -284,8 +295,10 @@
   right: 0;
   border-radius: 10px;
   background-color: rgb(133, 106, 150);
+}
 
-  animation: jaani 2s linear 1s forwards;
+.pg2ski.on .gpin5::before {
+  animation: jaani 2s linear forwards;
 }
 
 @keyframes jaani {
@@ -311,20 +324,45 @@
   outline: 2px dotted green;
 }
 
+/* 자기소개+자격증박스 */
 .abcbx{
   display: flex;
-  width: 50%;
-  height: 50%;
+  margin: 7% 7% 0 7%;
+  padding-left: 10px;
+  outline: 2px dotted red;
+}
+.iambx{
+  width: 100%;
+}
+.iambx li{
+  float: none;
+}
+.licbx{
+  width: 100%;
+}
+.licbx li{
+  float: none;
+}
+
+/* 일+교육박스 */
+.abdbx{
+  display: flex;
+  margin: 7% 7% 0 7%;
+  padding-left: 10px;
 
   outline: 2px dotted red;
 }
-
-.abdbx{
-  display: flex;
-  width: 50%;
-  height: 50%;
-
-  outline: 2px dotted red;
+.workbx{
+  width: 100%;
+}
+.workbx li{
+  float: none;
+}
+.edubx{
+  width: 100%;
+}
+.edubx li{
+  float: none;
 }
 
 
