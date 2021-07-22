@@ -98,7 +98,7 @@
   width: 100%;
   max-width: 200px;
   padding: 12px;
-  padding-left: 69px;
+  padding-left: 72px;
 }
 
 .phosbx {
@@ -106,21 +106,21 @@
   height: auto;
   width: 40%;
   top: 40%;
-  left: 75%;
+  left: 73%;
   transform: translate(-50%, -50%);
-  ;
 }
 
 .phosbx h3 {
   font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .phosbx li {
+  float: none;
   list-style-type: circle;
   font-size: 18px;
-  line-height: 2.5;
+  line-height: 2;
 }
 
 
@@ -196,13 +196,13 @@
 }
 
 @keyframes maani {
-  to{
+  to {
     width: 51%;
   }
 }
 
-.gpin .aftx1{
-  color:rgb(66, 140, 149);
+.gpin .aftx1 {
+  color: rgb(66, 140, 149);
   font-weight: bold;
 }
 
@@ -223,12 +223,12 @@
 }
 
 @keyframes eaani {
-  to{
+  to {
     width: 66%;
   }
 }
 
-.gpin .pretx2{
+.gpin .pretx2 {
   color: rgb(226, 188, 81);
   font-weight: bold;
 }
@@ -247,14 +247,15 @@
 
 .pg2ski.on .gpin3::before {
   animation: bonani 2s linear forwards;
-  }
+}
 
 @keyframes bonani {
-  to{
+  to {
     width: 65%;
   }
 }
-.gpin .pretx3{
+
+.gpin .pretx3 {
   color: rgb(88, 189, 130);
   font-weight: bold;
 }
@@ -272,16 +273,16 @@
 }
 
 .pg2ski.on .gpin4::before {
-animation: junani 2s linear forwards;
+  animation: junani 2s linear forwards;
 }
 
 @keyframes junani {
-  to{
+  to {
     width: 82%;
   }
 }
 
-.gpin .aftx4{
+.gpin .aftx4 {
   color: rgb(219, 141, 215);
   font-weight: bold;
 }
@@ -302,18 +303,18 @@ animation: junani 2s linear forwards;
 }
 
 @keyframes jaani {
-  to{
+  to {
     width: 75%;
   }
 }
 
-.gpin .aftx5{
+.gpin .aftx5 {
   color: rgb(133, 106, 150);
   font-weight: bold;
 }
 
 
-/* 오른쪽박스 */
+/**************** 오른쪽박스 ****************/
 .prorbx {
   position: absolute;
   width: 50%;
@@ -324,46 +325,119 @@ animation: junani 2s linear forwards;
   outline: 2px dotted green;
 }
 
+.abobx .gif h2 {
+  font-size: 1.1vw;
+  margin: 5px;
+}
+
+.abobx .gif {
+  list-style-image: url('../images/check2.gif');
+}
+
+
+.abobx .aboul {
+  line-height: 1.8;
+}
+
 /* 자기소개+자격증박스 */
-.abcbx{
+.abcbx {
   display: flex;
-  margin: 7% 7% 0 7%;
+  margin: 2% 7% 0 7%;
   padding-left: 10px;
   outline: 2px dotted red;
 }
-.iambx{
+
+.iambx {
   width: 100%;
 }
-.iambx li{
+
+.iambx .aboul li {
+  list-style-type: disc;
   float: none;
 }
-.licbx{
+
+.licbx {
   width: 100%;
 }
-.licbx li{
+
+.licbx .aboul li {
+  list-style-type: square;
   float: none;
 }
 
 /* 일+교육박스 */
-.abdbx{
+.abdbx {
   display: flex;
-  margin: 7% 7% 0 7%;
+  margin: 2% 7% 0 7%;
   padding-left: 10px;
+  outline: 2px dotted red;
+}
 
+.workbx {
+  width: 100%;
+}
+
+.workbx .aboul li {
+  list-style-type: square;
+  float: none;
+}
+
+.edubx {
+  width: 100%;
+}
+
+.edubx .aboul li {
+  list-style-type: square;
+  float: none;
+}
+
+/* 오른쪽 아래 나의 강점 박스 */
+.strong {
+  position: relative;
+  margin: 2% 7% 0 7%;
+  top: 0%;
+  left: 0%;
 
   outline: 2px dotted red;
 }
-.workbx{
+
+.strone {
+  display: flex;
   width: 100%;
+  height: 50%;
+  top: 5px;
+  left: 5px;
+
 }
-.workbx li{
-  float: none;
+
+.like {
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  margin: 22px;
+  background-color: purple;
+  border-radius: 50%;
+  outline: 2px dotted purple;
 }
-.edubx{
+
+.hobone {
+  display: flex;
   width: 100%;
+  height: 50%;
+  top: 52%;
+  left: 10%;
+
+  outline: 2px dotted green;
 }
-.edubx li{
-  float: none;
+
+.hobby {
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  background-color: purple;
+  border-radius: 50%;
+  outline: 2px dotted purple;
 }
 
 
