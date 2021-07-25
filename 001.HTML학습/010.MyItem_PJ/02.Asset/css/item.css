@@ -66,10 +66,11 @@
 .imbx{
     position: absolute;
     top: 0;
-    left: 25%; /* 중앙위치 */
+    left: 25%;/* 중앙위치 */
     width: 50%;
     height: 100%;
-    opacity: 0; /* 처음에 투명하게 */
+
+    opacity: 0;/* 투명하게 */
 
     /* outline: 3px dotted red; */
 }
@@ -83,7 +84,7 @@
 .dcbx{
     position: absolute;
     top: 0;
-    left: 25%;  /* 중앙위치 */
+    left: 25%;/* 중앙위치 */
     width: 50%;
     height: 100%;
 
@@ -94,7 +95,8 @@
     font-size: 13px;
     line-height: 30px;
     color: #777;
-    opacity: 0; /* 처음에 투명하게 */
+
+    opacity: 0;/* 투명하게 */
 
     /* outline: 3px dotted red; */
 }
