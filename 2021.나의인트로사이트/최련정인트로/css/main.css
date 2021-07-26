@@ -431,6 +431,11 @@
   /* outline: 2px dotted purple; */
 }
 
+.like img{
+  width: 80px;
+  height: 80px;
+}
+
 
 
 .hobone {
@@ -452,6 +457,11 @@
   border-radius: 50%;
 
   /* outline: 2px dotted purple; */
+}
+
+.hobby img{
+  width: 80px;
+  height: 80px;
 }
 
 
