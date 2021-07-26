@@ -28,12 +28,6 @@
     list-style: none;
  }
 
- ul::after {
-     /* float해제 */
-     content: '';
-     display: block;
-     clear: both;
- }
 
  li {
      float: left;

@@ -45,6 +45,7 @@
 /* SEC 2. ///////////////////////////////////////////////////*/
 
 .probox {
+  display: flex;
   position: absolute;
   top: 52%;
   left: 52%;
@@ -72,14 +73,14 @@
 }
 
 .mbti>h1 {
-  font-size: 40px;
+  font-size: 2.5vw;
   font-family: Sunflower, sans-serif;
   padding-left: 25px;
   padding-top: 15px;
 }
 
 .mbti>h2 {
-  font-size: 30px;
+  font-size: 2vw;
   padding-left: 25px;
   padding-top: 15px;
   font-family: 'Encode Sans SC', sans-serif;
@@ -87,39 +88,42 @@
 
 /* 사진박스 */
 .photo {
+  display: flex;
   width: 100%;
   height: 40%;
   top: 20%;
   left: 0;
   outline: 3px dotted blue;
 }
-
-.photo img {
+.photoIn1{
   width: 100%;
-  max-width: 200px;
-  padding: 12px;
-  padding-left: 72px;
 }
 
+.photo img {
+  max-width: 200px;
+  padding: 12px;
+}
+
+.photoIn2{
+  width: 100%;
+  margin: 20px;
+}
 .phosbx {
-  position: absolute;
-  height: auto;
-  width: 40%;
-  top: 40%;
-  left: 73%;
-  transform: translate(-50%, -50%);
+  
 }
 
 .phosbx h3 {
-  font-size: 25px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  font-size: 1.7vw;
+}
+
+.phosbx li:nth-child(1){
+  padding-top: 10px;
 }
 
 .phosbx li {
   float: none;
   list-style-type: circle;
-  font-size: 18px;
+  font-size: 1vw;
   line-height: 2;
 }
 
@@ -316,7 +320,6 @@
 
 /**************** 오른쪽박스 ****************/
 .prorbx {
-  position: absolute;
   width: 50%;
   height: 100%;
   top: 0;
@@ -345,6 +348,8 @@
   margin: 2% 7% 0 7%;
   padding-left: 10px;
   outline: 2px dotted red;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .iambx {
@@ -352,7 +357,7 @@
 }
 
 .iambx .aboul li {
-  list-style-type: disc;
+  list-style-type: square;
   float: none;
 }
 
@@ -371,6 +376,9 @@
   margin: 2% 7% 0 7%;
   padding-left: 10px;
   outline: 2px dotted red;
+
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .workbx {
@@ -392,6 +400,7 @@
 }
 
 /* 오른쪽 아래 나의 강점 박스 */
+
 .strong {
   position: relative;
   margin: 2% 7% 0 7%;
@@ -402,43 +411,50 @@
 }
 
 .strone {
-  display: flex;
   width: 100%;
-  height: 50%;
+  /* height: 50%; */
   top: 5px;
   left: 5px;
-
+  
+  display: flex;
 }
 
+/* 원형박스 공통 */
 .like {
-  flex: 1;
   width: 100px;
+  min-width: 50px;
   height: 100px;
   margin: 22px;
   background-color: purple;
   border-radius: 50%;
-  outline: 2px dotted purple;
+
+  /* outline: 2px dotted purple; */
 }
+
+
 
 .hobone {
   display: flex;
   width: 100%;
   height: 50%;
   top: 52%;
-  left: 10%;
+  left: 12%;
 
   outline: 2px dotted green;
 }
 
 .hobby {
-  flex: 1;
   width: 100px;
+  max-width: 100px;
   height: 100px;
   margin: 30px;
   background-color: purple;
   border-radius: 50%;
-  outline: 2px dotted purple;
+
+  /* outline: 2px dotted purple; */
 }
+
+
 
 
 
