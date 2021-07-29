@@ -328,75 +328,83 @@
   outline: 2px dotted green;
 }
 
-.abobx .gif h2 {
-  font-size: 1.1vw;
-  margin: 5px;
+.gif h2 {
+  font-size: 1.1rem;
+  padding: 5px;
 }
 
-.abobx .gif {
+.gif {
   list-style-image: url('../images/check2.gif');
+  margin-left: 10%;
 }
 
 
-.abobx .aboul {
-  line-height: 1.8;
-}
 
 /* 자기소개+자격증박스 */
-.abcbx {
+.iamlicbx {
   display: flex;
   margin: 2% 7% 0 7%;
   padding-left: 10px;
   outline: 2px dotted red;
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .iambx {
   width: 50%;
+  margin-left: 3%;
 }
 
-.iambx .aboul li {
-  list-style-type: square;
+.iambx li {
   float: none;
+  list-style-type: square;
+  font-size: .8vw;
+  line-height: 2;
 }
 
 .licbx {
   width: 50%;
 }
 
-.licbx .aboul li {
-  list-style-type: square;
+.licbx li {
   float: none;
+  list-style-type: square;
+  font-size: .8vw;
+  line-height: 2;
 }
 
 /* 일+교육박스 */
-.abdbx {
+.socialbx {
   display: flex;
   margin: 2% 7% 0 7%;
   padding-left: 10px;
   outline: 2px dotted red;
 
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .workbx {
-  width: 100%;
+  width: 50%;
+  margin-left: 3%;
 }
 
-.workbx .aboul li {
-  list-style-type: square;
+.workbx li {
   float: none;
+  list-style-type: square;
+  font-size: .8vw;
+  line-height: 2;
 }
 
 .edubx {
-  width: 100%;
+  width: 50%;
 }
 
-.edubx .aboul li {
-  list-style-type: square;
+.edubx li {
   float: none;
+  list-style-type: square;
+  font-size: .8vw;
+  line-height: 2;
 }
 
 /* 오른쪽 아래 나의 강점 박스 */
