@@ -1,42 +1,46 @@
 @charset "utf-8";
 
-html,body{
+html,body {
     margin: 0;
     padding: 0;
+    background-color: #fff;
 }
-ul,ol{
+
+ul, ol {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-li{
-    float: left;
-}
-body{
-    background-color: #fff;
-}
-a{
+
+a {
     color: #333;
     text-decoration: none;
 }
+
 body *{
     outline: 2px dotted red;
 }
-.prt{
-    position: relative;
+
+li{
+    float: left;
 }
 
-/* 공통박스 */
 .ibx{
     width: 1200px;
     margin: 0 auto;
 }
+
 .pbx{
-    float: left;
     height: 100%;
     padding: 10px;
+    float: left;
     box-sizing: border-box;
 }
+
+
+
+
+
 /* a */
 .top{
     height: 100px;
@@ -44,52 +48,109 @@ body *{
 .top1{
     width: 200px;
 }
-.logo img{
-    margin-top: 15px;
-    margin-left: -7px;
-}
 .top2{
+    position: relative;
     width: 1000px;
 }
+
 .gnb{
     position: absolute;
-    width: 600px;
+    width: 800px;
     height: 40px;
-    top: 30px;
-    right: 20px;
-    background-color: rgb(226, 225, 225);
+    right: 10px;
+    bottom: 20px;
+    box-sizing: border-box;
+    z-index: 1;
 }
 .gnb li{
-    width: 150px;
+    width: 200px;
+    line-height: 40px;
+    background-color: white;
 }
-.tit{
-    font-size: 18px;
-    font-weight: bold;
+.gnb>li a{
+    border: 1px solid #333;
 }
 .gnb li a{
     display: block;
     text-align: center;
-    line-height: 40px;
-    background-color: rgb(226, 225, 225);
 }
+.gnb ol{
+    height: 0;
+    overflow: hidden;
+}
+
+.gnb ol li a{
+    border: none;
+}
+.gnb:hover ol {
+    height: 160px;
+}
+
+.gnb li:hover>a{
+    background-color: lightsalmon;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
 
 /* b */
 .ban{
     height: 300px;
+    overflow: hidden;
 }
+.slide{
+    position: relative;
+    top: 0;
+}
+
+
+
+
+
+
+
 /* c */
 .cont{
     height: 200px;
 }
 .cont1{
-    width: 500px;
+    width: 400px;
 }
 .cont2{
-    width: 350px;
+    width: 400px;
 }
 .cont3{
-    width: 350px;
+    width: 400px;
 }
+
+.tm{
+    width: 200px;
+    height: 40px;
+}
+.tm li a{
+    display: block;
+    text-align: center;
+    width: 100px;
+    line-height: 40px;
+    background-color: lightsalmon;
+}
+
+/* on 들어가있는 a(선택 탭메뉴) */
+.tm li.on a{
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
 /* d */
 .info{
     height: 100px;
@@ -98,8 +159,12 @@ body *{
     width: 200px;
 }
 .info2{
-    width: 1000px;
+    width: 800px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
 }
-.pbxIn{
-    height: 50%;
+.info3{
+    width: 200px;
 }
+

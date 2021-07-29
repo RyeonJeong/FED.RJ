@@ -1,77 +1,194 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="./js/main.js"></script>
-        <title>강원천문대</title>
-
-    </head>
-    <body>
-        <!-- a -->
-        <div class="ibx top">
-            <div class="pbx top1">
-                <div class="logo">
-                    <a href="#">
-                        <img src="./images/logo.png" alt="로고">
-                    </a>
-                </div>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JUST 쇼핑몰</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-1.12.3.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <!-- a -->
+    <div class="ibx top">
+        <div class="pbx top1">
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="로고">
+                </a>
             </div>
-            <div class="pbx top2 prt">
-                <!-- gnb메뉴 -->
-                <ul class="gnb">
+        </div>
+        <div class="pbx top2">
+            <ul class="gnb">
+                <li>
+                    <a href="#">탑</a>
+                    <ol>
+                        <li>
+                            <a href="#">블라우스</a>
+                        </li>
+                        <li>
+                            <a href="#">티</a>
+                        </li>
+                        <li>
+                            <a href="#">셔츠</a>
+                        </li>
+                        <li>
+                            <a href="#">니트</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">아우터</a>
+                    <ol>
+                        <li>
+                            <a href="#">자켓</a>
+                        </li>
+                        <li>
+                            <a href="#">코트</a>
+                        </li>
+                        <li>
+                            <a href="#">가디건</a>
+                        </li>
+                        <li>
+                            <a href="#">머플러</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">팬츠</a>
+                    <ol>
+                        <li>
+                            <a href="#">청바지</a>
+                        </li>
+                        <li>
+                            <a href="#">짧은바지</a>
+                        </li>
+                        <li>
+                            <a href="#">긴바지</a>
+                        </li>
+                        <li>
+                            <a href="#">레깅스</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">악세사리</a>
+                    <ol>
+                        <li>
+                            <a href="#">귀고리</a>
+                        </li>
+                        <li>
+                            <a href="#">목걸이</a>
+                        </li>
+                        <li>
+                            <a href="#">반지</a>
+                        </li>
+                        <li>
+                            <a href="#">팔찌</a>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- b -->
+    <div class="ibx ban">
+        <ul class="slide">
+            <li>
+                <a href="#">
+                    <img src="./images/slide_01.png" alt="슬라이드1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/slide_02.png" alt="슬라이드2">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/slide_03.png" alt="슬라이드3">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- c -->
+    <div class="ibx cont">
+        <div class="pbx cont1">
+            <!-- 탭메뉴 -->
+            <ul class="tm">
+                <li class="on">
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">갤러리</a>
+                </li>
+            </ul>
+            <!-- 탭내용 -->
+            <ul class="tc">
+                <!-- 공지사항 -->
+                <li class="on">
+                    <ul class="gong">
+                        <li>
+                            <a href="#">
+                                [발표]『장사의 신동 X 설화수』 이벤트 당첨자
+                            </a>
+                            <span>2021. 06. 07</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [주의] 국표원, 유모차, LED등기구, 가정용 서랍장 등 66개 제품 리콜 안내
+                            </a>
+                            <span>2021. 06. 01</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『빅스마일데이 조지아 크래프트 경품』  이벤트 당첨자
+                            </a>
+                            <span>2021. 05. 31</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                [발표]『빅스마일데이 코카콜라 경품』  이벤트 당첨자
+                            </a>
+                            <span>2021. 05. 31</span>
+                        </li>
+                    </ul>
+                </li>
+                <!-- 갤러리 -->
+                <ul class="gal">
                     <li>
-                        <a class="tit" href="#">강원천문대</a>
-                        <ol>
-                            <li><a href="#">천문대소개</a></li>
-                            <li><a href="#">인사말</a></li>
-                            <li><a href="#">오시는길</a></li>
-                        </ol>
+                        <a href="#">
+                            <img src="./images/갤러리_01.png" alt="갤러리">
+                        </a>
                     </li>
                     <li>
-                        <a class="tit" href="#">이용안내</a>
-                        <ol>
-                            <li><a href="#">프로그램</a></li>
-                            <li><a href="#">관람시간표</a></li>
-                            <li><a href="#">이달의 별자리</a></li>
-                        </ol>
+                        <a href="#">
+                            <img src="./images/갤러리_02.png" alt="갤러리">
+                        </a>
                     </li>
                     <li>
-                        <a class="tit" href="#">천문대예약</a>
-                        <ol>
-                            <li><a href="#">예약하기</a></li>
-                            <li><a href="#">예약확인</a></li>
-                            <li><a href="#">예약취소</a></li>
-                        </ol>
-                    </li>
-                    <li>
-                        <a class="tit" href="#">커뮤니티</a>
-                        <ol>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">방문후기</a></li>
-                            <li><a href="#">자유게시판</a></li>
-                        </ol>
+                        <a href="#">
+                            <img src="./images/갤러리_03.png" alt="갤러리">
+                        </a>
                     </li>
                 </ul>
+            </ul>
+        </div>
+        <div class="pbx cont2"></div>
+        <div class="pbx cont3"></div>
+    </div>
+    <!-- d -->
+    <div class="ibx info">
+        <div class="pbx info1">
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/blogo.png" alt="하단로고">
+                </a>
             </div>
         </div>
-        <!-- b -->
-        <div class="ibx ban">
-            
+        <div class="pbx info2">
+            Copyright JUST Shopping Mall All rights reserved.
         </div>
-        <!-- c -->
-        <div class="ibx cont">
-            <div class="pbx cont1"></div>
-            <div class="pbx cont2"></div>
-            <div class="pbx cont3"></div>
-        </div>
-        <!-- d -->
-        <div class="ibx info">
-            <div class="pbx info1"></div>
-            <div class="pbx info2">
-                <div class="pbxIn"></div>
-                <div class="pbxIn"></div>
-            </div>
-        </div>
-    </body>
+        <div class="pbx info3"></div>
+    </div>
+</body>
 </html>
