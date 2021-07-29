@@ -135,6 +135,74 @@
     box-shadow: none;
 }
 
+/*********** 전체메뉴 ************/
+.mbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;/* 처음에 안보임 */
+}
+/* 가상요소로 반투명배경 */
+.mbox::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+/* 메뉴중앙박스 */
+.mlist{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;/* 플렉스박스 */
+    font-family: UB;
+    z-index: 1;/* 반투명배경보다 위 */
+}
+/* 메뉴별박스 */
+.mlist dl{
+    width: 300px;
+}
+/* 상위메뉴 */
+.mlist dt{
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+/* 하위메뉴 */
+.mlist dd{
+    font-size: 2.1rem;
+    padding-bottom: 5px;
+}
+
+/* 링크공통 */
+.mlist a{
+    color: #fff;
+}
+/* 오버시 글자색 */
+.mlist a:hover{
+    color: aqua;
+}
+
+/* 동영상 박스 */
+.bgm{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* 2. 페이지영역 */
 /* 개별 페이지 셋팅 */
@@ -156,6 +224,8 @@
     height: 100%;
 }
 .slide li{
+    position: relative;
+    /* 배너타이틀의 부모자격! */
     flex: 1;
     /* 부모 flex박스 영역을 등분할 함!(height도 자동으로 100%) */
 }
@@ -190,6 +260,94 @@
     opacity: 0.5; */
     display: none;
 }
+
+/* 배너블릿박스 */
+.bindic{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    /* 부모는? #ban */  
+
+    display: flex;/* 플렉스박스 */
+    justify-content: space-between;
+    width: 200px;
+    /* outline: 1px solid blue;   */
+}
+.bindic li{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.4;
+    box-shadow: 0 0 2px #777;
+}
+.bindic a{/* 링크영역확장 */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 선택블릿 */
+.bindic li.on{
+    opacity: 1;
+    box-shadow: 0 0 5px #000;
+}
+
+/* 양쪽이동버튼(영역+버튼) */
+/* 영역공통 */
+.btna {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+/* 왼쪽영역 */
+.ar1 {
+    left: 0;
+    /* background-color: #ffafaf; */
+}
+/* 오른쪽영역 */
+.ar2 {
+    right: 0;
+    /* background-color: #769bff; */
+}
+
+/*팔로워*/
+.badge {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+}
+
+.inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.7;
+    transition: all .1s;
+}
+
+/*버튼글자박스*/
+.btntit {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0);
+    /*            outline: 1px solid red;*/
+    font: 22px/80px Verdana;
+    color: #555;
+    text-align: center;
+    transition: all .1s;
+    cursor: pointer;/* 손가락모양 */
+}
+
+
 
 /********** 2-2.남성의류영역 ***********/
 #men {
