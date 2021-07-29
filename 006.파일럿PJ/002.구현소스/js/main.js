@@ -189,6 +189,12 @@ $(function () { /// jQB ////////////////////////
     /////// 배너이동 함수 : goSlide /////////////
     ////////////////////////////////////////////
     let goSlide = function (dir) {
+
+      
+      // 매번 새로 화면 width 구하기
+      winW = $(window).width();
+
+
         // dir-1 왼쪽이동, dir-0 오른쪽이동
         if (dir) { // 왼쪽이동
             slide.stop().animate({
@@ -274,6 +280,8 @@ $(function () { /// jQB ////////////////////////
     //console.log("윈도우width:"+winW);
 
     slide.on("dragstop", function () {
+
+
 
         // 자동넘김 지우기함수 호출!
         clearAuto();
@@ -416,9 +424,58 @@ $(function () { /// jQB ////////////////////////
 
     }); ////////// click //////////////////////
 
+    // 액션 초기화 //////
+    // 대상: .txtc h2 + .imgc
+    // 변경내용: transform: rotate(45deg) + opacity: 0
+    $(".txtc h2, .imgc").css({
+
+      transform: "rotate(15deg) translateY(100px)",
+      transformOrigin: "left top", // 축변경
+      opacity: "0"
+
+    }); ///////// css ///
+
+  }); ///////////// jQB ////////////////////////
+    
+    
+    
+  /////////////////////////////////////////////
+  ////// 페이지 등장액션 주기 //////
+  /////////////////////////////////////
+  function showEle(){
+
+    // 현재 페이지번호에 맞는 액션구현!
+    // pno = 1,2,3만 액션이 있음
+    if(pno > 0 && pno < 4){
+      // console.log("액션!"+pno);
+
+      $(".page").eq(pno).find(".txtc h2, .imgc").css({
+        transform: "rotate(0deg) translateY(0px)",
+        opacity: 1,
+        transition: "1s ease-out .3s"
+  
+      }); ///////// css /
+
+      // 글자만 트랜지션 지연시간주기 
+      $(".page").eq(pno).find(".txtc h2").css({
+        transitionDelay: ".8s"
+  
+      }); ///////// css /
+
+
+      // 글자만 트랜지션 지연시간주기 
+      $(".page").eq(pno).find(".txtc h2.tw").css({
+        transitionDelay: "1.2s"
+  
+      }); ///////// css /
 
 
 
+    } /// if문 //
 
 
-}); ///////////// jQB ////////////////////////
+
+  } ///// showEle 함수 /////
+  //////////////////////////   
+    
+    
