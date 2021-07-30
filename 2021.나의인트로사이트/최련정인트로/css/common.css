@@ -144,7 +144,8 @@
  }
  #pg2>img {
     position: absolute;
-    bottom: 8%;
+    width: 15%;
+    bottom: 10%;
     right: 3%;
 
     z-index: 1;
