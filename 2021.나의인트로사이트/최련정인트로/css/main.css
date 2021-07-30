@@ -407,7 +407,7 @@
   line-height: 2;
 }
 
-/* 오른쪽 아래 나의 강점 박스 */
+/* 오른쪽 아래 나의 소개 박스 */
 
 .strong {
   position: relative;
@@ -424,24 +424,44 @@
   top: 5px;
   left: 5px;
   
-  /* display: flex; */
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 원형박스 공통 */
 .like {
-  width: 100px;
+  position: relative;
+  width: 20%;
   min-width: 50px;
-  height: 100px;
-  margin: 22px;
   background-color: purple;
   border-radius: 50%;
+  float: none;
+  flex-shrink: 0;
+  text-align: center;
 
   /* outline: 2px dotted purple; */
 }
+.like::before{
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
 
 .like img{
-  width: 80px;
-  height: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50%;
+}
+
+.like h3{
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  left: 0;
+  text-align: center;
+  font-size: 1vw;
 }
 
 
