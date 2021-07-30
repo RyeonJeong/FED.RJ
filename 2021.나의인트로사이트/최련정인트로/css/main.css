@@ -424,7 +424,7 @@
   top: 5px;
   left: 5px;
   
-  display: flex;
+  /* display: flex; */
 }
 
 /* 원형박스 공통 */
@@ -441,7 +441,7 @@
 
 .like img{
   width: 80px;
-  height: 80px;
+  height: auto;
 }
 
 
@@ -469,7 +469,7 @@
 
 .hobby img{
   width: 80px;
-  height: 80px;
+  height: auto;
 }
 
 
