@@ -75,6 +75,9 @@ $(function () { /// jQB ////////////////////////
         함수명: pageAction(전역변수구역에 선언)
         기능: 각 페이지 도착시 요소 등장액션 실행
     */ /////////////////////////////////////////////
+    var str = "응용프로젝트";
+    var c = 0;
+
     pageAction = function () {
 
         // 호출확인
@@ -82,7 +85,7 @@ $(function () { /// jQB ////////////////////////
 
         // 만약 매번 페이지마다 액션을 다시 작동시키려면
         // 초기화함수를 처음에 호출해 준다!
-        init();// 초기화호출!
+        init(); // 초기화호출!
 
         // 각 페이지 번호에 맞게 액션을 수행한다!
 
@@ -98,8 +101,8 @@ $(function () { /// jQB ////////////////////////
 
         // 2. About me
         else if (pno === 1) {
-          
-          $(".pg2ski").addClass("on");
+
+            $(".pg2ski").addClass("on");
 
         } ////// else if ///////////////
 
@@ -114,13 +117,15 @@ $(function () { /// jQB ////////////////////////
 
         // 4. PortFolio1
         else if (pno === 3) {
-            // 가운데서 스케일이 커짐(원래상태로!)
-            $("#pg4 .minfo").css({
-                transform: "translate(-50%,-50%) scale(1)",
-                transition: "all 2s ease-out"
-            }); ///////// css ///////////
 
+            setInterval(function () {
+                if (c < 6)
+                    $('#typing').append(str[c]);
+                c++;
+            }, 1000);
         } ////// else if ///////////////
+
+        
 
         // 5. CONTACT ME
         else if (pno === 4) {
@@ -136,6 +141,14 @@ $(function () { /// jQB ////////////////////////
 
     }; ////////// pageAction함수 ///////////////////
     ////////////////////////////////////////////////
+
+    // 팝업함수
+    function pop(sts){
+        console.log("팝업확인"+sts);
+    
+        var pop = document.querySelector(".pop");
+        pop.style.display=sts;
+    }
 
     // pageAction함수 최초호출!
     pageAction();

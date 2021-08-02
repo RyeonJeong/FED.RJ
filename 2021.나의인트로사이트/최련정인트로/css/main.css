@@ -99,7 +99,7 @@
   /* outline: 3px dotted blue; */
 }
 
-.photoIn1{
+.photoIn1 {
   padding-left: 10%;
   flex: 1;
 }
@@ -110,7 +110,7 @@
   padding: 12px;
 }
 
-.photoIn2{
+.photoIn2 {
   margin: 20px;
   flex: 1;
 }
@@ -120,7 +120,7 @@
   font-size: 1.7vw;
 }
 
-.phosbx li:nth-child(1){
+.phosbx li:nth-child(1) {
   padding-top: 10px;
 }
 
@@ -421,7 +421,8 @@
 
   /* outline: 2px dotted red; */
 }
-.strong h2{
+
+.strong h2 {
   padding-left: 15px;
 }
 
@@ -430,7 +431,7 @@
   /* height: 50%; */
   top: 5px;
   left: 5px;
-  
+
   display: flex;
   justify-content: space-between;
 }
@@ -451,26 +452,27 @@
 }
 
 /* like 박스 마우스오버시 */
-.like:hover{
+.like:hover {
   transform: scale(1.1);
-  border: 3px solid palevioletred;
+  border: 3px solid rebeccapurple;
   box-sizing: border-box;
 }
-.like::before{
+
+.like::before {
   content: '';
   display: block;
   padding-top: 100%;
 }
 
-.like img{
+.like img {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 50%;
 }
 
-.like h3{
+.like h3 {
   position: absolute;
   width: 100%;
   bottom: 10%;
@@ -486,7 +488,7 @@
   /* height: 50%; */
   top: 5px;
   left: 5px;
-  
+
   display: flex;
   justify-content: space-evenly;
 }
@@ -504,28 +506,29 @@
 
   /* outline: 2px dotted purple; */
 }
+
 /* hobby에 마우스오버시 */
-.hobby:hover{
+.hobby:hover {
   transform: scale(1.1);
-  border: 3px solid palevioletred;
+  border: 3px solid rebeccapurple;
   box-sizing: border-box;
 }
 
-.hobby::before{
+.hobby::before {
   content: '';
   display: block;
   padding-top: 100%;
 }
 
-.hobby img{
+.hobby img {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 50%;
 }
 
-.hobby h3{
+.hobby h3 {
   position: absolute;
   width: 100%;
   bottom: 10%;
@@ -571,7 +574,7 @@
 
 /* li에 마우스 오버시 로고이미지 위치 아래로 */
 .sklbx>ul>li:hover img {
-  top: 88%;
+  top: 90%;
   width: 30%;
 }
 
@@ -650,11 +653,23 @@
   text-shadow: 1px 2px #333;
   display: none;
 }
+.sklbx>ul>li>span{
+  position: absolute;
+  top: 77%;
+  width: 82%;
+  left: 10%;
+
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1vw;
+  /* text-shadow: 1px 1px #333; */
+  display: none;
+}
 
 /* 각 %값 그래프막대공통 */
 .skill .pbox {
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   left: 37%;
   width: 25%;
   height: 0;
@@ -664,7 +679,8 @@
 
 }
 
-.sklbx>ul>li:hover .skill>.pbox {
+.sklbx>ul>li:hover .skill>.pbox,
+.sklbx>ul>li:hover span{
   display: block;
 }
 
@@ -708,56 +724,105 @@
 
 
 /* SEC 4.////////////////////////////////////////////// */
-/* 응용 프로젝트 */
 .mbox {
-  position: relative;
-  top: 15%;
-  left: 11%;
-  width: 40%;
-  height: 80%;
-  /* outline: 2px solid red; */
-
-  z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 50%;
+  padding-left: 150px;
 }
 
 .mpbx {
-  position: absolute;
-  width: 40%;
-  height: 45%;
-  border: 1px solid #f1f1f1;
-  background-color: #fff;
-  box-shadow: 12px 12px 18px rgb(0 0 0 / 10%);
-
+  position: relative;
+  width: 50%;
+  height: 50%;
 }
 
-/* 포트폴리오 이미지 크기지정 */
-.mpbx img {
+/* 이미지 담는 박스 */
+.btns {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 150px;
+  border: 1px solid #f1f1f1;
+  background-color: #fff;
+  box-shadow: 12px 12px 18px rgb(0 0 0 / 9%);
+}
+
+/* 비율밀기 */
+.btns::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+/* 링크 */
+.btns a{
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+
+  transition: .4s;
+}
+
+/* 첫번째 박스 */
+.btns1{
+  position: absolute;
+  top: 60%;
+  width: 75%;
+  background: url(../images/SeoulLand_main.jpg) no-repeat top/cover;
+  /* border: 1px solid #555; */
 }
 
 
-.mbox .bx1 {
-  top: 5%;
-  left: 5%;
+
+
+/* 두번째 박스 */
+.btns2 {
+  width: 75%;
+  background-image: url(../images/voguemain.PNG);
+  /* border: 1px solid #555; */
+  top: 60%;
+  position: absolute;
 }
 
-.mbox .bx2 {
-  top: 0%;
-  left: 55%;
-}
-
-.mbox .bx3 {
-  top: 55%;
-  left: 5%;
-}
-
-.mbox .bx4 {
+/* 세번째 박스 */
+.btns3 {
+  width: 75%;
+  background-image: url(../images/discoverymain2.png);
+  /* border: 1px solid #555; */
   top: 50%;
-  left: 55%;
+  position: absolute;
 }
 
+/* 네번째 박스 */
+.btns4 {
+  width: 75%;
+  background-image: url(../images/myitemmain.PNG);
+  /* border: 1px solid #555; */
+  top: 50%;
+  position: absolute;
+  z-index: 999;
+}
+.pop{
+  position: absolute;
+  background-color: white;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  display: none;
+}
+
+
+
+
+/* 오른쪽박스 */
 /* 응용 프로젝트 설명 */
 .sbox {
   position: absolute;
@@ -773,8 +838,37 @@
   top: 20%;
   left: 15%;
 
+
   /* outline: 1px dotted red; */
 }
+/* 타이핌 글자 */
+#typing{
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: ub;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* 깜박임 커서 가상요소 */
+#typing::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 4px;
+  height: 100%;
+
+  animation: typingAni 1s linear infinite;
+}
+
+@keyframes typingAni {
+  0%   { border-left: 8px solid rgba(85, 85, 85, 0); }
+  50%  { border-left: 8px solid #000; }
+  100% { border-left: 8px solid rgba(85, 85, 85, 0); }
+} /* 타이핑 키프레임 */
 
 .sbox1 h2 {
   font-family: 'Sunflower', sans-serif;
@@ -798,7 +892,8 @@
   right: 6%;
   width: 50%;
   height: 46%;
-  background-color: #ccc;
+  background-color: rgb(179 162 232 / 31%);
+  /* background-color: #ccc; */
 }
 
 #myvid2 {
@@ -812,4 +907,7 @@
 
 
 
+
 /* SEC 5.////////////////////////////////////////////// */
+
+
