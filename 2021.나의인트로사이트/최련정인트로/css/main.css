@@ -653,7 +653,8 @@
   text-shadow: 1px 2px #333;
   display: none;
 }
-.sklbx>ul>li>span{
+
+.sklbx>ul>li>span {
   position: absolute;
   top: 77%;
   width: 82%;
@@ -680,7 +681,7 @@
 }
 
 .sklbx>ul>li:hover .skill>.pbox,
-.sklbx>ul>li:hover span{
+.sklbx>ul>li:hover span {
   display: block;
 }
 
@@ -761,7 +762,7 @@
 }
 
 /* 링크바로가기 */
-.btns a{
+.btns a {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -770,8 +771,13 @@
   transition: .4s;
 }
 
+.btns:hover a {
+  background-color: #000;
+  opacity: 0.5;
+}
+
 /* 첫번째 박스 */
-.btns1{
+.btns1 {
   position: absolute;
   top: 60%;
   width: 75%;
@@ -809,41 +815,100 @@
   position: absolute;
   z-index: 999;
 }
-.pop{
+
+
+
+/* 팝업창 */
+.pop {
   position: absolute;
-  background-color: aliceblue;
+  background-color: rgb(255 255 255);
   top: 52%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 50%;
   min-height: 70%;
   border: 2px solid #000;
 
   z-index: 999;
-  /* display: none; */
+  display: none;
 }
 
-.pop img{
-  margin: 3%;
+.pop img {
+  width: 40%;
+  margin: 5%;
   border: 1px solid #333;
 }
-.pop span{
+
+/* 웹사이트 바로가기 버튼 */
+.baro {
   position: absolute;
-    /* width: 300px; */
-    top: 5%;
-    line-height: 5vh;
-}
-.pop button{
-  position: absolute;
-  width: 70px;
-  height: 30px;
-  background-color: rgb(163 108 163);
+  top: 40%;
+  width: 22vw;
+  height: 4vh;
+  background-color: rgb(9 8 9);
   color: white;
-  font-weight: bold;
   border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1vw;
+  font-family: 'Nanum Gothic Coding';
+
+  transition: .4s;
+}
+.baro:hover{
+  background-color: #fff;
+  border: 2px solid #ccc;
+  color: #000;
+}
+
+.pop li {
+  float: none;
+  margin-left: 7%;
+  line-height: 2;
+  font-size: 1vw;
+}
+
+/* 설명글 위에 일자선 */
+.pop li::before{
+  content: '';
+}
+
+.pop .clse {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  color: #000;
+  font-family: 'Encode Sans SC';
+  font-weight: bold;
   border-radius: 10px;
-  right: 3%;
-  bottom: 4%;
+  right: 4%;
+  bottom: 3%;
+  cursor: pointer;
+
+  transition: all .4s;
+}
+
+.pop .clse:hover {
+  background-color: rgb(9 8 9);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* 팝업창 외 부분 가상요소로 반투명만들기 */
+.pop::before {
+  /* content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+
+  z-index: 99; */
 }
 
 
@@ -868,8 +933,9 @@
 
   /* outline: 1px dotted red; */
 }
+
 /* 타이핌 글자 */
-#typing{
+#typing {
   font-size: 3rem;
   font-weight: bold;
   font-family: ub;
@@ -879,7 +945,7 @@
 }
 
 /* 깜박임 커서 가상요소 */
-#typing::after{
+#typing::after {
   content: '';
   display: block;
   position: absolute;
@@ -892,10 +958,20 @@
 }
 
 @keyframes typingAni {
-  0%   { border-left: 8px solid rgba(85, 85, 85, 0); }
-  50%  { border-left: 8px solid #000; }
-  100% { border-left: 8px solid rgba(85, 85, 85, 0); }
-} /* 타이핑 키프레임 */
+  0% {
+    border-left: 8px solid rgba(85, 85, 85, 0);
+  }
+
+  50% {
+    border-left: 8px solid #000;
+  }
+
+  100% {
+    border-left: 8px solid rgba(85, 85, 85, 0);
+  }
+}
+
+/* 타이핑 키프레임 */
 
 .sbox1 h2 {
   font-family: 'Sunflower', sans-serif;
@@ -938,3 +1014,54 @@
 /* SEC 5.////////////////////////////////////////////// */
 
 
+
+/* 하단 공통 적용 */
+/* 스크롤 박스 */
+.scroll {
+  position: fixed;
+  width: 5%;
+  top: 20%;
+  left: 4%;
+}
+
+/* 스크롤 마우스 */
+.scrollin {
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 16px;
+  height: 35px;
+  border: 3px solid #f5f5f5;
+  box-shadow: 1px 1px 2px rgb(51 51 51);
+  border-radius: 7px;
+}
+
+.scrollin::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(255 196 157);
+  animation: k_scroll 1.2s linear alternate infinite;
+}
+@keyframes k_scroll {
+  to {
+      top: 70%;
+      opacity: .5;
+  }
+}
+
+.scroll span {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  color: #f5f5f5;
+  font-family: 'Encode Sans SC';
+  font-size: 1.1rem;
+  transform: translateX(-50%);
+  text-shadow: 1px 1px 2px rgb(51 51 51);
+}
