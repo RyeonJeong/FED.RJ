@@ -760,7 +760,7 @@
   padding-top: 100%;
 }
 
-/* 링크 */
+/* 링크바로가기 */
 .btns a{
   position: absolute;
   width: 100%;
@@ -811,12 +811,39 @@
 }
 .pop{
   position: absolute;
-  background-color: white;
-  top: 35%;
+  background-color: aliceblue;
+  top: 52%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 400px;
-  display: none;
+  width: 50%;
+  min-height: 70%;
+  border: 2px solid #000;
+
+  z-index: 999;
+  /* display: none; */
+}
+
+.pop img{
+  margin: 3%;
+  border: 1px solid #333;
+}
+.pop span{
+  position: absolute;
+    /* width: 300px; */
+    top: 5%;
+    line-height: 5vh;
+}
+.pop button{
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  background-color: rgb(163 108 163);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  right: 3%;
+  bottom: 4%;
 }
 
 
