@@ -813,7 +813,7 @@
   /* border: 1px solid #555; */
   top: 50%;
   position: absolute;
-  z-index: 999;
+  z-index: 99;
 }
 
 /* 팝업창 뒷배경 */
@@ -827,6 +827,7 @@
   background: #000;
   opacity: 0.5;
   display: none;
+  z-index: 999;
 }
 
 /* 팝업창 */
@@ -840,7 +841,7 @@
   min-height: 70%;
   border: 2px solid #000;
 
-  z-index: 999;
+  z-index: 9999;
   display: none;
 }
 
@@ -857,7 +858,7 @@
   width: 22vw;
   height: 4vh;
   background-color: rgb(9 8 9);
-  color: white;
+  color: #333;
   border: none;
   cursor: pointer;
   font-weight: bold;
