@@ -17,7 +17,7 @@ $(function () { //// jQB ///////////////////////////////////
     let chk = $(this).prop("checked");
     // prop(속성명) -> attr(속성명)과 유사함(단, 리턴값이 다름!)
     // prop(속성명) 메서드는 제대로된 return값 true/false를 가져옴
-    console.log("전체동의상태:" + chk);
+    // console.log("전체동의상태:" + chk);
 
     // 2. 전체체크박스가 체크상태(true)이면 개별체크도 모두 true
     //      미체크상태(false)이면 개별체크도 모두 false!
@@ -169,7 +169,7 @@ $(function () { //// jQB ///////////////////////////////////
             - $.ajax(URL,TYPE,DATA,DATA TYPE,ASYNC옵션,SUCCESS,ERROR)
 
             - 상세 파라미터값:
-            $.ajax(
+            $.ajax({
               전송할 페이지,
               전송방식(GET/POST),
               보낼데이터,
@@ -177,14 +177,66 @@ $(function () { //// jQB ///////////////////////////////////
               ASYNC옵션(보통은 false),
               결과값 리턴함수,
               에러처리함수
-              )
+              })
           */
 
+          $.ajax({
+
+            // 1. 전송할 페이지
+            url: "process/chkID.php",
+            // 2. 전송방식(GET/POST)
+            type: "post",
+            // 3. 보낼데이터
+            data: {
+              "mid": $("#mid").val()
+            },
+            // 4. 전송할 데이터 타입
+            dataType: "html",
+            // 5. ASYNC옵션(보통은 false)
+            // -> false로 해야 전역변수사용가능
+            // 여기서는 pass변수를 사용하기 위함!
+            async: false,
+            // 6. 결과값 리턴함수
+            // success(result,status,xhr)
+            // success(결과값,성공상태값,XMLHttpRequest)
+            // 보통 하나만 쓰면 결과값을 리턴 받는다!
+            success: function (res) { // res는 결과값
+              // alert(res);
+              if (res === "ok") { // DB에 없는 ID
+
+                // 성공메시지
+                $("#mid").siblings(".msg")
+                  .text("훌륭한 아이디네요~!")
+                  .addClass("on"); //글자색 변경
+
+              } /// ok이면 ///
+              else { // DB에 이미 같은 ID있음
+
+                // 아이디중복 메시지
+                $("#mid").siblings(".msg")
+                  .text("사용중인 ID입니다!")
+                  .removeClass("on"); //글자색 변경
+
+                // 통과여부 false
+                pass = false;
+                
+              } /// no이면 ///
+
+            }, // success 함수 //
 
 
-          $(this).siblings(".msg")
-            .text("훌륭한 아이디네요~!")
-            .addClass("on"); //글자색 변경 클래스
+            // 7. 에러처리함수
+            // error:function(xhr,status,error){}
+            // error:function(XMLHttpRequest,실패상태,에러결과값){}
+            error: function (xhr, status, error) {
+              alert("연결실행실패:" + error);
+            } // error//
+
+          }); // ajax 메서드 //
+          ///////////////////////
+
+
+
         } ////////// else문 : 결과 true ////////
 
       } /////////// else if문 : 아이디일때 //////////

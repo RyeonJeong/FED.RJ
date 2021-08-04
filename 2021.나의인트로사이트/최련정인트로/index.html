@@ -310,7 +310,7 @@
     <ul class="mbox">
       <li class="mpbx bx1">
         <div class="btns btns1">
-          <a href="#" onclick="pop('block')"></a>
+          <a href="#" onclick="pop('block'),popbg('block')"></a>
         </div>
       </li>
       <li class="mpbx bx2">
@@ -344,19 +344,23 @@
     </div>
 
   </section>
+
   <div class="pop">
     <img src="./images/SeoulLand_main.jpg" alt="서울랜드">
     <button class="baro">웹사이트 바로가기</button>
     <ul>
       <li>이름: 서울랜드 </li>
-      <li>구분: PC, 반응형</li> 
-      <li>페이지: 메인/ sns페이지, footer링크 연결작업</li> 
+      <li>구분: PC, 반응형</li>
+      <li>페이지: 메인/ sns페이지, footer링크 연결작업</li>
       <li>설명: 기존 서울랜드 페이지를 그리드작업하여 최대한 동일한 느낌으로 제작하였습니다.</li>
     </ul>
     <div class="bbx">
       <button class="clse" onclick="pop('none')">Close</button>
     </div>
+
   </div>
+  <!-- 팝업창 띄울때 주변 어둡게 -->
+  <div class="popbg"></div>
 
   <!-- SEC 5. Contact me -->
   <section id="pg5" class="page"></section>
@@ -391,9 +395,9 @@
   <!-- 스크롤 -->
   <div class="scroll">
     <div class="scrollin">
-        <span>Scroll</span>
+      <span>Scroll</span>
     </div>
-</div>
+  </div>
 </body>
 
 </html>
