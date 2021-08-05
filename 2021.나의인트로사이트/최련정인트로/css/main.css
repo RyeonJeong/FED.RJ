@@ -60,6 +60,8 @@
 
 /* 왼쪽박스 */
 .prolbx {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 50%;
   height: 100%;
@@ -867,6 +869,13 @@
 
   transition: .4s;
 }
+
+.baro>a{
+  display: block;
+  line-height: 2;
+  width: 100%;
+  height: 100%;
+}
 .baro:hover{
   background-color: #fff;
   border: 2px solid #ccc;
@@ -908,21 +917,6 @@
   border: none;
   cursor: pointer;
 }
-
-/* 팝업창 외 부분 가상요소로 반투명만들기 */
-.pop::before {
-  /* content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: .5;
-
-  z-index: 99; */
-}
-
 
 
 
@@ -1077,3 +1071,239 @@
   transform: translateX(-50%);
   text-shadow: 1px 1px 2px rgb(51 51 51);
 }
+
+
+
+/************************************** 미디어쿼리 **************************************/
+@media only screen and (max-width:500px) {
+  
+/**************** sec1 ****************/
+
+/* 메인글씨 */
+#pg1>h1{
+  top: 65%;
+  font-size: 6vw;
+  right: 5%;
+}
+
+/* 서브글씨 */
+#pg1>p{
+  font-size: 4vw;
+  right: 5%;
+  top: 70%;
+}
+
+/**************** sec2 ****************/
+
+/* 왼쪽박스 */
+/* mbti */
+.mbti{
+  height: 10%;
+}
+
+/* mbti 글씨 */
+.mbti>h1, .mbti>h2{
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* 증명사진 박스 */
+.photo{
+  flex-direction: column;
+  height: auto;
+}
+
+.photo img{
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photoIn1{
+  padding: 15%
+}
+.photoIn2{
+  display: none;
+}
+
+/* mbti 그래프 박스 */
+.gp{
+  height: 26.5%;
+}
+/* 그래프 왼쪽 설명글 */
+.gpin .pregp{
+  top: -30px;
+  font-size: 2vw;
+}
+/* 그래프 오른쪽 설명글 */
+.gpin .afgp{
+  top: -30px;
+  font-size: 2vw;
+}
+
+/* 오른쪽박스 */
+.iamlicbx{
+  flex-direction: column;
+}
+
+.socialbx{
+  flex-direction: column;
+}
+
+/* iam 박스 */
+iambx{
+  width: 100%;
+}
+.iambx li{
+  line-height: normal;
+  font-size: 2.8vw;
+}
+
+/* 라이센스박스 */
+.licbx{
+  width: 100%;
+}
+.licbx li{
+  line-height: normal;
+  font-size: 2.8vw;
+}
+
+/* iam + 라이센스박스 */
+.iamlicbx{
+  margin: 0;
+}
+
+
+/* 워크박스 */
+.workbx{
+  width: 100%;
+}
+.workbx li{
+  line-height: normal;
+  font-size: 2.8vw;
+}
+
+/* 에듀박스 */
+.edubx{
+  width: 100%;
+}
+.edubx li{
+  line-height: normal;
+  font-size: 2.8vw;
+}
+
+/* 일 + 교육 박스 */
+.socialbx{
+  margin: 0;
+}
+
+/* 캐릭터부분 */
+.strong{
+  display: none;
+}
+#pg2>img{
+  display: none;
+}
+
+/**************** sec3 ****************/
+
+/* typing */
+.sbox{
+  height: 30%;
+  top: 7%;
+  right: 50%;
+}
+.sbox1 span{
+  font-size: 2vw;
+  white-space: nowrap;
+}
+
+/* 포폴박스 */
+.mbox {
+  padding-left: 80px;
+}
+
+/* 포폴담는 박스 */
+.btns{
+  min-width: 120px;
+  border: 1px solid #555;
+  z-index: 999;
+}
+
+/* 첫번째 포폴 */
+.btns1{
+  top: 105%;
+}
+
+/* 두번째 포폴 */
+.btns2{
+  left: 100px;
+  top: 85%;
+}
+
+/* 네번째 포폴 */
+.btns4{
+  top: 30%;
+  left: 100px;
+}
+
+/* 배경 비디오 */
+.video{
+  top: 70%;
+  right: 5%;
+  width: 90%;
+  height: 25%;
+}
+#myvid2{
+  width: 60%;
+  top: 15%;
+  left: 35%;
+}
+
+/* 팝업 */
+.pop{
+  width: 90%;
+}
+
+/**************** sec4 ****************/
+
+
+/**************** 공통 CSS ****************/
+
+/* gnb박스 */
+.top{
+  height: 90px;
+}
+
+/* 로고 */
+#logo img{
+  width: 25%;
+  margin-top: 2px;
+  position: absolute;
+  left: 2px;
+}
+
+/* gnb메뉴 */
+.gnb{
+  right: 0%;
+  top: 60px;
+}
+
+
+/* 스크롤 */
+.scrollin{
+  width: 10px;
+  height: 30px;
+}
+/* 스크롤글씨 */
+.scroll span{
+  font-size: 0.5rem;
+}
+
+
+/* 인디케이터 */
+.indic{
+  width: 10px;
+}
+
+}/* 미디어쿼리 500px */
