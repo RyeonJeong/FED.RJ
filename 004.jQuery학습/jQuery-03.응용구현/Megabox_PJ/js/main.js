@@ -264,53 +264,81 @@ $(function () { // jQB2 //
   // 2-1-1. 마우스 오버/아웃시 이미지 변경하기//
   // 대상: .btnpp
   $(".btnpp img").hover(
-    function(){ // over - 진한 이미지로 변경
+    function () { // over - 진한 이미지로 변경
       // 이미지 경로 읽어오기
       let csrc = $(this).attr("src");
       // 이미지 경로 변경하기 : .png -> -1.png
-      csrc = csrc.replace(".png","-1.png");
+      csrc = csrc.replace(".png", "-1.png");
       // console.log(csrc);
       // 이미지 실제로 변경하기
-      $(this).attr("src",csrc);
+      $(this).attr("src", csrc);
 
     },
-    function(){ //out - 원래 이미지로 다시 변경
+    function () { //out - 원래 이미지로 다시 변경
       // 이미지 경로 읽어오기
       let csrc = $(this).attr("src");
       // 이미지 경로 변경하기 : .png -> -1.png
-      csrc = csrc.replace("-1.png",".png");
+      csrc = csrc.replace("-1.png", ".png");
       // console.log(csrc);
       // 이미지 실제로 변경하기
-      $(this).attr("src",csrc);
+      $(this).attr("src", csrc);
 
     }); //// hover //
 
-    // 2-1-2. 재생/멈춤 기능구현
-    // 대상: .btnpp img
-    // 원리: 재생상태이면 멈추고 멈춤상태이면 재생한다.
-    // 핵심: 동영상 멈춤 상태를 알아낼 수 있다!
-    $(".btnpp img").click(function(){
-      // 동영상 멈춤상태 알아내기 - paused 속성으로 알아냄
-      // 결과: true - 멈춤, false - 멈춤아님
-      let paused_sts = mv.get(0).paused;
-      console.log("비디오가 멈췄냐?"+paused_sts);
+  // 2-1-2. 재생/멈춤 기능구현
+  // 대상: .btnpp img
+  // 원리: 재생상태이면 멈추고 멈춤상태이면 재생한다.
+  // 핵심: 동영상 멈춤 상태를 알아낼 수 있다!
+  $(".btnpp img").click(function () {
+    // 동영상 멈춤상태 알아내기 - paused 속성으로 알아냄
+    // 결과: true - 멈춤, false - 멈춤아님
+    let paused_sts = mv.get(0).paused;
+    console.log("비디오가 멈췄냐?" + paused_sts);
 
-      // 1. 멈춤아님(false)이면 동영상 멈추기!
-      if(!paused_sts){
-        // 비디오 멈추기는 pause() 메서드!
-        mv.get(0).pause();
-      } //// if문 //
+    // 1. 멈춤아님(false)이면 동영상 멈추기!
+    if (!paused_sts) {
+      // 비디오 멈추기는 pause() 메서드!
+      mv.get(0).pause();
+      // 멈춤상태이면 진한재생버튼으로 변경!
+      $(this).attr("src", "images/vbt2-1.png");
 
-      else{
-        // 비디오 재생은 play() 메서드!
-        mv.get(0).play();
-        
-      } /// else문 //
+    } //// if문 //
+    else {
+      // 비디오 재생은 play() 메서드!
+      mv.get(0).play();
+      // 재생상태이면 진한멈춤버튼으로 변경!
+      $(this).attr("src", "images/vbt1-1.png");
 
-    }); /// click //
+    } /// else문 //
+
+  }); /// click //
 
 
-  // 2-2. 소리남/안남 기능
+  // 2-2. 소리남/안남 기능 //////////////////////////
+  // 대상: .btnsnd img
+  // 원리: 소리가 나는지 안나는지 상태에 따라 반대로 설정함
+  // 핵심: 소리가 안나는지 상태를 알 수 있음!
+  $(".btnsnd img").click(function () {
+
+    // 1. 현재 소리가 안나는지 상태 알아오기
+    // 동영상 소리 안남여부 속성 -> muted
+    // muted는 상태값을 읽어오기 / 상태설정하기 모두 됨!
+    let sound = mv.get(0).muted;
+    console.log("소리안나냐?" + sound);
+
+    // 2. 만약 소리가 안나면 나게/ 나면 안나게하기
+    mv.get(0).muted = !sound; 
+    // !sound -> true/false인 sound값을 반대로 넣음
+
+    // 3. 아이콘을 현재 소리 상태로 넣기
+    // sound가 true이면 반대로 했으므로 소리남 아이콘!
+    if(sound) $(this).attr("src","images/speaker_blue.png");
+    else $(this).attr("src","images/speaker-mute_blue.png");
+
+  }); //// click ///
+
+
+
   // 2-3. 재생위치변경 기능(클릭/드래그)
   // 2-4. 소리크기변경 기능
   // 2-5. 플레이어 축소/확대 기능
