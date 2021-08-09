@@ -23,7 +23,7 @@
 
 #pg1>h1 {
   position: absolute;
-  font-size: 3.8vw;
+  font-size: 2.2rem;
   left: 15%;
   top: 28%;
 
@@ -34,7 +34,7 @@
 
 #pg1>p {
   position: absolute;
-  font-size: 1.4vw;
+  font-size: 1.3rem;
   left: 20%;
   top: 38%;
 
@@ -664,7 +664,7 @@
 
   color: #000;
   font-weight: bold;
-  font-size: 1.1vw;
+  font-size: 1.1rem;
   /* text-shadow: 1px 1px #333; */
   display: none;
 }
@@ -860,7 +860,7 @@
   width: 22vw;
   height: 4vh;
   background-color: rgb(9 8 9);
-  color: #333;
+  color: #fff;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -1074,23 +1074,23 @@
 
 
 
-/************************************** 미디어쿼리 **************************************/
+/***************************** 미디어쿼리 *******************************/
 @media only screen and (max-width:500px) {
   
 /**************** sec1 ****************/
 
 /* 메인글씨 */
 #pg1>h1{
-  top: 65%;
-  font-size: 6vw;
-  right: 5%;
+  top: 31%;
+  font-size: 2rem;
+  left: 8%;
 }
 
 /* 서브글씨 */
 #pg1>p{
-  font-size: 4vw;
-  right: 5%;
-  top: 70%;
+  top: 38%;
+  right: 24%;
+  font-size: .8rem;
 }
 
 /**************** sec2 ****************/
@@ -1274,19 +1274,26 @@ iambx{
 .top{
   height: 90px;
 }
-
-/* 로고 */
-#logo img{
+/* 로고위치 */
+#logo{
   width: 25%;
   margin-top: 2px;
   position: absolute;
   left: 2px;
 }
+/* 로고이미지 */
+#logo img{
+  width: 100%;
+}
 
 /* gnb메뉴 */
 .gnb{
-  right: 0%;
-  top: 60px;
+  left: 10%;
+  top: 70%;
+  width: 100%;
+}
+.gnb ul{
+  font-size: .9rem;
 }
 
 
@@ -1303,7 +1310,7 @@ iambx{
 
 /* 인디케이터 */
 .indic{
-  width: 10px;
+  width: 15px;
 }
 
 }/* 미디어쿼리 500px */
