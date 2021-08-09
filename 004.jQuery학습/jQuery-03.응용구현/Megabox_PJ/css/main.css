@@ -214,6 +214,7 @@ h3 {
   transform: translate(-50%, -50%);
   width: 32.3%;
   /* outline: 2px dashed lime; */
+  display: none; /* 처음에 안보임! */
 }
 /* 스크린비율 가상요소 */
 #screen::before{
@@ -232,14 +233,22 @@ h3 {
 }
 
 /* 2-1-2. 예고편 선택박스 */
-.gbx{
+/* 포스터 전체박스 */
+#gbx{
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90%;
+
+  /* outline: 4px dashed blue; */
+}
+/* 포스터박스 */
+.gbx{
+  position: relative;
+  /* 부모자격 */
   width: 20%;
   margin: 0 auto;
-  /* outline: 4px dashed blue; */
 }
 .gbx::before{
   content: '';
@@ -255,6 +264,9 @@ h3 {
   width: 100%;
   box-shadow: 6px 6px 5px #333;
   border-radius: 15px;
+  cursor: pointer;
+  /* 손가락모양 */
+  
   /* 트랜지션 */
   transition: all .4s ease-in-out;
 }
@@ -267,6 +279,7 @@ h3 {
   left: -210%;
   transform: scale(.7);
   opacity: 0;/* 안보임 */
+  cursor: default;
 }
 /* 왼쪽 바로옆 */
 .gbx img:nth-child(2){
@@ -294,13 +307,15 @@ h3 {
   left: 210%;
   transform: scale(.7);
   opacity: 0;/* 안보임 */
+  cursor: default;
 }
 
 /* 이동버튼 공통 */
 .abtn{
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 4%;
   max-width: 55px;
   /* 최대크기지정 */
@@ -311,7 +326,7 @@ h3 {
 }
 /* 오른쪽버튼 */
 .rb{
-  right: 10%;
+  left: 90%;
 }
 /* 왼쪽버튼 */
 .lb{
