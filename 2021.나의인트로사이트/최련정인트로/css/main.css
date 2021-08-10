@@ -1295,19 +1295,13 @@
     min-width: 100px;
     left: 35%;
   }
-}
+
 
 /* 로고이미지 */
 #logo img {
   width: 100%;
 }
 
-/* gnb메뉴 */
-.gnb {
-  left: 10%;
-  top: 70%;
-  width: 100%;
-}
 
 .gnb ul {
   font-size: .9rem;
