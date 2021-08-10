@@ -23,7 +23,7 @@
 
 #pg1>h1 {
   position: absolute;
-  font-size: 2.2rem;
+  font-size: 3.8vw;
   left: 15%;
   top: 28%;
 
@@ -34,7 +34,7 @@
 
 #pg1>p {
   position: absolute;
-  font-size: 1.3rem;
+  font-size: 1.8vw;
   left: 20%;
   top: 38%;
 
@@ -819,7 +819,7 @@
 }
 
 /* 팝업창 뒷배경 */
-.popbg{
+.popbg {
   position: fixed;
   display: block;
   top: 0;
@@ -870,13 +870,14 @@
   transition: .4s;
 }
 
-.baro>a{
+.baro>a {
   display: block;
   line-height: 2;
   width: 100%;
   height: 100%;
 }
-.baro:hover{
+
+.baro:hover {
   background-color: #fff;
   border: 2px solid #ccc;
   color: #000;
@@ -890,7 +891,7 @@
 }
 
 /* 설명글 위에 일자선 */
-.pop li::before{
+.pop li::before {
   content: '';
 }
 
@@ -1054,10 +1055,11 @@
   background-color: rgb(255 196 157);
   animation: k_scroll 1.2s linear alternate infinite;
 }
+
 @keyframes k_scroll {
   to {
-      top: 70%;
-      opacity: .5;
+    top: 70%;
+    opacity: .5;
   }
 }
 
@@ -1076,241 +1078,259 @@
 
 /***************************** 미디어쿼리 *******************************/
 @media only screen and (max-width:500px) {
-  
-/**************** sec1 ****************/
 
-/* 메인글씨 */
-#pg1>h1{
-  top: 31%;
-  font-size: 2rem;
-  left: 8%;
-}
+  /**************** sec1 ****************/
 
-/* 서브글씨 */
-#pg1>p{
-  top: 38%;
-  right: 24%;
-  font-size: .8rem;
-}
+  /* 메인글씨 */
+  #pg1>h1 {
+    top: 31%;
+    font-size: 6vw;
+    left: 8%;
+  }
 
-/**************** sec2 ****************/
+  /* 서브글씨 */
+  #pg1>p {
+    top: 38%;
+    right: 24%;
+    font-size: 3vw;
+  }
 
-/* 왼쪽박스 */
-/* mbti */
-.mbti{
-  height: 10%;
-}
+  /**************** sec2 ****************/
 
-/* mbti 글씨 */
-.mbti>h1, .mbti>h2{
-  padding-left: 10px;
-  padding-top: 10px;
-}
+  /* 왼쪽박스 */
+  /* mbti */
+  .mbti {
+    height: 10%;
+  }
 
-/* 증명사진 박스 */
-.photo{
-  flex-direction: column;
-  height: auto;
-}
+  /* mbti 글씨 */
+  .mbti>h1,
+  .mbti>h2 {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
 
-.photo img{
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
+  /* 증명사진 박스 */
+  .photo {
+    flex-direction: column;
+    height: auto;
+  }
 
-.photoIn1{
-  padding: 15%
-}
-.photoIn2{
-  display: none;
-}
+  .photo img {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-/* mbti 그래프 박스 */
-.gp{
-  height: 26.5%;
-}
-/* 그래프 왼쪽 설명글 */
-.gpin .pregp{
-  top: -30px;
-  font-size: 2vw;
-}
-/* 그래프 오른쪽 설명글 */
-.gpin .afgp{
-  top: -30px;
-  font-size: 2vw;
-}
+  .photoIn1 {
+    padding: 15%
+  }
 
-/* 오른쪽박스 */
-.iamlicbx{
-  flex-direction: column;
-}
+  .photoIn2 {
+    display: none;
+  }
 
-.socialbx{
-  flex-direction: column;
-}
+  /* mbti 그래프 박스 */
+  .gp {
+    height: 26.5%;
+  }
 
-/* iam 박스 */
-iambx{
-  width: 100%;
-}
-.iambx li{
-  line-height: normal;
-  font-size: 2.8vw;
-}
+  /* 그래프 왼쪽 설명글 */
+  .gpin .pregp {
+    top: -30px;
+    font-size: 2vw;
+  }
 
-/* 라이센스박스 */
-.licbx{
-  width: 100%;
-}
-.licbx li{
-  line-height: normal;
-  font-size: 2.8vw;
-}
+  /* 그래프 오른쪽 설명글 */
+  .gpin .afgp {
+    top: -30px;
+    font-size: 2vw;
+  }
 
-/* iam + 라이센스박스 */
-.iamlicbx{
-  margin: 0;
-}
+  /* 오른쪽박스 */
+  .iamlicbx {
+    flex-direction: column;
+  }
 
+  .socialbx {
+    flex-direction: column;
+  }
 
-/* 워크박스 */
-.workbx{
-  width: 100%;
-}
-.workbx li{
-  line-height: normal;
-  font-size: 2.8vw;
-}
+  /* iam 박스 */
+  iambx {
+    width: 100%;
+  }
 
-/* 에듀박스 */
-.edubx{
-  width: 100%;
-}
-.edubx li{
-  line-height: normal;
-  font-size: 2.8vw;
-}
+  .iambx li {
+    line-height: normal;
+    font-size: 2.8vw;
+  }
 
-/* 일 + 교육 박스 */
-.socialbx{
-  margin: 0;
-}
+  /* 라이센스박스 */
+  .licbx {
+    width: 100%;
+  }
 
-/* 캐릭터부분 */
-.strong{
-  display: none;
-}
-#pg2>img{
-  display: none;
-}
+  .licbx li {
+    line-height: normal;
+    font-size: 2.8vw;
+  }
 
-/**************** sec3 ****************/
-
-/* typing */
-.sbox{
-  height: 30%;
-  top: 7%;
-  right: 50%;
-}
-.sbox1 span{
-  font-size: 2vw;
-  white-space: nowrap;
-}
-
-/* 포폴박스 */
-.mbox {
-  padding-left: 80px;
-}
-
-/* 포폴담는 박스 */
-.btns{
-  min-width: 120px;
-  border: 1px solid #555;
-  z-index: 999;
-}
-
-/* 첫번째 포폴 */
-.btns1{
-  top: 105%;
-}
-
-/* 두번째 포폴 */
-.btns2{
-  left: 100px;
-  top: 85%;
-}
-
-/* 네번째 포폴 */
-.btns4{
-  top: 30%;
-  left: 100px;
-}
-
-/* 배경 비디오 */
-.video{
-  top: 70%;
-  right: 5%;
-  width: 90%;
-  height: 25%;
-}
-#myvid2{
-  width: 60%;
-  top: 15%;
-  left: 35%;
-}
-
-/* 팝업 */
-.pop{
-  width: 90%;
-}
-
-/**************** sec4 ****************/
+  /* iam + 라이센스박스 */
+  .iamlicbx {
+    margin: 0;
+  }
 
 
-/**************** 공통 CSS ****************/
+  /* 워크박스 */
+  .workbx {
+    width: 100%;
+  }
 
-/* gnb박스 */
-.top{
-  height: 90px;
+  .workbx li {
+    line-height: normal;
+    font-size: 2.8vw;
+  }
+
+  /* 에듀박스 */
+  .edubx {
+    width: 100%;
+  }
+
+  .edubx li {
+    line-height: normal;
+    font-size: 2.8vw;
+  }
+
+  /* 일 + 교육 박스 */
+  .socialbx {
+    margin: 0;
+  }
+
+  /* 캐릭터부분 */
+  .strong {
+    display: none;
+  }
+
+  #pg2>img {
+    display: none;
+  }
+
+  /**************** sec3 ****************/
+
+  /* typing */
+  .sbox {
+    height: 30%;
+    top: 7%;
+    right: 50%;
+  }
+
+  .sbox1 span {
+    font-size: 2vw;
+    white-space: nowrap;
+  }
+
+  /* 포폴박스 */
+  .mbox {
+    padding-left: 80px;
+  }
+
+  /* 포폴담는 박스 */
+  .btns {
+    min-width: 120px;
+    border: 1px solid #555;
+    z-index: 999;
+  }
+
+  /* 첫번째 포폴 */
+  .btns1 {
+    top: 105%;
+  }
+
+  /* 두번째 포폴 */
+  .btns2 {
+    left: 100px;
+    top: 85%;
+  }
+
+  /* 네번째 포폴 */
+  .btns4 {
+    top: 30%;
+    left: 100px;
+  }
+
+  /* 배경 비디오 */
+  .video {
+    top: 70%;
+    right: 5%;
+    width: 90%;
+    height: 25%;
+  }
+
+  #myvid2 {
+    width: 60%;
+    top: 15%;
+    left: 35%;
+  }
+
+  /* 팝업 */
+  .pop {
+    width: 90%;
+  }
+
+  /**************** sec4 ****************/
+
+
+  /**************** 공통 CSS ****************/
+
+  /* gnb박스 */
+  .top {
+    height: 90px;
+  }
+
+  /* 로고위치 */
+  #logo {
+    width: 23%;
+    margin: 0 auto;
+    min-width: 100px;
+    left: 35%;
+  }
 }
-/* 로고위치 */
-#logo{
-  width: 25%;
-  margin-top: 2px;
-  position: absolute;
-  left: 2px;
-}
+
 /* 로고이미지 */
-#logo img{
+#logo img {
   width: 100%;
 }
 
 /* gnb메뉴 */
-.gnb{
+.gnb {
   left: 10%;
   top: 70%;
   width: 100%;
 }
-.gnb ul{
+
+.gnb ul {
   font-size: .9rem;
 }
 
 
 /* 스크롤 */
-.scrollin{
+.scrollin {
   width: 10px;
   height: 30px;
 }
+
 /* 스크롤글씨 */
-.scroll span{
+.scroll span {
   font-size: 0.5rem;
 }
 
 
 /* 인디케이터 */
-.indic{
+.indic {
   width: 15px;
 }
 
-}/* 미디어쿼리 500px */
+}
+
+/* 미디어쿼리 500px */
