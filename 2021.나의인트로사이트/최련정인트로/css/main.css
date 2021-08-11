@@ -1296,9 +1296,7 @@
   }
 
   #myvid2 {
-    width: 60%;
-    top: 15%;
-    left: 35%;
+    display: none;
   }
 
   /* 팝업 */
@@ -1335,7 +1333,7 @@
   .gnb{
     position: absolute;
     top: 65%;
-    left: 3%;
+    left: 2%;
   }
 
   .gnb li {
