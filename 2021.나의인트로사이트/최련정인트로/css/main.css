@@ -1266,19 +1266,19 @@
   /* 포폴담는 박스 */
   .btns {
     min-width: 120px;
-    border: 1px solid #555;
+    /* border: 1px solid #555; */
     z-index: 999;
   }
 
   /* 첫번째 포폴 */
   .btns1 {
-    top: 105%;
+    top: 75%;
   }
 
   /* 두번째 포폴 */
   .btns2 {
     left: 100px;
-    top: 85%;
+    top: 75%;
   }
 
   /* 네번째 포폴 */
