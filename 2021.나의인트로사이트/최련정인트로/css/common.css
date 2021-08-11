@@ -118,14 +118,16 @@ h3 {
 /* 1-2. GNB 메뉴 */
 .gnb {
   position: absolute;
-  top: 40px;
+  top: 30%;
   right: 2%;
   font-family: 'Encode Sans SC', sans-serif;
 }
 
 .gnb li {
-  margin: 0 9px;
+  margin: 0 11px;
+  font-size: 1.2vw;
 }
+
 
 /* 메뉴에 마우스 오버시 */
 .gnb a:hover,
