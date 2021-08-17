@@ -28,8 +28,8 @@ function sendMail($to, $from, $from_name, $subject, $body){
     $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier (TLS는 tls 입력)
     $mail->Host       = "smtp.naver.com";      // sets GMAIL as the SMTP server
     $mail->Port       = 465;                   // set the SMTP port for the GMAIL server (TLS는 587 입력)
-    $mail->Username   = "gansoo@naver.com";            // GMAIL username
-    $mail->Password   = "fpdltmxj00";            // GMAIL password
+    $mail->Username   = "fpalsl@naver.com";            // GMAIL username
+    $mail->Password   = "Wkdb9495$$";            // GMAIL password
 
     $mail->SetFrom($from, $from_name);
 
@@ -51,6 +51,6 @@ function sendMail($to, $from, $from_name, $subject, $body){
 
 # 메일 보내기 함수 호출!!!
 //sendMail($to, $from, $from_name, $subject, $body)
-sendMail("gansoo@naver.com","gansoo@naver.com", $nm, $title,$msg);
+sendMail("fpalsl@naver.com","fpalsl@naver.com", $nm, $title,$msg);
 
 ?>
