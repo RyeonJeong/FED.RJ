@@ -16,6 +16,7 @@
   <script src="js/jquery-touch-punch.min.js"></script>
   <script src="js/autoScroll_pageAction.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/formmail.js"></script>
 
 </head>
 
@@ -62,7 +63,7 @@
     <!-- 메인글 -->
     <video muted="" playsinline="" loop="" autoplay="" id="myvid">
       <source src="./video/pexels-ron-lach-7596677.mp4" type="video/mp4">
-  </video>
+    </video>
     <!-- <video id="myvid" src="./video/pexels-ron-lach-7596677.mp4" autoplay muted loop></video> -->
     <h1>What do you think of this?</h1>
     <p>I hope you've shown interested.</p>
@@ -365,8 +366,59 @@
   <!-- 팝업창 띄울때 주변 어둡게 -->
   <div class="popbg"></div>
 
+
+
+
   <!-- SEC 5. Contact me -->
-  <section id="pg5" class="page"></section>
+  <section id="pg5" class="page">
+    <div class="contact">
+      <!-- 폼메일박스 -->
+      <div class="contact_fm">
+        <!-- 이메일 보내기 -->
+        <form action="../Sndmail.php" method="post">
+          <p class="msgbox">
+            <span class="tit2">SEND ME A EMAIL</span><br><br>
+            <label for="nm">Your Name</label><br>
+            <input type="text" id="nm"><br>
+            <label for="email">Your email</label><br>
+            <input type="text" id="email"><br>
+            <label for="email">Your Title</label><br>
+            <input type="text" id="title"><br>
+            <label for="msg">Your Message</label><br>
+            <textarea id="msg" cols="40" rows="5"></textarea><br>
+            <input type="button" value="Send" id="btnsend">
+          </p>
+        </form>
+      </div>
+      <div class="rcont">
+        <ul class="imcont">
+          <li>
+            <a href="">
+              <img src="images/mail.png" alt="메일주소">fpalsl@naver.com
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="images/call.png" alt="핸드폰번호">010.3904.6345
+            </a>
+          </li>
+          <li>
+            <a href="" target="_blank">
+              <!-- <a href="https://open.kakao.com/o/sdjFTizc" target="_blank"> -->
+              <img src="images/kakao.png" alt="오픈카카오톡 ID">카카오톡 오픈채팅
+            </a>
+          </li>
+          <li>
+            <a href="" download>
+              <img src="images/down.png" alt="이력서 다운받기">이력서 다운받기
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+  </section>
 
 
 

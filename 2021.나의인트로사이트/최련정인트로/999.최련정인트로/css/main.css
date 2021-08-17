@@ -840,9 +840,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  min-height: 70%;
-  border: 2px solid #000;
-
+  min-height: 30%;
+  border: 2px solid #10142c;
   z-index: 9999;
   display: none;
 }
@@ -850,44 +849,56 @@
 .pop img {
   width: 40%;
   margin: 5%;
-  border: 1px solid #333;
+  border: 1px solid #10142c;
 }
 
 /* 웹사이트 바로가기 버튼 */
-.baro {
+html .baro {
   position: absolute;
-  top: 40%;
-  width: 22vw;
-  height: 4vh;
-  background-color: rgb(9 8 9);
-  color: #fff;
-  border: none;
+  bottom: 3%;
+  width: 15vw;
+  height: 40px;
+  right: 20%;
+  background-color: #10142c;
+  border: 1px solid #e7b522;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   font-size: 1vw;
   font-family: 'Nanum Gothic Coding';
-
-  transition: .4s;
 }
 
 .baro>a {
   display: block;
-  line-height: 2;
+  line-height: 30px;
   width: 100%;
-  height: 100%;
+  height: 30px;
+  color: #e7b522;
+  transition: .4s;
 }
 
 .baro:hover {
   background-color: #fff;
-  border: 2px solid #ccc;
+  border: 2px solid #10142c;
+  box-sizing: border-box;
+}
+
+.baro:hover a {
   color: #000;
+}
+
+.pop ul {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 45%;
 }
 
 .pop li {
   float: none;
-  margin-left: 7%;
-  line-height: 2;
+  line-height: 3;
   font-size: 1vw;
+  font-weight: bold;
 }
 
 /* 설명글 위에 일자선 */
@@ -897,25 +908,25 @@
 
 .pop .clse {
   position: absolute;
-  width: 80px;
+  width: 7vw;
   height: 40px;
   background-color: #fff;
-  border: 2px solid #ccc;
-  color: #000;
+  border: 2px solid #10142c;
+  color: #10142c;
   font-family: 'Encode Sans SC';
   font-weight: bold;
+  font-size: 1vw;
   border-radius: 10px;
-  right: 4%;
+  right: 3%;
   bottom: 3%;
   cursor: pointer;
-
   transition: all .4s;
 }
 
 .pop .clse:hover {
-  background-color: rgb(9 8 9);
-  color: white;
-  border: none;
+  background-color: #10142c;
+  color: #e7b522;
+  border: 1px solid #e7b522;
   cursor: pointer;
 }
 
@@ -1020,6 +1031,110 @@
 
 /* SEC 5.////////////////////////////////////////////// */
 
+.contact_fm {
+  flex: 1;
+}
+.contact {
+  display: flex;
+  position: absolute;
+  top: 52%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 82vw;
+  height: 75vh;
+  border: 2px solid #ddd;
+  box-shadow: 2px 2px 2px #a5a5a5;
+
+  outline: 2px dotted red;
+}
+/* 폼메일박스 */
+.contact_fm {
+  flex: 1;
+}
+
+/* 폼메일박스 */
+.msgbox {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid rgb(16, 20, 44);
+  overflow: hidden;
+}
+
+/* 폼메일 텍스트 */
+.msgbox label {
+  color: #000;
+  font-size: 1vw;
+}
+
+/* 입력창 */
+input {
+  background-color: transparent;
+  width: 400px;
+  height: 30px;
+  border: 1px solid #10142c;
+}
+
+/* 내용창 */
+#msg{
+  width: 400px;
+  background-color: transparent;
+  border: 1px solid #10142c;
+}
+
+/* 보내기 버튼 */
+#btnsend {
+  width: 120px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #e7b522;
+  font-size: 1vw;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  color: #e7b522;
+  background-color: #10142c;
+}
+
+#btnsend:hover{
+  background-color: #fff;
+  border: 2px solid #10142c;
+  color: #000;
+}
+
+/* 오른쪽박스 */
+.contnum{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* 인사박스 */
+.conttit{
+  flex: 1;
+}
+
+/* 연락처박스 */
+.phone{
+  flex: 1;
+}
+.rcont {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  outline: 2px dotted blue;
+}
+
+.imcont li {
+  float: none;
+}
+
+
 
 
 /* 하단 공통 적용 */
@@ -1098,7 +1213,7 @@
   /**************** sec2 ****************/
 
   /* 전체박스 */
-  .probox{
+  .probox {
     position: absolute;
     width: 90vw;
     height: 80vh;
@@ -1142,7 +1257,7 @@
   }
 
   /* mbti 그래프 전체박스 */
-  .pg2ski{
+  .pg2ski {
     border: none;
   }
 
@@ -1153,7 +1268,7 @@
     border: none;
   }
 
-  .gp>span{
+  .gp>span {
     padding-top: 15px;
   }
 
@@ -1171,9 +1286,10 @@
 
 
   /* 오른쪽박스 타이틀 */
-  .gif h2{
+  .gif h2 {
     font-size: 3.8vw;
   }
+
   /* 오른쪽박스(iam + license) */
   .iamlicbx {
     flex-direction: column;
@@ -1239,7 +1355,7 @@
   }
 
   /**************** sec3 ****************/
-  .sklbx>ul>li>span{
+  .sklbx>ul>li>span {
     font-size: 2.5vw;
   }
 
@@ -1304,7 +1420,56 @@
     width: 90%;
   }
 
+
+
   /**************** sec5 ****************/
+
+
+  /* 메일창 */
+  .msgbox {
+    padding: 10px;
+  }
+
+  /* 메일창 메인 */
+  .tit2 {
+    font-size: 3.5vw;
+    font-weight: normal;
+  }
+
+  /* 입력창 */
+  input {
+    width: 90%;
+    height: 25px;
+    margin: 5px 0;
+  }
+
+  /* 내용입력창 */
+  #msg {
+    width: 90%;
+    margin-top: 5px;
+  }
+
+  /* 각 창 설명텍스트 */
+  .msgbox label {
+    color: #000;
+    font-size: 3.5vw;
+    font-weight: normal;
+  }
+
+  html .mainp {
+    margin-top: 10px;
+    font-size: 3.5vw;
+  }
+
+  /* 보내기창 */
+  #btnsend {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 3.5vw;
+    font-weight: bold;
+    height: 30px;
+  }
+
 
 
   /**************** 공통 CSS ****************/
@@ -1330,7 +1495,7 @@
   }
 
   /* 메뉴 재정비 */
-  .gnb{
+  .gnb {
     position: absolute;
     top: 65%;
     left: 2%;
@@ -1342,10 +1507,11 @@
 
 
   /* 스크롤 */
-  .scroll{
+  .scroll {
     top: 22%;
     left: 5%;
   }
+
   .scrollin {
     width: 10px;
     height: 30px;
