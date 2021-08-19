@@ -403,8 +403,7 @@
             </a>
           </li>
           <li>
-            <a href="" target="_blank">
-              <!-- <a href="https://open.kakao.com/o/sdjFTizc" target="_blank"> -->
+            <a href="https://open.kakao.com/o/sSU4QQud" target="_blank">
               <img src="images/kakao.png" alt="오픈카카오톡 ID">카카오톡 오픈채팅
             </a>
           </li>
