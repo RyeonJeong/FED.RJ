@@ -408,7 +408,7 @@
             </a>
           </li>
           <li>
-            <a href="" download>
+            <a href="http://fpalsl.dothome.co.kr/ryeonjeong/최련정입사지원서.hwp" download>
               <img src="images/down.png" alt="이력서 다운받기">이력서 다운받기
             </a>
           </li>

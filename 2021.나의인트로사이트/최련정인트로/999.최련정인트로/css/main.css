@@ -836,12 +836,11 @@
 .pop {
   position: absolute;
   background-color: rgb(255 255 255);
-  top: 52%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  min-height: 30%;
-  border: 2px solid #10142c;
+  width: 60%;
+  min-height: 60%;
   z-index: 9999;
   display: none;
 }
@@ -849,7 +848,7 @@
 .pop img {
   width: 40%;
   margin: 5%;
-  border: 1px solid #10142c;
+  border: 1px solid #ccc;
 }
 
 /* 웹사이트 바로가기 버튼 */
