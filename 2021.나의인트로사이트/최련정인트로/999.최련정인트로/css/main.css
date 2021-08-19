@@ -565,8 +565,6 @@
   flex: 1;
   text-align: center;
 
-  transition: all .4s ease-in-out;
-
 }
 
 /* li에 마우스 오버시 커짐 */
@@ -727,6 +725,29 @@
 
 
 /* SEC 4.////////////////////////////////////////////// */
+
+/* 스와이퍼 슬라이드 */
+
+html .swiper-container {
+  width: 100%;
+  top: 55%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+html .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+html .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
 .mbox {
   margin: 0;
   padding: 0;
@@ -931,44 +952,30 @@ html .baro {
 
 
 
-/* 오른쪽박스 */
-/* 응용 프로젝트 설명 */
-.sbox {
-  position: absolute;
-  width: 36%;
-  height: 30%;
-  top: 17%;
-  right: 6%;
-  /* outline: 2px dotted green; */
-}
-
-.sbox1 {
-  position: absolute;
-  top: 20%;
-  left: 15%;
 
 
-  /* outline: 1px dotted red; */
-}
-
-/* 타이핌 글자 */
+/* 타이핑 글자(MY portfolio) */
 #typing {
-  font-size: 3rem;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 3vw;
+  letter-spacing: 1vw;
   font-weight: bold;
   font-family: ub;
-  margin: 0;
-  padding: 0;
   white-space: nowrap;
 }
 
-/* 깜박임 커서 가상요소 */
+/* 깜박임 커서 가상요소
 #typing::after {
   content: '';
   display: block;
   position: absolute;
   top: 0;
   right: -15px;
-  width: 4px;
+  width: 1px;
   height: 100%;
 
   animation: typingAni 1s linear infinite;
@@ -986,43 +993,22 @@ html .baro {
   100% {
     border-left: 8px solid rgba(85, 85, 85, 0);
   }
-}
+} */
 
-/* 타이핑 키프레임 */
-
-.sbox1 h2 {
-  font-family: 'Sunflower', sans-serif;
-  font-size: 2.5vw;
-  letter-spacing: 1vw;
-  text-align: center;
-  line-height: 2;
-}
-
-.sbox1 span {
-  font-family: 'Nanum Gothic Coding', monospace;
-  color: #797979;
-  line-height: 2;
-  text-align: center;
-}
-
-/* 오른쪽 아래 동영상 */
-.video {
+/* 부가설명 타이핑 */
+.type-wrap{
   position: absolute;
-  top: 51%;
-  right: 6%;
-  width: 50%;
-  height: 46%;
-  background-color: rgb(179 162 232 / 31%);
-  /* background-color: #ccc; */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#typed{
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: ub;
+  white-space: nowrap;
 }
 
-#myvid2 {
-  position: absolute;
-  width: 59%;
-  top: 24%;
-  left: 37%;
-
-}
 
 
 
@@ -1033,6 +1019,7 @@ html .baro {
 .contact_fm {
   flex: 1;
 }
+
 .contact {
   display: flex;
   position: absolute;
@@ -1046,6 +1033,7 @@ html .baro {
 
   outline: 2px dotted red;
 }
+
 /* 폼메일박스 */
 .contact_fm {
   flex: 1;
@@ -1076,7 +1064,7 @@ input {
 }
 
 /* 내용창 */
-#msg{
+#msg {
   width: 400px;
   background-color: transparent;
   border: 1px solid #10142c;
@@ -1098,28 +1086,29 @@ input {
   background-color: #10142c;
 }
 
-#btnsend:hover{
+#btnsend:hover {
   background-color: #fff;
   border: 2px solid #10142c;
   color: #000;
 }
 
 /* 오른쪽박스 */
-.contnum{
+.contnum {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 /* 인사박스 */
-.conttit{
+.conttit {
   flex: 1;
 }
 
 /* 연락처박스 */
-.phone{
+.phone {
   flex: 1;
 }
+
 .rcont {
   width: 50%;
   height: 100%;

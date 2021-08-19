@@ -17,7 +17,7 @@ $(function () { /// jQB ////////////////////////
         ////// 광스크롤막기 /////////////
         if(psts) return;//돌아가!
         psts = 1;//불허용상태변경!
-        setTimeout(()=>{psts=0;},1200);
+        setTimeout(()=>{psts=0;},500);
         // 1.2초애니시간후 허용상태변경 //
 
         // 0. 클릭된 li순번 구해오기
@@ -42,7 +42,7 @@ $(function () { /// jQB ////////////////////////
         // -> 범용브라우저에서 사용하는 스크롤대상
         $("html,body").animate({
             scrollTop: pos + "px"
-        }, 1200, "easeOutQuint"); //// animate /////
+        }, 800, "easeOutQuint", pageAction); //// animate /////
 
         // 4. 클릭된 a요소의 부모 li에 class="on" 넣기
         $(".gnb li").eq(idx).addClass("on")
@@ -57,6 +57,26 @@ $(function () { /// jQB ////////////////////////
         console.log("페이지번호:" + pno);
 
     }); ///////////// click ///////////////
+
+
+
+    // 포트폴리오 슬라이드 스와이퍼
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
 
 }); ///////////// jQB ////////////////////////
 

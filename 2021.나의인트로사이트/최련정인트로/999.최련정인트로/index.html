@@ -10,13 +10,16 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   <!-- css -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- script -->
   <script src="js/jquery-1.7.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="js/jquery-touch-punch.min.js"></script>
   <script src="js/autoScroll_pageAction.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/typed.min.js"></script>
   <script src="js/formmail.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -310,41 +313,42 @@
 
   <!-- SEC 4. PortFolio -->
   <section id="pg4" class="page">
-    <!-- 메인프로젝트 응용박스 -->
-    <ul class="mbox">
-      <li class="mpbx bx1">
-        <div class="btns btns1">
-          <a href="#"></a>
-        </div>
-      </li>
-      <li class="mpbx bx2">
-        <div class="btns btns2">
-          <a href="#"></a>
-        </div>
-      </li>
-      <li class="mpbx bx3">
-        <div class="btns btns3">
-          <a href="#"></a>
-        </div>
-      </li>
-      <li class="mpbx bx4">
-        <div class="btns btns4">
-          <a href="#"></a>
-        </div>
-      </li>
-    </ul>
-    <!-- 오른쪽 설명박스 -->
-    <div class="sbox">
-      <div class="sbox1">
-        <h2>
-          <p id='typing'></p>
-        </h2>
-        <span>클릭 후 시간이 소요될 수 있습니다. 잠시만 기다려주세요~!</span>
-      </div>
+    <!-- my portfolio 타이핑 -->
+    <div id="typing"></div>
+    <!-- 부가설명 타이핑 -->
+    <div class="type-wrap">
+      <span id="typed"></span>
     </div>
-    <!-- 오른쪽 아래 영상박스 -->
-    <div class="video">
-      <video id="myvid2" src="./video/coding2.mp4" autoplay muted loop></video>
+
+    <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/myintro2.png" alt="나의인트로">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/SeoulLand_main.jpg" alt="서울랜드">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/discoverymain2.png" alt="디스커버리">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/myitemmain.PNG" alt="마이아이템">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/megabox2.png" alt="메가박스">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/voguemain.PNG" alt="보그">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/화보속스타.PNG" alt="화보속스타">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
   </section>
@@ -403,13 +407,12 @@
             </a>
           </li>
           <li>
-            <a href="" target="_blank">
-              <!-- <a href="https://open.kakao.com/o/sdjFTizc" target="_blank"> -->
+            <a href="https://open.kakao.com/o/sSU4QQud" target="_blank">
               <img src="images/kakao.png" alt="오픈카카오톡 ID">카카오톡 오픈채팅
             </a>
           </li>
           <li>
-            <a href="" download>
+            <a href="http://fpalsl.dothome.co.kr/ryeonjeong/최련정입사지원서.hwp" download>
               <img src="images/down.png" alt="이력서 다운받기">이력서 다운받기
             </a>
           </li>

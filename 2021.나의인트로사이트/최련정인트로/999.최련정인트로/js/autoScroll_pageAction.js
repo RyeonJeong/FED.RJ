@@ -25,19 +25,6 @@ $(function () { /// jQB ////////////////////////
     // 호출확인
     // console.log("초기화!");
 
-    // 1. 아수라 : 오른쪽 바깥으로 나가있음!
-    $("#pg1 .minfo").css({
-      left: "150%"
-    }); ///////// css ///////////
-
-    // 2. 고산자 : 처음에 안보임!(fadeIn사용예정!)
-    $("#pg2 .minfo").hide(); // display:none
-
-    // 3. 인천상륙작전 : 위로 올라가 있음
-    $("#pg3 .minfo").css({
-      top: "-50%"
-    }); ///////// css ///////////
-
     // 4. 봉이 김선달 : 스케일이 0으로 안보임
     $("#pg4 .minfo").css({
       transform: "translate(-50%,-50%) scale(0)"
@@ -53,16 +40,19 @@ $(function () { /// jQB ////////////////////////
       opacity: 0
     }); ///////// css ///////////
 
-    // 6. 아가씨 : 중앙에서 스케일 0, 평면회전
-    $("#pg6 .minfo").css({
-      transform: "translate(-50%,-50%) scale(0) rotate(1000deg)"
-    }); ///////// css ///////////
 
-    // 7. 탐정홍길동 : 중앙에서 X축 스케일 10배, 투명도 0
-    $("#pg7 .minfo").css({
-      transform: "translate(-50%,-50%) scaleX(10)",
-      opacity: 0
-    }); ///////// css ///////////
+    // 2. About me
+    if (pno === 1) {
+
+      $(".pg2ski").addClass("on").css({
+        transition: "all .4s ease-in-out"
+      });
+    } 
+    else if (pno === 0,2,3,4) {
+      $(".pg2ski").removeClass("on").css({
+        transition: "none"
+      });
+    }
 
 
   }; ///////////// init함수 ///////////////////
@@ -75,8 +65,9 @@ $(function () { /// jQB ////////////////////////
       함수명: pageAction(전역변수구역에 선언)
       기능: 각 페이지 도착시 요소 등장액션 실행
   */ /////////////////////////////////////////////
-  var str = "응용프로젝트";
+  var str = "MY PORTFOLIO";
   var c = 0;
+  let pg2sts = 0; //0-실행전, 1-실행후
 
   pageAction = function () {
 
@@ -86,8 +77,8 @@ $(function () { /// jQB ////////////////////////
     psts = 1; //불허용상태변경!
     setTimeout(() => {
       psts = 0;
-    }, 1200);
-    // 1.2초애니시간후 허용상태변경 //
+    }, 800);
+    // 0.8초애니시간후 허용상태변경 //
 
 
     // 호출확인
@@ -95,55 +86,62 @@ $(function () { /// jQB ////////////////////////
 
     // 만약 매번 페이지마다 액션을 다시 작동시키려면
     // 초기화함수를 처음에 호출해 준다!
+
     init(); // 초기화호출!
 
     // 각 페이지 번호에 맞게 액션을 수행한다!
 
-    // 1. Home
-    if (pno === 0) {
-      // 오른쪽에서 중앙으로 날아오기(거미출에 걸리는 효과)
-      $("#pg1 .minfo").delay(1000)
-        .animate({
-          left: "50%"
-        }, 1000, "easeOutElastic"); //// animate ///
-
-    } /////// if ////////////
-
-    // 2. About me
-    else if (pno === 1) {
-
-      $(".pg2ski").addClass("on");
-
-    } ////// else if ///////////////
 
     // 3. SKILL
-    else if (pno === 2) {
+    if (pno === 2) {
       // 위에서 아래로 내려오기
       $("#pg3 .minfo")
         .animate({
           top: "50%"
-        }, 1000, "easeOutBounce"); //// animate ///
+        }, 800, "easeOutBounce"); //// animate ///
     } ////// else if ///////////////
+
 
     // 4. PortFolio1
     else if (pno === 3) {
+
 
       let setFn = () => {
         $('#typing').append(str.substr(c, 1));
         // console.log("요기" + c + "/" + str.substr(c, 1));
 
         setTimeout(() => {
-          if (c < 6) {
+          if (c < 12) {
             c++;
             setFn();
           } //// if /////
 
-        }, 500);
+        }, 200);
       }; //////// setFn ////////
 
       setFn();
+
+      //// 2번째 (큐레이션) 실행코드
+      // 한번만 실행하기 위해 실행상태값 변경하기
+      pg2sts = 1; //잠금!
+      
+      //console.log("타이핑실행!");
+      
+      // typed 플러그인 적용하기!
+      let typed =  new Typed('#typed', {
+        strings: ['My strings are: <i>strings</i> with', 'My strings are: <strong>HTML</strong>', 'My strings are: Chars &times; &copy;'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        smartBackspace: true, // this is a default
+        loop: false
+      }); ////// typed /////////////
+      
     } ////// else if ///////////////
 
+
+
+
+    
 
 
     // 5. CONTACT ME
@@ -169,27 +167,27 @@ $(function () { /// jQB ////////////////////////
     // 팝업창내용 셋팅
     let poptxt = [
       [
-        "이름: 서울랜드_PJ", 
-        "구분: PC, 반응형", 
-        "페이지: 메인/ sns페이지, footer링크 연결작업", 
+        "이름: 서울랜드_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인/ sns페이지, footer링크 연결작업",
         "설명: 기존 서울랜드 페이지를 그리드작업하여 최대한 동일한 느낌으로 제작하였습니다."
       ],
       [
-        "이름: 보그_PJ", 
-        "구분: PC, 반응형", 
-        "페이지: 메인/sub메뉴 페이지", 
+        "이름: 보그_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인/sub메뉴 페이지",
         "설명: 기존 보그 페이지를 참고하여 최대한 동일한 느낌으로 제작하였습니다."
       ],
       [
-        "이름: 디스커버리_PJ", 
-        "구분: PC, 반응형", 
-        "페이지: 메인/ 메뉴의남성페이지", 
+        "이름: 디스커버리_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인/ 메뉴의남성페이지",
         "설명: 디스커버리 페이지를 참고하여 제작하였고 메뉴의 남성페이지 부분의 이미지 슬라이드 부분만 따로 디자인하여 제작하였습니다"
       ],
       [
-        "이름: MY Item_PJ", 
-        "구분: PC", 
-        "페이지: 메인/서브메뉴/상단오른쪽 input 메뉴들", 
+        "이름: MY Item_PJ",
+        "구분: PC",
+        "페이지: 메인/서브메뉴/상단오른쪽 input 메뉴들",
         "설명: 학원에서 배운 input을 활용해보기 위해 만든 페이지로 회원가입, 로그인페이지 등 디자인보다는 기능에 비중을 더 두어 제작하였습니다."
       ],
     ];
@@ -228,12 +226,12 @@ $(function () { /// jQB ////////////////////////
         let nowpop = poptxt[idx];
         console.log(nowpop);
 
-        $(".pop ul li").each(function(idx,ele){
+        $(".pop ul li").each(function (idx, ele) {
           //console.log(idx);
           $(ele).text(nowpop[idx]);
-        });////////// each //////////////////
+        }); ////////// each //////////////////
 
-        $(".baro").html('<a href="'+popurl[idx]+'" target="_blank">웹사이트 바로가기</a>');
+        $(".baro").html('<a href="' + popurl[idx] + '" target="_blank">웹사이트 바로가기</a>');
 
       }); //////// click ///////////////
 
@@ -299,7 +297,7 @@ $(function () { /// jQB ////////////////////////
       psts = 1; //불허용상태변경!
       setTimeout(() => {
         psts = 0;
-      }, 1200);
+      }, 800);
       // 1.2초애니시간후 허용상태변경 //
 
 
