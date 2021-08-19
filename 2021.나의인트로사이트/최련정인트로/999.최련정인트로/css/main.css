@@ -747,7 +747,7 @@ html .swiper-slide img {
   width: 100%;
 }
 
-
+/* 
 .mbox {
   margin: 0;
   padding: 0;
@@ -763,7 +763,7 @@ html .swiper-slide img {
   position: relative;
   width: 50%;
   height: 50%;
-}
+} */
 
 /* 이미지 담는 박스 */
 .btns {
@@ -807,8 +807,6 @@ html .swiper-slide img {
   background: url(../images/SeoulLand_main.jpg) no-repeat top/cover;
   /* border: 1px solid #555; */
 }
-
-
 
 
 /* 두번째 박스 */
