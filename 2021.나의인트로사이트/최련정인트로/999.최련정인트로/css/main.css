@@ -873,12 +873,12 @@ html .swiper-slide img {
 /* 웹사이트 바로가기 버튼 */
 html .baro {
   position: absolute;
-  bottom: 3%;
+  bottom: 20%;
   width: 15vw;
   height: 40px;
   right: 20%;
-  background-color: #10142c;
-  border: 1px solid #e7b522;
+  background-color: #fff;
+  border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -891,18 +891,18 @@ html .baro {
   line-height: 30px;
   width: 100%;
   height: 30px;
-  color: #e7b522;
+  color: #333;
   transition: .4s;
 }
 
 .baro:hover {
-  background-color: #fff;
-  border: 2px solid #10142c;
+  background-color: #333;
+  border: 2px solid #fff;
   box-sizing: border-box;
 }
 
 .baro:hover a {
-  color: #000;
+  color: #fff;
 }
 
 .pop ul {
@@ -929,22 +929,22 @@ html .baro {
   width: 7vw;
   height: 40px;
   background-color: #fff;
-  border: 2px solid #10142c;
-  color: #10142c;
+  border: 2px solid #333;
+  color: #333;
   font-family: 'Encode Sans SC';
   font-weight: bold;
   font-size: 1vw;
   border-radius: 10px;
-  right: 3%;
-  bottom: 3%;
+  right: 5%;
+  bottom: 20%;
   cursor: pointer;
   transition: all .4s;
 }
 
 .pop .clse:hover {
-  background-color: #10142c;
-  color: #e7b522;
-  border: 1px solid #e7b522;
+  background-color: #333;
+  border: 2px solid #333;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -994,13 +994,14 @@ html .baro {
 } */
 
 /* 부가설명 타이핑 */
-.type-wrap{
+.type-wrap {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#typed{
+
+#typed {
   font-size: 2vw;
   font-weight: bold;
   font-family: ub;
@@ -1014,10 +1015,7 @@ html .baro {
 
 /* SEC 5.////////////////////////////////////////////// */
 
-.contact_fm {
-  flex: 1;
-}
-
+/* contact 전체박스 */
 .contact {
   display: flex;
   position: absolute;
@@ -1029,8 +1027,18 @@ html .baro {
   border: 2px solid #ddd;
   box-shadow: 2px 2px 2px #a5a5a5;
 
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
 }
+
+/* contact me 타이틀 */
+.ctmtit {
+  font-size: 2.5vw;
+  font-family: 'Encode Sans SC', sans-serif;
+  font-weight: bold;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
 
 /* 폼메일박스 */
 .contact_fm {
@@ -1040,17 +1048,26 @@ html .baro {
 /* 폼메일박스 */
 .msgbox {
   width: 100%;
+  margin-top: 5%;
+  text-align: center;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 10px;
-  border: 1px solid rgb(16, 20, 44);
   overflow: hidden;
+}
+
+/* send me a email 글자 */
+.tit2 {
+  font-size: 1.5vw;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* 폼메일 텍스트 */
 .msgbox label {
   color: #000;
   font-size: 1vw;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 5vh;
 }
 
 /* 입력창 */
@@ -1058,53 +1075,49 @@ input {
   background-color: transparent;
   width: 400px;
   height: 30px;
-  border: 1px solid #10142c;
+  border: 1px solid #333;
 }
 
 /* 내용창 */
 #msg {
   width: 400px;
   background-color: transparent;
-  border: 1px solid #10142c;
+  border: 1px solid #333;
 }
 
 /* 보내기 버튼 */
 #btnsend {
   width: 120px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 30px;
   border-radius: 5px;
-  border: 1px solid #e7b522;
+  font-family: 'Encode Sans SC', sans-serif;
   font-size: 1vw;
   font-weight: bold;
   position: relative;
   z-index: 1;
   cursor: pointer;
-  color: #e7b522;
-  background-color: #10142c;
+  background-color: #333;
+  border: 2px solid #333;
+  color: #fff;
 }
 
 #btnsend:hover {
+  border: 1px solid #333;
+  color: #333;
   background-color: #fff;
-  border: 2px solid #10142c;
-  color: #000;
 }
 
 /* 오른쪽박스 */
-.contnum {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
 
-/* 인사박스 */
-.conttit {
-  flex: 1;
-}
-
-/* 연락처박스 */
-.phone {
-  flex: 1;
+/* contact me 내용 */
+.mysbx {
+  font-size: 1vw;
+  text-align: center;
+  padding-left: 5%;
+  padding-top: 5%;
+  line-height: 3.5vh;
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .rcont {
@@ -1113,12 +1126,49 @@ input {
   top: 0;
   right: 0;
 
-  outline: 2px dotted blue;
+  /* outline: 2px dotted blue; */
 }
 
+/* 오른쪽박스 내용 */
+.imcont {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 오른쪽박스 왼쪽 선 가상요소로 주기 */
+.imcont::before {
+  content: '';
+  display: block;
+  border-left: 2px solid #ccc;
+}
+
+/* 오른쪽박스 이미지 + 내용 */
 .imcont li {
   float: none;
+  flex: 1;
 }
+
+.imcont li a {
+  color: #555;
+  padding-left: 0px;
+  font-size: 1.2vw;
+  text-shadow: none;
+}
+
+.imcont li img {
+  position: relative;
+  top: 40%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+
+
 
 
 
@@ -1129,7 +1179,7 @@ input {
   position: fixed;
   width: 5%;
   top: 20%;
-  left: 4%;
+  left: 3%;
 }
 
 /* 스크롤 마우스 */
@@ -1138,7 +1188,7 @@ input {
   margin: 0 auto;
   box-sizing: border-box;
   width: 16px;
-  height: 35px;
+  height: 60px;
   border: 3px solid #f5f5f5;
   box-shadow: 1px 1px 2px rgb(51 51 51);
   border-radius: 7px;
@@ -1166,7 +1216,7 @@ input {
 
 .scroll span {
   position: absolute;
-  top: 40px;
+  top: 70px;
   left: 50%;
   color: #f5f5f5;
   font-family: 'Encode Sans SC';
@@ -1177,8 +1227,144 @@ input {
 
 
 
-/***************************** 미디어쿼리 *******************************/
-@media only screen and (max-width:750px) {
+
+
+
+/***************************** 미디어쿼리 900px *******************************/
+@media only screen and (max-width:900px) {
+
+  /**************** sec1 ****************/
+
+
+  /**************** sec2 ****************/
+
+  /* 왼쪽박스 */
+  /* MBTI 박스 */
+  .mbti {
+    height: 15%;
+  }
+
+  /* MBTI 메인 */
+  .mbti>h1 {
+    font-size: 1vw;
+    padding-top: 5px;
+  }
+
+   /* MBTI 서브 */
+  .mbti>h2 {
+    font-size: 1.5vw;
+    padding-left: 25px;
+    padding-top: 5px;
+    font-family: 'Encode Sans SC', sans-serif;
+  }
+
+  /* 포토박스 */
+  .photo {
+    height: 35%;
+  }
+
+  /* 내사진 */
+  .photo img {
+    width: 50%;
+  }
+
+
+  /* 내설명 */
+  .phosbx li {
+    line-height: 4vh;
+  }
+  .photoIn2{
+    margin: 0;
+  }
+  
+  
+  /* 그래프박스 */
+  .pg2ski {
+    height: 50%;
+  }
+
+  /* 그래프박스 메인텍스트 */
+  .gp>span {
+    padding-top: 0;
+    font-size: 1vw;
+  }
+
+  /* 그래프 속박스 */
+  .gpin {
+    height: 3px;
+  }
+
+  /* 그래프 애니메이션 */
+  .gpin1::before {
+    height: 5PX;
+  }
+  .gpin2::before {
+    height: 5PX;
+  }
+  .gpin3::before {
+    height: 5PX;
+  }
+  .gpin4::before {
+    height: 5PX;
+  }
+  .gpin5::before {
+    height: 5PX;
+  }
+
+  /* 그래프 왼쪽 설명 */
+  .gpin .pregp {
+    font-size: 1vw;
+    top: 50%;
+    transform: translateY(-65%);
+  }
+
+  /* 그래프 오른쪽 설명 */
+  .gpin .afgp {
+    font-size: 1vw;
+    top: 50%;
+    transform: translateY(-65%);
+  }
+
+  /* 오른쪽박스 */
+  .gif h2 {
+    font-size: 1vw;
+  }
+
+  /**************** sec3 ****************/
+  /**************** sec4 ****************/
+  /**************** sec5 ****************/
+  /**************** 공통 ****************/
+
+  /* GNB메뉴 */
+  .gnb {
+    top: 0;
+    width: 700px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  /* GNB 텍스트 */
+  .gnb a {
+    font-size: 2vw;
+  }
+
+
+
+  /* 스크롤 */
+  .scrollin {
+    height: 40px;
+  }
+
+  .scroll span {
+    top: 45px;
+  }
+
+
+
+
+
+/***************************** 미디어쿼리 500px *******************************/
+@media only screen and (max-width:500px) {
 
   /**************** sec1 ****************/
 
@@ -1347,72 +1533,89 @@ input {
 
 
   /**************** sec4 ****************/
-
-  /* typing */
-  .sbox {
-    height: 30%;
-    top: 7%;
-    right: 50%;
+  /* 배경 */
+  #pg4{
+    background: url(../images/mpfbg.png) no-repeat top/cover;
   }
 
-  .sbox1 span {
-    font-size: 2vw;
-    white-space: nowrap;
+  /* typing */
+  #typing {
+    font-size: 6vw;
+  }
+
+  /* typing 부가설명 */
+  .type-wrap {
+    top: 35%;
+  }
+
+  #typed {
+    font-size: 3.5vw;
   }
 
   /* 포폴박스 */
-  .mbox {
-    padding-left: 80px;
-  }
-
-  /* 포폴담는 박스 */
-  .btns {
-    min-width: 120px;
-    /* border: 1px solid #555; */
-    z-index: 999;
-  }
-
-  /* 첫번째 포폴 */
-  .btns1 {
-    top: 75%;
-  }
-
-  /* 두번째 포폴 */
-  .btns2 {
-    left: 100px;
-    top: 75%;
-  }
-
-  /* 네번째 포폴 */
-  .btns4 {
-    top: 30%;
-    left: 100px;
-  }
-
-  /* 배경 비디오 */
-  .video {
-    top: 70%;
-    right: 5%;
-    width: 90%;
-    height: 25%;
-  }
-
-  #myvid2 {
-    display: none;
+  html .swiper-container {
+    top: 45%;
   }
 
   /* 팝업 */
   .pop {
+    width: 80%;
+  }
+
+  /* 팝업 이미지 */
+  .pop img {
+    width: 50%;
+    margin-left: 25%;
+    border: 1px solid #333;
+  }
+
+  /* 팝업 설명 */
+  .pop ul {
     width: 90%;
+    top: 43%;
+    left: 5%;
+  }
+
+
+  /* 팝업 바로가기버튼 */
+  html .baro {
+    bottom: 7%;
+    left: 10%;
+    width: 40%;
+    height: 7%;
+    background: #333;
+  }
+
+  .baro>a {
+    color: #fff;
+  }
+
+  /* 팝업 닫기버튼 */
+  .pop .clse {
+    bottom: 7%;
+    left: 60%;
+    width: 30%;
+    height: 7%;
+    background: #333;
+    color: #fff;
   }
 
 
 
+
   /**************** sec5 ****************/
+  /* contact me */
+  .ctmtit{
+    font-size: 5vw;
+    /* margin: 15px 0; */
+    display: block;
+    height: auto;
+  }
 
 
   /* 메일창 */
   .msgbox {
+    margin: 0;
     padding: 10px;
   }
 
@@ -1456,19 +1659,50 @@ input {
     height: 30px;
   }
 
+  /* 오른쪽박스 */
+  .imcont{
+    text-align: unset;
+  }
+
+  /* 오른쪽 설명박스 */
+  .mysbx{
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 15px;
+  }
+
+  /* 오른쪽 박스 이미지 */
+  .imcont li img{
+    position: static;
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  /* 이미지 내용 */
+  .imcont li span{
+    text-align: center;
+    display: block;
+    margin-top: -20px;
+  }
+  .imcont li a{
+    font-size: 4vw;
+  }
 
 
-  /**************** 공통 CSS ****************/
+
+
+  /**************** 공통 CSS (미디어쿼리)****************/
 
   /* gnb박스 */
   .top {
-    height: 90px;
+    height: 100%;
   }
 
   /* 로고위치 */
   #logo {
     width: 20%;
-    padding-top: 3px;
     margin: 0 auto;
     min-width: 100px;
     left: 35%;
@@ -1482,14 +1716,28 @@ input {
 
   /* 메뉴 재정비 */
   .gnb {
-    position: absolute;
+    position: relative;
     top: 65%;
-    left: 2%;
+    width: 100%;
+    left: 0;
   }
+
+  .gnb ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
   .gnb li {
     font-size: 3.3vw;
+    margin: 0 10px;
   }
+
+  .gnb a {
+    font-size: 3vw;
+}
 
 
   /* 스크롤 */
