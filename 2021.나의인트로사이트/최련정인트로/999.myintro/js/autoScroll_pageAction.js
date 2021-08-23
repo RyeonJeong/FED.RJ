@@ -222,14 +222,14 @@ $(function () { /// jQB ////////////////////////
     };
 
     let popurl = {
-      "myintro2": "../999.myintro/003.site/index.html",
+      "myintro2": "../999.myintro/index.html",
       "SeoulLand_main": "../001.SeoulLand_PJ/asset/index.html",
-      "discoverymain2": "../005.MyItem_PJ/02.Asset/index.html",
-      "myitemmain": "../004.DiscoveryPJ/002.구현소스/index.html",
-      "megabox2": "../002.VOGUE_PJ/002.site/index.html",
-      "voguemain": "../003.SeoulLand_PJ/asset/index.html",
-      "화보속스타": "../003.SeoulLand_PJ/asset/index.html",
-      "nature-9": "../003.SeoulLand_PJ/asset/index.html"
+      "discoverymain2": "../003.파일럿PJ/index.html",
+      "myitemmain": "../004.MyItem_PJ/02.Asset/index.html",
+      "megabox2": "../005.Megabox_PJ/index.html",
+      "voguemain": "../002.VOGUE_PJ/002.site/index.html",
+      "화보속스타": "../006.Photo_Gallery/flexGallery.html",
+      "nature-9": "#"
     };
 
     ///// 팝업창 띄우기 /////////
