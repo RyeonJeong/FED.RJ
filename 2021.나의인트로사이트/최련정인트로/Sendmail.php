@@ -29,7 +29,7 @@ function sendMail($to, $from, $from_name, $subject, $body){
     $mail->Host       = "smtp.naver.com";      // sets GMAIL as the SMTP server
     $mail->Port       = 465;                   // set the SMTP port for the GMAIL server (TLS는 587 입력)
     $mail->Username   = "fpalsl@naver.com";            // GMAIL username
-    $mail->Password   = "Wkdb9495$$";            // GMAIL password
+    $mail->Password   = "Wkdb6345$$";            // GMAIL password
 
     $mail->SetFrom($from, $from_name);
 

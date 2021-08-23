@@ -10,13 +10,19 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   <!-- css -->
   <link rel="stylesheet" href="css/main.css">
+  <!-- 스와이퍼 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- script -->
   <script src="js/jquery-1.7.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="js/jquery-touch-punch.min.js"></script>
   <script src="js/autoScroll_pageAction.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/typed.min.js"></script>
   <script src="js/formmail.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/click.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -28,7 +34,7 @@
     <header class="top ibx">
       <!-- 1-1.로고 -->
       <h1 id="logo">
-        <a href="#">
+      <a href="">
           <img src="images/logo3.png" alt="최련정로고">
         </a>
       </h1>
@@ -264,7 +270,7 @@
           <div class="pbox pbx1">
             <a href="#">90%</a>
           </div>
-          <img src="./images/photoshop.png" alt="포토샵">
+          <img src="./images/photoshop.png" alt="포토샵" class="on">
           <span>사진편집 및 활용이 가능합니다.</span>
         </li>
         <li>
@@ -310,45 +316,63 @@
 
   <!-- SEC 4. PortFolio -->
   <section id="pg4" class="page">
-    <!-- 메인프로젝트 응용박스 -->
-    <ul class="mbox">
-      <li class="mpbx bx1">
-        <div class="btns btns1">
-          <a href="#"></a>
-        </div>
-      </li>
-      <li class="mpbx bx2">
-        <div class="btns btns2">
-          <a href="#"></a>
-        </div>
-      </li>
-      <li class="mpbx bx3">
-        <div class="btns btns3">
-          <a href="#"></a>
-        </div>
-      </li>
-      <li class="mpbx bx4">
-        <div class="btns btns4">
-          <a href="#"></a>
-        </div>
-      </li>
-    </ul>
-    <!-- 오른쪽 설명박스 -->
-    <div class="sbox">
-      <div class="sbox1">
-        <h2>
-          <p id='typing'></p>
-        </h2>
-        <span>클릭 후 시간이 소요될 수 있습니다. 잠시만 기다려주세요~!</span>
-      </div>
+    <!-- my portfolio 타이핑 -->
+    <div id="typing"></div>
+    <!-- 부가설명 타이핑 -->
+    <div class="type-wrap">
+      <span id="typed"></span>
     </div>
-    <!-- 오른쪽 아래 영상박스 -->
-    <div class="video">
-      <video id="myvid2" src="./video/coding2.mp4" autoplay muted loop></video>
+
+    <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/myintro2.png" alt="myintro2">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/SeoulLand_main.jpg" alt="SeoulLand_main">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/discoverymain2.png" alt="discoverymain2">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/myitemmain.PNG" alt="myitemmain">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/megabox2.png" alt="megabox2">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/voguemain.PNG" alt="voguemain">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="./images/화보속스타.PNG" alt="화보속스타">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="nature-9" />
+          </a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
   </section>
 
+  <!-- 팝업창 -->
   <div class="pop">
     <img src="./images/SeoulLand_main.jpg" alt="서울랜드">
     <button class="baro">웹사이트 바로가기</button>
@@ -371,9 +395,13 @@
 
   <!-- SEC 5. Contact me -->
   <section id="pg5" class="page">
+    <!-- 전체박스 -->
     <div class="contact">
       <!-- 폼메일박스 -->
       <div class="contact_fm">
+        <!-- contact me 타이틀 -->
+        <span class="ctmtit">Contact Me</span>
+        
         <!-- 이메일 보내기 -->
         <form action="../Sndmail.php" method="post">
           <p class="msgbox">
@@ -393,23 +421,26 @@
       <div class="rcont">
         <ul class="imcont">
           <li>
-            <a href="">
-              <img src="images/mail.png" alt="메일주소">fpalsl@naver.com
+            <h2 class="mysbx">안녕하세요. 신입 웹퍼블리셔 최련정입니다. <br> 어떤 일이라도 안되면 될때까지 항상 열심히 하는 모습 보여드리겠습니다!</h2>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/mail.png" alt="메일주소"><span>fpalsl@naver.com</span>
             </a>
           </li>
           <li>
-            <a href="">
-              <img src="images/call.png" alt="핸드폰번호">010.3904.6345
+            <a href="#">
+              <img src="images/call.png" alt="핸드폰번호"><span>010-3904-6345</span>
             </a>
           </li>
           <li>
             <a href="https://open.kakao.com/o/sSU4QQud" target="_blank">
-              <img src="images/kakao.png" alt="오픈카카오톡 ID">카카오톡 오픈채팅
+              <img src="images/kakao.png" alt="오픈카카오톡 ID"><span>카카오톡 오픈채팅</span>
             </a>
           </li>
           <li>
             <a href="http://fpalsl.dothome.co.kr/ryeonjeong/최련정입사지원서.hwp" download>
-              <img src="images/down.png" alt="이력서 다운받기">이력서 다운받기
+              <img src="images/down.png" alt="이력서 다운받기"><span>이력서 다운받기</span>
             </a>
           </li>
         </ul>
