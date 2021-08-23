@@ -1325,6 +1325,116 @@ input {
     font-size: 1vw;
   }
 
+   /* li에 배경색 없애기 */
+   .sklbx>ul>li:nth-child(1) {
+    background-color: transparent;
+  }
+
+  .sklbx>ul>li:nth-child(2) {
+    background-color: transparent;
+  }
+
+  .sklbx>ul>li:nth-child(3) {
+    background-color: transparent;
+  }
+
+  .sklbx>ul>li:nth-child(4) {
+    background-color: transparent;
+  }
+
+  .sklbx>ul>li:nth-child(5) {
+    background-color: transparent;
+  }
+
+  .sklbx>ul>li:nth-child(6) {
+    background-color: transparent;
+  }
+
+
+
+  /* 겉에 투명도 빼기 */
+  .sklbx>ul>li::before {
+    background: transparent;
+    opacity: 0;
+  }
+
+  /* 그래프퍼센트 숫자 */
+  .pbox a {
+    font-size: 5vw;
+    margin: 0;
+    line-height: 25px;
+  }
+
+  /* 스킬박스 겉박스 */
+  .sklbx {
+    height: 60%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sklbx>ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 스킬박스 이미지 */
+  .sklbx>ul>li>img {
+    width: 5%;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    transform: translatey(-50%);
+  }
+
+  /* 스킬그래프 */
+  .skill .pbox {
+    height: 25px;
+    width: 0;
+    left: 30%;
+  }
+
+  /* 클릭시 img */
+  .skill li.on img{
+    display: block;
+    left: 15%;
+    top: 40%;
+    transform: translatey(-50%);
+  }
+
+  /* 클릭시 스킬그래프 개별 */
+
+  .skill li.on .pbx1 {
+    width: 50%;
+    height: 25px;
+    border: 1px solid darkred;
+  }
+  .skill li.on .pbx2 {
+    width: 40%;
+    height: 25px;
+    border: 1px solid darkred;
+  }
+  .skill li.on .pbx3 {
+    width: 45%;
+    height: 25px;
+    border: 1px solid darkred;
+  }
+  .skill li.on .pbx4 {
+    width: 50%;
+    height: 25px;
+    border: 1px solid darkred;
+  }
+  .skill li.on .pbx5 {
+    width: 25%;
+    height: 25px;
+    border: 1px solid darkred;
+  }
+  .skill li.on .pbx6 {
+    width: 30%;
+    height: 25px;
+    border: 1px solid darkred;
+  }
+
   /**************** sec4 ****************/
   /* 포트폴리오 담는 박스 */
   html .swiper-slide {

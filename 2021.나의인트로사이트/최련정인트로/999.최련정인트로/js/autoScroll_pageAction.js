@@ -47,13 +47,16 @@ $(function () { /// jQB ////////////////////////
       $(".pg2ski").addClass("on").css({
         transition: "all .4s ease-in-out"
       });
-    } 
-    else if (pno === 0,2,3,4) {
+    } else if (pno === 0, 2, 3, 4) {
       $(".pg2ski").removeClass("on").css({
         transition: "none"
       });
     }
 
+    // 3.skill
+    if (pno === 0, 1, 3, 4) {
+      $(".skill li").removeClass("on");
+    }
 
   }; ///////////// init함수 ///////////////////
   ////////////////////////////////////////////
@@ -70,6 +73,8 @@ $(function () { /// jQB ////////////////////////
   let pg2sts = 0; //0-실행전, 1-실행후
 
   pageAction = function () {
+
+
 
 
     ////// 광스크롤막기 /////////////
@@ -124,24 +129,24 @@ $(function () { /// jQB ////////////////////////
       //// 2번째 (큐레이션) 실행코드
       // 한번만 실행하기 위해 실행상태값 변경하기
       pg2sts = 1; //잠금!
-      
+
       //console.log("타이핑실행!");
-      
+
       // typed 플러그인 적용하기!
-      let typed =  new Typed('#typed', {
+      let typed = new Typed('#typed', {
         strings: ['My Portfolio is: Drag sideways!', 'My Portfolio is: <strong>Click!!</strong>', 'My Portfolio is: interesting!'],
         typeSpeed: 100,
         backSpeed: 50,
         smartBackspace: true, // this is a default
         loop: true
       }); ////// typed /////////////
-      
+
     } ////// else if ///////////////
 
 
 
 
-    
+
 
 
     // 5. CONTACT ME
@@ -161,123 +166,123 @@ $(function () { /// jQB ////////////////////////
 
 
   // 제이쿼리 코드블록 ////////////////////////
-$(function () {
+  $(function () {
 
-  // 팝업창내용 셋팅
-  let poptxt = {
-    "myintro2":[
-      "이름: 나의 인트로_PJ",
-      "구분: PC, 반응형",
-      "페이지: 메인페이지, 포트폴리오연결 팝업, 메일&카톡 등 연결 작업",
-      "설명: 저의 포트폴리오를 담기 위한 인트로 페이지로 이력서 비슷한 느낌으로 제작하였습니다."
-    ],
-    "SeoulLand_main":[
-      "이름: 서울랜드_PJ",
-      "구분: PC, 반응형",
-      "페이지: 메인/ sns페이지, footer링크 연결작업", 
-      "설명: 기존 서울랜드 페이지를 그리드작업하여 최대한 동일한 느낌으로 제작하였습니다."
-    ],
-    "discoverymain2":[
-      "이름: 디스커버리_PJ",
-      "구분: PC, 반응형",
-      "페이지: 메인/ 메뉴의남성페이지",
-      "설명: 디스커버리 페이지를 참고하여 제작하였고 메뉴의 남성페이지 부분의 이미지 슬라이드 부분만 따로 디자인하여 제작하였습니다"
-    ],
-    "myitemmain":[
-      "이름: MY Item_PJ",
-      "구분: PC",
-      "페이지: 메인/서브메뉴/상단오른쪽 input 메뉴들",
-      "설명: 학원에서 배운 input을 활용해보기 위해 만든 페이지로 회원가입, 로그인페이지 등 디자인보다는 기능에 비중을 더 두어 제작하였습니다."
-    ],
-    "megabox2":[
-      "이름: 메가박스_PJ",
-      "구분: PC",
-      "페이지: 메인, 동영상안의 기능들, 부트스트랩활용",
-      "설명: 메가박스 영화관을 모티브로 하여 동영상 안의 기능들(제이쿼리사용), 부트스트랩을 활용한 타이핑 기술 등을 참고하여 제작하였습니다."
-    ],
-    "voguemain":[
-      "이름: 보그_PJ",
-      "구분: PC, 반응형",
-      "페이지: 메인/sub메뉴 페이지",
-      "설명: 기존 보그 페이지를 참고하여 최대한 동일한 느낌으로 제작하였습니다."
-    ],
-    "화보속스타":[
-      "이름: 화보속스타_PJ",
-      "구분: PC, 반응형", 
-      "페이지: 메인, 팝업페이지",
-      "설명: 사진들을 활용해 쇼핑몰이나 기사느낌의 페이지로 제작하였습니다."
-    ],
-    "nature-9":[
-      "이름: 진행중",
-      "구분: PC",
-      "페이지: 메인",
-      "설명: 앞으로도 꾸준히 만들어 나가겠습니다!"
-    ]
-  };
-  
-      let popurl = {
-        "CGV":"../001.CGV_PJ/003.site/index.html",
-        "MYITEM":"../005.MyItem_PJ/02.Asset/index.html",
-        "DISCOVERY":"../004.DiscoveryPJ/002.구현소스/index.html",
-        "VOGUE":"../002.VOGUE_PJ/002.site/index.html",
-        "SEOULLEND":"../003.SeoulLand_PJ/asset/index.html",
-        "SEOULLEND":"../003.SeoulLand_PJ/asset/index.html",
-        "SEOULLEND":"../003.SeoulLand_PJ/asset/index.html"
-      };
-  
-      ///// 팝업창 띄우기 /////////
-      // 대상: .gong li:first-child
-      $(".swiper-slide img")
-        .click(function () {
-  
-          //순번
-          let idx = $(this).index();
-          // 호출확인
-          console.log("팝업띄워!" + idx);
-  
-          // 팝업 띄우기
-          // 대상: .pop, .popbg
-          $(".pop,.popbg").show();
-          // show()는 display를 보이게하는 메서드
-  
-          let isrc = $(this).attr("src");
-          console.log(isrc);
-  
-          $(".pop img").attr("src", isrc);
-  
-          // 클릭된 이미지의 alt
-          let ialt = $(this).attr("alt");
-  
-          // 열린팝업창의 텍스트설명
-          let nowpop = poptxt[ialt];
-          console.log(nowpop);
-  
-          $(".pop ul li").each(function(idx,ele){
-            // console.log(idx);
-            $(ele).text(nowpop[idx]);
-          });////////// each //////////////////
-  
-          $(".baro").html('<a href="'+popurl[ialt]+'" target="_blank">웹사이트 바로가기</a>');
-  
-        }); //////// click ///////////////
-  
-      /// 팝업 닫기버튼 클릭시 /////
-      // 대상: .bbx button
-      $(".bbx button").click(function () {
+    // 팝업창내용 셋팅
+    let poptxt = {
+      "myintro2": [
+        "이름: 나의 인트로_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인페이지, 포트폴리오연결 팝업, 메일&카톡 등 연결 작업",
+        "설명: 저의 포트폴리오를 담기 위한 인트로 페이지로 이력서 비슷한 느낌으로 제작하였습니다."
+      ],
+      "SeoulLand_main": [
+        "이름: 서울랜드_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인/ sns페이지, footer링크 연결작업",
+        "설명: 기존 서울랜드 페이지를 그리드작업하여 최대한 동일한 느낌으로 제작하였습니다."
+      ],
+      "discoverymain2": [
+        "이름: 디스커버리_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인/ 메뉴의남성페이지",
+        "설명: 디스커버리 페이지를 참고하여 제작하였고 메뉴의 남성페이지 부분의 이미지 슬라이드 부분만 따로 디자인하여 제작하였습니다"
+      ],
+      "myitemmain": [
+        "이름: MY Item_PJ",
+        "구분: PC",
+        "페이지: 메인/서브메뉴/상단오른쪽 input 메뉴들",
+        "설명: 학원에서 배운 input을 활용해보기 위해 만든 페이지로 회원가입, 로그인페이지 등 디자인보다는 기능에 비중을 더 두어 제작하였습니다."
+      ],
+      "megabox2": [
+        "이름: 메가박스_PJ",
+        "구분: PC",
+        "페이지: 메인, 동영상안의 기능들, 부트스트랩활용",
+        "설명: 메가박스 영화관을 모티브로 하여 동영상 안의 기능들(제이쿼리사용), 부트스트랩을 활용한 타이핑 기술 등을 참고하여 제작하였습니다."
+      ],
+      "voguemain": [
+        "이름: 보그_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인/sub메뉴 페이지",
+        "설명: 기존 보그 페이지를 참고하여 최대한 동일한 느낌으로 제작하였습니다."
+      ],
+      "화보속스타": [
+        "이름: 화보속스타_PJ",
+        "구분: PC, 반응형",
+        "페이지: 메인, 팝업페이지",
+        "설명: 사진들을 활용해 쇼핑몰이나 기사느낌의 페이지로 제작하였습니다."
+      ],
+      "nature-9": [
+        "이름: 진행중",
+        "구분: PC",
+        "페이지: 메인",
+        "설명: 앞으로도 꾸준히 만들어 나가겠습니다!"
+      ]
+    };
+
+    let popurl = {
+      "CGV": "../001.CGV_PJ/003.site/index.html",
+      "MYITEM": "../005.MyItem_PJ/02.Asset/index.html",
+      "DISCOVERY": "../004.DiscoveryPJ/002.구현소스/index.html",
+      "VOGUE": "../002.VOGUE_PJ/002.site/index.html",
+      "SEOULLEND": "../003.SeoulLand_PJ/asset/index.html",
+      "SEOULLEND": "../003.SeoulLand_PJ/asset/index.html",
+      "SEOULLEND": "../003.SeoulLand_PJ/asset/index.html"
+    };
+
+    ///// 팝업창 띄우기 /////////
+    // 대상: .gong li:first-child
+    $(".swiper-slide img")
+      .click(function () {
+
+        //순번
+        let idx = $(this).index();
         // 호출확인
-        console.log("팝업닫어!");
-  
-        // 팝업 닫기
-        // 대상: .pop
-        $(".pop,.popbg").hide();
-        // hide()는 display:none으로 만들어주는 메서드
-  
-      }); //////// click //////////////////
-  
-  
-  
-    }); /////// jQB ///////////////////////////
-    ///////////////////////////////////////////
+        console.log("팝업띄워!" + idx);
+
+        // 팝업 띄우기
+        // 대상: .pop, .popbg
+        $(".pop,.popbg").show();
+        // show()는 display를 보이게하는 메서드
+
+        let isrc = $(this).attr("src");
+        console.log(isrc);
+
+        $(".pop img").attr("src", isrc);
+
+        // 클릭된 이미지의 alt
+        let ialt = $(this).attr("alt");
+
+        // 열린팝업창의 텍스트설명
+        let nowpop = poptxt[ialt];
+        console.log(nowpop);
+
+        $(".pop ul li").each(function (idx, ele) {
+          // console.log(idx);
+          $(ele).text(nowpop[idx]);
+        }); ////////// each //////////////////
+
+        $(".baro").html('<a href="' + popurl[ialt] + '" target="_blank">웹사이트 바로가기</a>');
+
+      }); //////// click ///////////////
+
+    /// 팝업 닫기버튼 클릭시 /////
+    // 대상: .bbx button
+    $(".bbx button").click(function () {
+      // 호출확인
+      console.log("팝업닫어!");
+
+      // 팝업 닫기
+      // 대상: .pop
+      $(".pop,.popbg").hide();
+      // hide()는 display:none으로 만들어주는 메서드
+
+    }); //////// click //////////////////
+
+
+
+  }); /////// jQB ///////////////////////////
+  ///////////////////////////////////////////
 
   // pageAction함수 최초호출!
   pageAction();
@@ -466,7 +471,7 @@ $(function () { /// jQB2 ////////////////////////
   // 원리: 이벤트 버블링 막기!(자식이벤트가 부모로 올라가는 현상!)
   // 사용메서드: e.stopPropagation()
   $("#top,.indic,.skill,.swiper-container,.pop,.msgbox,.imcont li span,.imcont li img").on("touchstart touchend", function (e) {
-      e.stopPropagation();
+    e.stopPropagation();
   }); /////////// 터치이벤트 버블링 막기 ///////////
 
   //// 터치방향을 위한 변수 ///
@@ -479,9 +484,9 @@ $(function () { /// jQB2 ////////////////////////
   // 사용위치속성: screenY (페이지 이동이 Y축 이므로!)
   $(document).on("touchstart", function (e) { // e-이벤트전달변수
 
-      // 모바일 터치 위치값 변수에 할당하기
-      tcd1 = e.originalEvent.touches[0].screenY;
-      console.log("터치시작:" + tcd1);
+    // 모바일 터치 위치값 변수에 할당하기
+    tcd1 = e.originalEvent.touches[0].screenY;
+    console.log("터치시작:" + tcd1);
 
   }); /////////// touchstart 이벤트함수 /////////////
 
@@ -490,73 +495,73 @@ $(function () { /// jQB2 ////////////////////////
   // 사용위치속성: screenY (페이지 이동이 Y축 이므로!)
   $(document).on("touchend", function (e) { // e-이벤트전달변수
 
-      ////// 광스크롤막기 /////////////
-      if (psts) return; //돌아가!
-      psts = 1; //불허용상태변경!
-      setTimeout(() => {
-          psts = 0;
-      }, 1000);
-      // 1초애니시간후 허용상태변경 //
+    ////// 광스크롤막기 /////////////
+    if (psts) return; //돌아가!
+    psts = 1; //불허용상태변경!
+    setTimeout(() => {
+      psts = 0;
+    }, 1000);
+    // 1초애니시간후 허용상태변경 //
 
-      // 1. 모바일 터치 위치값 변수에 할당하기
-      tcd2 = e.originalEvent.changedTouches[0].screenY;
-      //console.log("터치끝:" + tcd2);
+    // 1. 모바일 터치 위치값 변수에 할당하기
+    tcd2 = e.originalEvent.changedTouches[0].screenY;
+    //console.log("터치끝:" + tcd2);
 
-      // 2. 방향판별하기(델타변수)
-      let delta = tcd1 - tcd2;
-      //console.log("차이:" + delta);
+    // 2. 방향판별하기(델타변수)
+    let delta = tcd1 - tcd2;
+    //console.log("차이:" + delta);
 
-      ////////////////////////////////////////////////
-      ////// 여기서 부터는 마우스 휠 코드와 동일함!//////
+    ////////////////////////////////////////////////
+    ////// 여기서 부터는 마우스 휠 코드와 동일함!//////
 
-      //////////////////////////////////////////////
-      // 3. 스와이프 방향에 따라 페이지번호 증감하기!//
-      //////////////////////////////////////////////
+    //////////////////////////////////////////////
+    // 3. 스와이프 방향에 따라 페이지번호 증감하기!//
+    //////////////////////////////////////////////
 
-      if (delta > 0) { // 양수면 윗방향 스와이프(다음페이지)
-          pno++;
-          if (pno === totnum) pno = totnum - 1;
-          // 마지막페이지에 고정하기!
-      } ////// if ///////////
-      else { // 음수면 아랫방향 스와이프(이전페이지)
-          pno--;
-          if (pno === -1) pno = 0;
-          // 첫페이지에 고정하기!
-      } /////// else ////////
+    if (delta > 0) { // 양수면 윗방향 스와이프(다음페이지)
+      pno++;
+      if (pno === totnum) pno = totnum - 1;
+      // 마지막페이지에 고정하기!
+    } ////// if ///////////
+    else { // 음수면 아랫방향 스와이프(이전페이지)
+      pno--;
+      if (pno === -1) pno = 0;
+      // 첫페이지에 고정하기!
+    } /////// else ////////
 
-      //console.log("페이지번호:" + pno);
+    //console.log("페이지번호:" + pno);
 
-      //////////////////////////////////////////////
-      // 4. 이동할 페이지(.page)의 위치값 알아내기 ///
-      //////////////////////////////////////////////
+    //////////////////////////////////////////////
+    // 4. 이동할 페이지(.page)의 위치값 알아내기 ///
+    //////////////////////////////////////////////
 
-      ////////////////////////////////////////////////////
-      // 새로운 페이지 위치값 : 윈도우 높이값 * 페이지순번 //
-      let pos = $(window).height() * pno;
-      ///////////////////////////////////////////////////
+    ////////////////////////////////////////////////////
+    // 새로운 페이지 위치값 : 윈도우 높이값 * 페이지순번 //
+    let pos = $(window).height() * pno;
+    ///////////////////////////////////////////////////
 
-      //console.log("이동위치:" + pos);
+    //console.log("이동위치:" + pos);
 
-      //////////////////////////////////////////////
-      // 5. 실제 이동위치로 스크롤 애니메이션 하기 ////
-      //////////////////////////////////////////////
+    //////////////////////////////////////////////
+    // 5. 실제 이동위치로 스크롤 애니메이션 하기 ////
+    //////////////////////////////////////////////
 
-      $("html,body").stop().animate({
-          scrollTop: pos + "px"
-      }, 1000, "easeOutQuint", pageAction);
-
-  
+    $("html,body").stop().animate({
+      scrollTop: pos + "px"
+    }, 1000, "easeOutQuint", pageAction);
 
 
-      ///////////////////////////////////////////////
-      // 6. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
-      ///////////////////////////////////////////////
-      // 변경대상: .gnb li, .indic li
-      $(".gnb li").eq(pno).addClass("on")
-          .siblings().removeClass("on");
-      $(".indic li").eq(pno).addClass("on")
-          .siblings().removeClass("on");
-      // 선택된 li 이외의 li형제들 class="on"제거하기
+
+
+    ///////////////////////////////////////////////
+    // 6. 페이지번호(pno)에 맞는 GNB 메뉴 변경하기 //
+    ///////////////////////////////////////////////
+    // 변경대상: .gnb li, .indic li
+    $(".gnb li").eq(pno).addClass("on")
+      .siblings().removeClass("on");
+    $(".indic li").eq(pno).addClass("on")
+      .siblings().removeClass("on");
+    // 선택된 li 이외의 li형제들 class="on"제거하기
 
 
   }); /////////// touchend 이벤트함수 /////////////

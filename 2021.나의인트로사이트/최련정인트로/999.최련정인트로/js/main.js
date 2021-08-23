@@ -13,7 +13,7 @@ $(function () { /// jQB ////////////////////////
     //// GNB메뉴 클릭시 해당 페이지 위치로 이동 애니메이션
     // 이벤트 대상: .gnb li + .indic li
     // 변경 대상: html,body
-    $(".gnb li,.indic li").click(function (e) {
+    $(".gnb li,.indic li").stop().click(function (e) {
 
         ////// 광스크롤막기 /////////////
         if(psts) return;//돌아가!

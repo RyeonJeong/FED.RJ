@@ -141,7 +141,7 @@ h3 {
 
 
 /* 메뉴에 마우스 오버시 */
-.gnb a:hover,
+
 .gnb li.on a {
   color: tomato;
   transform: scale(1.2);
