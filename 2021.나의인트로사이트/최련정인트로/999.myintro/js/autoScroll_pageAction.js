@@ -108,7 +108,7 @@ $(function () { /// jQB ////////////////////////
 
 
     // 4. PortFolio1
-    else if (pno === 3) {
+    else if (pno === 3 && pg2sts===0) { //상태값 조건추가! 한번만실행!
 
 
       let setFn = () => {
@@ -140,6 +140,7 @@ $(function () { /// jQB ////////////////////////
         smartBackspace: true, // this is a default
         loop: true
       }); ////// typed /////////////
+
 
     } ////// else if ///////////////
 
@@ -221,13 +222,14 @@ $(function () { /// jQB ////////////////////////
     };
 
     let popurl = {
-      "CGV": "../001.CGV_PJ/003.site/index.html",
-      "MYITEM": "../005.MyItem_PJ/02.Asset/index.html",
-      "DISCOVERY": "../004.DiscoveryPJ/002.구현소스/index.html",
-      "VOGUE": "../002.VOGUE_PJ/002.site/index.html",
-      "SEOULLEND": "../003.SeoulLand_PJ/asset/index.html",
-      "SEOULLEND": "../003.SeoulLand_PJ/asset/index.html",
-      "SEOULLEND": "../003.SeoulLand_PJ/asset/index.html"
+      "myintro2": "../999.myintro/003.site/index.html",
+      "SeoulLand_main": "../001.SeoulLand_PJ/asset/index.html",
+      "discoverymain2": "../005.MyItem_PJ/02.Asset/index.html",
+      "myitemmain": "../004.DiscoveryPJ/002.구현소스/index.html",
+      "megabox2": "../002.VOGUE_PJ/002.site/index.html",
+      "voguemain": "../003.SeoulLand_PJ/asset/index.html",
+      "화보속스타": "../003.SeoulLand_PJ/asset/index.html",
+      "nature-9": "../003.SeoulLand_PJ/asset/index.html"
     };
 
     ///// 팝업창 띄우기 /////////
