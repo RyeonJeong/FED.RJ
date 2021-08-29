@@ -720,6 +720,7 @@
 /* 스와이퍼 슬라이드 */
 
 html .swiper-container {
+  position: absolute;
   width: 100%;
   top: 55%;
   padding-top: 50px;
@@ -862,7 +863,7 @@ html .baro {
   display: block;
   line-height: 30px;
   font-weight: bold;
-  font-size: 3vw;
+  font-size: 1.3vw;
   width: 100%;
   height: 30px;
   color: #333;
@@ -889,7 +890,7 @@ html .baro {
 .pop li {
   float: none;
   line-height: 3;
-  font-size: 3vw;
+  font-size: 1vw;
   font-weight: bold;
 }
 
@@ -903,7 +904,7 @@ html .baro {
   color: #333;
   font-family: 'Encode Sans SC';
   font-weight: bold;
-  font-size: 3vw;
+  font-size: 1.3vw;
   border-radius: 10px;
   right: 5%;
   bottom: 20%;
@@ -1065,6 +1066,7 @@ input {
 }
 
 .rcont {
+  flex: 1;
   width: auto;
   height: 100%;
   top: 0;
@@ -1319,6 +1321,10 @@ input {
   }
 
   /**************** sec3 ****************/
+  /* 모바일 이미지 크기 줄여서 li 줄이기(모바일 터치때문) */
+  .sklbx>ul{
+    width: 80%;
+  }
 
   /* 글씨 크기 줄이기 */
   .sklbx>ul>li>span {
@@ -1360,7 +1366,7 @@ input {
 
   /* 그래프퍼센트 숫자 */
   .pbox a {
-    font-size: 5vw;
+    font-size: 3vw;
     margin: 0;
     line-height: 25px;
   }
@@ -1369,7 +1375,7 @@ input {
   .sklbx {
     height: 60%;
     position: relative;
-    top: 50%;
+    top: 57%;
     transform: translateY(-50%);
   }
 
@@ -1452,19 +1458,23 @@ input {
   }
 
   .pop li {
-    line-height: 5.5vh;
+    font-size: 1.2vw;
+    line-height: 6.5vh;
+    font-weight: normal;
   }
 
   /* 팝업창 바로가기버튼 */
   html .baro {
+    width: 17vw;
+    height: 30px;
     bottom: 8%;
-    height: 20px;
-    right: 25%;
+    right: 24%;
     background: #333;
   }
 
   .baro>a {
-    line-height: 17px;
+    line-height: 30px;
+    font-size: 1.6vw;
     color: #fff;
     text-shadow: none;
   }
@@ -1472,10 +1482,11 @@ input {
   /* 팝업창 닫기버튼 */
   .pop .clse {
     width: 10vw;
-    height: 20px;
+    height: 30px;
     bottom: 8%;
     /* border: 1px solid #333; */
     background: #333;
+    font-size: 1.6vw;
     color: #fff;
   }
 
@@ -1486,6 +1497,10 @@ input {
   .msgbox {
     padding: 0;
     margin: 0;
+  }
+  /* 인풋 줄높이 없애기 */
+  .msgbox label{
+    line-height: 0;
   }
 
   /* 인풋 안에 박스 */
@@ -1508,7 +1523,6 @@ input {
 
   /* 오른쪽박스 */
   .rcont {
-    flex: 1;
     width: auto;
   }
 
@@ -1725,6 +1739,10 @@ input {
   }
 
   /**************** sec3 ****************/
+  /* 모바일배경 */
+  #pg3{
+    background: url(../images/mpfbg1.png) no-repeat top/cover;
+  }
 
 
   .sklbx>ul>li>span {
@@ -1781,6 +1799,7 @@ input {
 
   .sklbx>ul {
     display: flex;
+    width: 100%;
     flex-direction: column;
   }
 
@@ -1887,7 +1906,8 @@ input {
   }
 
   .pop li {
-    line-height: 4.5vh;
+    line-height: 3.5vh;
+    font-size: 3.5vw;
   }
 
 
@@ -1902,6 +1922,7 @@ input {
 
   .baro>a {
     color: #fff;
+    font-size: 2.4vw;
     line-height: 30px;
   }
 
@@ -1910,6 +1931,7 @@ input {
     bottom: 7%;
     left: 60%;
     width: 30%;
+    font-size: 2.4vw;
     height: 7%;
     background: #333;
     color: #fff;

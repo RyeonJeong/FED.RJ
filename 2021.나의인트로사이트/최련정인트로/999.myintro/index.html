@@ -405,7 +405,7 @@
         <!-- 이메일 보내기 -->
         <form action="../Sndmail.php" method="post">
           <p class="msgbox">
-            <span class="tit2">SEND ME A EMAIL</span><br><br>
+            <span class="tit2">SEND ME A EMAIL</span><br>
             <label for="nm">Your Name</label><br>
             <input type="text" id="nm"><br>
             <label for="email">Your email</label><br>
